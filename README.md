@@ -1,3 +1,9 @@
+# Code Climate QA
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/acf50d3ee2833ae85f97/maintainability)](https://codeclimate.com/github/Lambda-School-Labs/project-canopy-fe/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/98d14f41aa17b7028197/test_coverage)](https://codeclimate.com/github/Lambda-School-Labs/sauti-design-studio-fe/test_coverage)
+
 # Sauti Design Studio
 
 You can find the deployed project at [Sauti Design Studio](https://sautistudio.netlify.com/).
