@@ -7,7 +7,7 @@
     "@emotion/styled": "^10.0.15",
     "@material-ui/core": "^4.2.0",
     "@material-ui/icons": "^4.2.1",
-    "@projectstorm/react-diagrams": "^6.0.1-beta.0",
+    "@projectstorm/react-diagrams": "^6.0.1-beta.7",
     "@types/jest": "^24.0.15",
     "@types/lodash": "^4.14.136",
     "@types/node": "^12.6.8",
@@ -36,10 +36,12 @@
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "resize-observer-polyfill": "^1.5.1",
     "sass": "^1.22.7",
     "typescript": "3.4.5"
   },
   "devDependencies": {
+    "@testing-library/react": "^10.0.1",
     "@types/lodash": "^4.14.136",
     "jest-dom": "^3.1.2",
     "react-testing-library": "^6.0.0"
@@ -47,8 +49,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --verbose",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject ",
+    "coverage": "CI=true yarn test --coverage --watchAll=false || true"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -63,6 +66,14 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/__tests__/**"
     ]
   }
 }

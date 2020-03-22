@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {PropTypes} from "react";
 import { connect } from "react-redux";
 import { saveCanvas, getCanvasById, deleteProject, setDeleteState, setSimulationState, saveTitle, getTitleById, publishCanvas } from "../../actions";
 import DeleteModal from "../DeleteModal.js";
@@ -54,20 +54,34 @@ for(let key in obj){
 class CustomExample extends React.Component {
   constructor(props){
     super(props);
+
+    // stack overflow click outside
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+
     this.ENTER_KEY = 13;
     this.state = {
       selectedColor: "#B80000",
       canvas_stop: false,
-      project_title: null,
+      project_title: "",
       project_title_class: false,
       delete_project: false,
-      simulate_project: false
+      simulate_project: false,
+      wantToChange: false
     }
   }
 
   componentDidMount(){
     // On load get project canvas
     this.getCanvas();
+
+    // stack overflow click outside
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  // stack overflow click outside
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
   }
 
   componentDidUpdate(prevProps, prevState){
@@ -236,9 +250,11 @@ class CustomExample extends React.Component {
     if (name === "project_title") {
       this.setState({
         ...this.state,
+        wantToChange: true,
         project_title_class: !this.state.project_title_class
       });
     }
+    
   }
 
   handleChange = (event) => {
@@ -246,6 +262,10 @@ class CustomExample extends React.Component {
       ...this.state,
       [event.target.name]: event.target.value
     });
+    console.log(event.target.name)
+    
+    // this.handleSubmit(event);
+    // this.handleEdit('project_title')
   }
 
   handleKeyDown = (event) => {
@@ -264,6 +284,25 @@ class CustomExample extends React.Component {
       this.updateTitle();
     }
   }
+ 
+  // stack overflow click outside
+  setWrapperRef(node) {
+    this.wrapperRef = node;
+  }
+
+  // stack overflow click outside
+  handleClickOutside(event) {
+    // event = {...event, name: }
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target) && this.state.wantToChange === true) {
+      this.setState({
+        ...this.state,
+        wantToChange: false,
+        project_title: this.state.project_title,
+        project_title_class: !this.state.project_title_class
+      });
+      this.updateTitle();
+    }
+  }
 
   updateTitle = () => {
     const objUpdate = {
@@ -277,17 +316,21 @@ class CustomExample extends React.Component {
       <div className="diagram-page">
         <DeleteModal props={this.props.props}/>
         <SimulationModal props={this.props.props}/>
-        <section className="title-and-buttons">
+        <section ref={this.setWrapperRef} className="title-and-buttons">
           <h2
-            title="Double Click to Edit Title"
+            title="Click to Edit Title"
             className={this.state.project_title_class ? "hidden" : ""}
-            onDoubleClick={()=>this.handleEdit("project_title")}>
-            {this.state.project_title}
+            // className={""}
+            // onDoubleClick={()=>this.handleEdit("project_title")}>
+            onClick={()=> this.handleEdit("project_title")}>
+            {this.state.project_title.length > 1 ? this.state.project_title : "Click here to modify title"}
+            
           </h2>
             <input
               name="project_title"
               placeholder="Enter something..."
               className={this.state.project_title_class ? "" : "hidden"}
+              // className={""}
               value={this.state.project_title}
               onChange={this.handleChange}
               onKeyDown={(event)=>{
@@ -296,6 +339,7 @@ class CustomExample extends React.Component {
               onKeyUp={(event) => {
               event.stopPropagation()
             }}
+            
             />
           <div className="project-buttons">
             <button
@@ -434,3 +478,7 @@ export default connect(
           //     cerealBox.deserializeModel(this.props.graph_json, engine);
           //     engine.setModel(cerealBox);
           // }
+
+          // CustomExample.propTypes = {
+          //   children: PropTypes.element.isRequired,
+          // };
