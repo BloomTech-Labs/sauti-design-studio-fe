@@ -87,7 +87,8 @@ function LoginModal() {
           <GoogleLoginButton
             style={loginButtonStyle}
             onClick={() =>
-              (window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/google`)
+              // (window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/google`)
+              (window.location.href = `http://localhost:5000/auth/google`)
             }
           />
           {/* <FacebookLoginButton
