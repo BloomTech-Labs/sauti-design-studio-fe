@@ -77,6 +77,14 @@ class CustomExample extends React.Component {
 
     // stack overflow click outside
     document.addEventListener('mousedown', this.handleClickOutside);
+
+    // Handle Project title update on initial load
+    if(this.props.project_title !== ""){
+        this.setState({
+          ...this.state,
+          project_title: this.props.project_title
+        })
+      }
   }
 
   // stack overflow click outside
@@ -254,7 +262,7 @@ class CustomExample extends React.Component {
         project_title_class: !this.state.project_title_class
       });
     }
-    
+
   }
 
   handleChange = (event) => {
@@ -305,12 +313,18 @@ class CustomExample extends React.Component {
   }
 
   updateTitle = () => {
+    if (this.state.project_title === ""){
+      this.setState({
+        ...this.state,
+        project_title: "My app"
+      })
+    }
     const objUpdate = {
         "project_title": this.state.project_title,
     }
     this.props.saveTitle(objUpdate, this.props.project_id);
   }
-
+// {this.state.project_title !== "" ? this.state.project_title : "Click here to add a title"}
   render() {
     return (
       <div className="diagram-page">
@@ -323,8 +337,7 @@ class CustomExample extends React.Component {
             // className={""}
             // onDoubleClick={()=>this.handleEdit("project_title")}>
             onClick={()=> this.handleEdit("project_title")}>
-            {this.state.project_title.length > 1 ? this.state.project_title : "Click here to modify title"}
-            
+            {this.state.project_title !== "" && this.state.project_title !== "My app" ? this.state.project_title + " (click to edit)" : "Click here to add/edit app title"}
           </h2>
             <input
               name="project_title"

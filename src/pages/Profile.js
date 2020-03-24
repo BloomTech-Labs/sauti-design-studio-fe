@@ -99,7 +99,7 @@ class Profile extends React.Component {
                 title="Add Project"
                 onClick={()=>this.addProject(
                   {
-                    project_title: "Enter Title...",
+                    project_title: "My app",
                     graph_json: null,
                     user_id: this.props.user_id,
                     initial_node_id: null
