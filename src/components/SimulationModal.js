@@ -87,7 +87,7 @@ class SimulationModal extends React.Component {
                     )
                     .then(response => {
                       console.log(response);
-                      this.setState({ incoming: response.data });
+                      this.setState({ incoming: ""});
                       this.setState({ text: "" });
                     })
                     .catch(err => console.log(err));
