@@ -103,7 +103,7 @@ class CustomExample extends React.Component {
 
     if(prevProps.publishing_canvas !== this.props.publishing_canvas && this.props.publishing_canvas === false){
       if(this.props.error === false)
-        window.alert("Publishing Successful!");
+        console.log("Save Successful!");
       else
         window.alert(this.props.error)
     }
@@ -308,7 +308,8 @@ class CustomExample extends React.Component {
             </button>
             <button
               className="cursor"
-              onClick={() => {
+              onClick={(event) => {
+                this.publishCanvas(event)
                 this.props.setSimulationState(this.props.simulate_project);
               }}
             >

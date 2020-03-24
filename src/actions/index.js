@@ -150,6 +150,7 @@ export const publishCanvas = (objUpdate, project_id) => dispatch => {
     .post(endpoint,
       objUpdate
     ).then(response => {
+
       dispatch({
         type: PUBLISH_CANVAS_SUCCESS,
         payload: response.data
