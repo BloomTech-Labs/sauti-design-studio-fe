@@ -8,6 +8,7 @@
 
 // import rootReducer from "../../../reducers/index";
 // import {AdvancedPortFactory} from './JSCustomPortFactory';
+// import { AbstractModelFactory } from '@projectstorm/react-canvas-core';
 
 
 // const store = createStore(rootReducer, applyMiddleware(thunk, logger));
@@ -17,7 +18,7 @@
 
 //     //Error: Uncaught [TypeError: Class constructor AdvancedPortFactory cannot be invoked without 'new']
 
-//     render(
+//     render (
 //         <Provider store={store}>
 //             <Router>
 //                <AdvancedPortFactory />
