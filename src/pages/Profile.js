@@ -1,9 +1,11 @@
 import React from 'react';
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { getProjectsByUserId,addProjectByUserId,setProjectId,setUserId } from "../actions";
 
 import Navbar from '../components/Navbar';
+
 class Profile extends React.Component {
   state={
     // local State Projects
@@ -163,7 +165,6 @@ const mapStateToProps = state => ({
 });
 
 // Connecting State and Rdux Reducer Methods
-export default connect(
-  mapStateToProps,
+export default withRouter(connect(mapStateToProps,
   { getProjectsByUserId, addProjectByUserId, setProjectId, setUserId }
-)(Profile); 
+)((Profile))) 
