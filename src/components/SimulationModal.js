@@ -93,7 +93,8 @@ class SimulationModal extends React.Component {
                     .catch(err => console.log(err));
               }}
             >
-              <i class="fas fa-window-close"></i>
+              <i className="fas fa-window-close"></i>
+              {/* this ^^^ was class instead of className */}
             </div>
             <div className="simulation-screen-container">
               <div className="to-container">
