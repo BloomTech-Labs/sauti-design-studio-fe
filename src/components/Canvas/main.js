@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { saveCanvas, getCanvasById, deleteProject, setDeleteState, setSimulationState, saveTitle, getTitleById, publishCanvas } from "../../actions";
 import DeleteModal from "../DeleteModal.js";
 import SimulationModal from "../SimulationModal.js";
+import axios from "axios"
 
 import createEngine, {
   DiagramModel,
@@ -61,7 +62,7 @@ class CustomExample extends React.Component {
       project_title: null,
       project_title_class: false,
       delete_project: false,
-      simulate_project: false
+      simulate_project: false,
     }
   }
 
@@ -311,6 +312,7 @@ class CustomExample extends React.Component {
               onClick={(event) => {
                 this.publishCanvas(event)
                 this.props.setSimulationState(this.props.simulate_project);
+                
               }}
             >
               Simulate App

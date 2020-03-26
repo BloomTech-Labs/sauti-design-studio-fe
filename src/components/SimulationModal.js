@@ -67,15 +67,34 @@ class SimulationModal extends React.Component {
               className="cancel-container"
               title="Cancel Simulation"
               onClick={() => {
-                this.props.setSimulationState(this.props.simulate_project);
-                this.setState({
-                  simulate_project: false,
-                  incoming: "",
-                  text: ""
-                });
+                this.props.setSimulationState(this.props.simulate_project)
+                // this.setState({
+                //   simulate_project: false,
+                //   incoming: "",
+                //   text: ""
+                // });
+                const reqBody = {
+                    user_id: this.props.user_id,
+                    text: "00"
+                  };
+                  console.log(reqBody);
+                  axios
+                    .post(
+                      process.env.REACT_APP_BE_API_URL
+                        ? `${process.env.REACT_APP_BE_API_URL}/workflows/sim/${this.props.project_id}`
+                        : `http://localhost:5000/workflows/sim/${this.props.project_id}`,
+                      reqBody
+                    )
+                    .then(response => {
+                      console.log(response);
+                      this.setState({ incoming: ""});
+                      this.setState({ text: "" });
+                    })
+                    .catch(err => console.log(err));
               }}
             >
-              <i class="fas fa-window-close"></i>
+              <i className="fas fa-window-close"></i>
+              {/* this ^^^ was class instead of className */}
             </div>
             <div className="simulation-screen-container">
               <div className="to-container">
