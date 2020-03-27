@@ -46,13 +46,23 @@
     "@testing-library/user-event": "^10.0.0",
     "@types/lodash": "^4.14.136",
     "jest-dom": "^3.1.2",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
     "react-testing-library": "^8.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --verbose --coverage",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --verbose --coverage --env=jest-environment-jsdom-sixteen",
+    "eject": "react-scripts eject",
+    "coverage": "CI=true npm test --coverage --watchAll=false || true"
+  },
+	"jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/__tests__/**"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
