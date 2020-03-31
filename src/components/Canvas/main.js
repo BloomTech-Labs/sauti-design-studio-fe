@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { saveCanvas, getCanvasById, deleteProject, setDeleteState, setSimulationState, saveTitle, getTitleById, publishCanvas } from "../../actions";
 import DeleteModal from "../DeleteModal.js";
 import SimulationModal from "../SimulationModal.js";
+import PublishModal from '../PublishModal';
 import axios from "axios"
 
 import createEngine, {
@@ -317,14 +318,15 @@ class CustomExample extends React.Component {
             >
               Simulate App
             </button>
-            <button
+            <PublishModal props={this.props.props}/>
+            {/* <button
               className="cursor"
               onClick={(event) => {
                 this.publishCanvas(event);
               }}
             >
               Publish App
-            </button>
+            </button> */}
             <button
               className="cursor"
               onClick={() => {
