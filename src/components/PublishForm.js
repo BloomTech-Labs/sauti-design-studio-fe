@@ -20,7 +20,7 @@ const PublishForm = props => {
       organization: "",
       email: "",
       title: "",
-      implementationCountry: "",
+      implementationCountry: "KE",
       user_id: props.user_id,
       project_id: props.project_id,
       comments: ""
@@ -46,7 +46,7 @@ const PublishForm = props => {
         if (res.data.status === 'success'){
           alert("message Sent")
           resetCredentials()
-    
+          props.setOpen(false)
         } else if(Response.data.status === 'failure'){
           alert("message failed to send")
           
@@ -126,7 +126,7 @@ const PublishForm = props => {
         </div>
         <div class="form-group">
           <p>Country</p>
-          <select id="dropdown" name="country" class="form-control" required>
+          <select id="dropdown" name="implementationCountry" class="form-control" value={credentials.implementationCountry} onChange={handleChange} required>
             {/* Add more countries as needed according to their country code */}
             <option disabled selected value>
               Select current country
@@ -135,7 +135,7 @@ const PublishForm = props => {
             <option value="KE">KE</option>
             <option value="RW">RW</option>
             <option value="UG">UG</option>
-          </select>
+          </select> 
         </div>
         <div class="form-group">
           <p>Any comments or suggestions?</p>

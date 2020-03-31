@@ -49,7 +49,7 @@ export default function PublishModal() {
     <div style={modalStyle} className={classes.paper}>
       
       <div id="simple-modal-description">
-        <PublishForm />
+        <PublishForm open={open} setOpen={setOpen} handleClose={handleClose} count={count} setCount={setCount}/>
       </div>
       <PublishModal />
     </div>
