@@ -34,13 +34,15 @@ export default function PublishModal() {
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-
+  const [count, setCount] = React.useState(0)
   const handleOpen = () => {
     setOpen(true);
+    setCount(count + 1)
   };
 
   const handleClose = () => {
     setOpen(false);
+    setCount(0)
   };
 
   const body = (
@@ -54,9 +56,9 @@ export default function PublishModal() {
   );
 
   return (
-    <div>
+    <>
         {/* need a way to make this publish button visible only from main canvas page */}
-      <button type="button cursor" onClick={handleOpen}> 
+      <button className="{`${count > 0 ? hidden : cursor publish }`}" onClick={handleOpen}> 
         Publish
       </button>
       <Modal
@@ -67,6 +69,6 @@ export default function PublishModal() {
       >
         {body}
       </Modal>
-    </div>
+    </>
   );
 }
