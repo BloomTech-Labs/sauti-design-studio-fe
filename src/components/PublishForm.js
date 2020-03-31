@@ -46,7 +46,7 @@ const PublishForm = props => {
         if (res.data.status === 'success'){
           alert("message Sent")
           resetCredentials()
-    
+          props.setOpen(false)
         } else if(Response.data.status === 'failure'){
           alert("message failed to send")
           
