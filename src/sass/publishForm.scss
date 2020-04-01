@@ -1,0 +1,70 @@
+// Mobile
+//$mobile: (max-width: 600px);
+
+// Tablet
+//$tablet: (max-width: 900px);
+
+//      @media (max-width: 600px) {
+//    width: 100%;  }
+
+.makeStyles-paper-1{
+    width: 35% !important;
+    padding: 6% !important;
+    display: flex !important;
+
+    @media (max-width: 900px) {
+        width: 55% !important;
+        padding: 8% !important;
+    }
+    
+    #form-title{
+        font-size: 3.5rem;
+        font-weight: bolder;
+        padding-bottom: 6%;
+    }
+
+    #description{
+        font-weight: bold;
+        padding-bottom: 4%;
+
+        @media (max-width: 600px) {
+            font-weight: normal;
+            font-size: 1.6rem;
+        }
+    }
+
+    label{
+        line-height: 1.5;
+        font-size: 1.6rem;
+        padding-right: 1%;
+        padding-bottom: 3%;
+    }
+    input{
+        margin:1%;
+        padding-top: 2%;      
+    }
+    select {      
+            margin:1%;
+            padding-top: 2%;        
+    }
+    textarea{
+        margin: 0 auto;
+        padding-top: 5%;
+        padding-right: 15%;
+        margin-bottom: 4%;
+    }
+    p{
+        margin: 4%;
+        margin-left: 0%;
+        font-style: italic;
+        font-size: 1.8rem;
+    }
+    .submit {
+        align-self: center;
+        @include custom-btn(23%, 35px, $darkslateblue, #fbffff, 1.4rem);
+
+        @media (max-width: 900px) {
+            width: 35%;
+        }
+      }
+}

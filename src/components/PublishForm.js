@@ -58,7 +58,7 @@ const PublishForm = props => {
   return (
     <div id="container">
       <header>
-        <h1 id="title"> Have your app published</h1>
+        <h1 id="form-title"> Submit app to be published</h1>
         <p id="description">
           Application to have your project deploy to AfricaTalking
         </p>
@@ -88,7 +88,7 @@ const PublishForm = props => {
             name="organization"
             id="organization"
             class="form-control"
-            placeholder="Enter your Organization name"
+            placeholder="Organization name"
             value={credentials.organization}
             onChange={handleChange}
             required
@@ -125,7 +125,7 @@ const PublishForm = props => {
           />
         </div>
         <div class="form-group">
-          <p>Country</p>
+          <label>Country</label>
           <select id="dropdown" name="implementationCountry" class="form-control" value={credentials.implementationCountry} onChange={handleChange} required>
             {/* Add more countries as needed according to their country code */}
             <option disabled selected value>
@@ -145,11 +145,11 @@ const PublishForm = props => {
             name="comments"
             value={credentials.comments}
             onChange={handleChange}
-            placeholder="Enter your comment here..."
+            placeholder="Enter your comments here..."
           />
         </div>
         <div>
-          <button type="submit" id="submit" >
+          <button className="submit" type="submit" id="submit" >
             Submit
           </button>
         </div>
