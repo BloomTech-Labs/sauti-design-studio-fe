@@ -4,7 +4,7 @@ import { saveCanvas, getCanvasById, deleteProject, setDeleteState, setSimulation
 import DeleteModal from "../DeleteModal.js";
 import SimulationModal from "../SimulationModal.js";
 import PublishModal from '../PublishModal';
-import axios from "axios"
+
 
 import createEngine, {
   DiagramModel,

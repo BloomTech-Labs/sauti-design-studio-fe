@@ -3,6 +3,9 @@ import axios from "axios";
 import { connect } from "react-redux";
 import PublishModal from "./PublishModal";
 const PublishForm = props => {
+  const callbackURL = process.env.REACT_APP_BE_API_URL
+    ? `${process.env.REACT_APP_BE_API_URL}/workflows/sim/${props.project_id}`
+    : `http://localhost:5000/workflows/sim/${props.project_id}`;
   const [credentials, setCredentials] = useState({
     name: "",
     organization: "",
@@ -11,7 +14,8 @@ const PublishForm = props => {
     implementationCountry: "",
     user_id: props.user_id,
     project_id: props.project_id,
-    comments: ""
+    comments: "",
+    callback: callbackURL
   });
 
   const resetCredentials = () => {
@@ -23,9 +27,10 @@ const PublishForm = props => {
       implementationCountry: "KE",
       user_id: props.user_id,
       project_id: props.project_id,
-      comments: ""
-    })
-  }
+      comments: "",
+      callback: callbackURL
+    });
+  };
 
   const handleChange = e => {
     setCredentials({
@@ -34,31 +39,35 @@ const PublishForm = props => {
     });
   };
 
-
   const submit = e => {
     e.preventDefault();
-   
-    console.log("this is credentials at submission", credentials)
+
+    console.log("this is credentials at submission", credentials);
     axios
-      .post(`${process.env.REACT_APP_BE_API_URL ? process.env.REACT_APP_BE_API_URL : 'http://localhost:5000'}/publish/send`, credentials)
+      .post(
+        `${
+          process.env.REACT_APP_BE_API_URL
+            ? process.env.REACT_APP_BE_API_URL
+            : "http://localhost:5000"
+        }/publish/send`,
+        credentials
+      )
       .then(res => {
         console.log("this is the API response", res);
-        if (res.data.status === 'success'){
-          alert("message Sent")
-          resetCredentials()
-          props.setOpen(false)
-        } else if(Response.data.status === 'failure'){
-          alert("message failed to send")
-          
+        if (res.data.status === "success") {
+          alert("message Sent");
+          resetCredentials();
+          props.setOpen(false);
+        } else if (Response.data.status === "failure") {
+          alert("message failed to send");
         }
       })
       .catch(err => console.log(err));
-      
   };
   return (
     <div id="container">
       <header>
-        <h1 id="title"> Have your app published</h1>
+        <h1 id="form-title"> Have your app published</h1>
         <p id="description">
           Application to have your project deploy to AfricaTalking
         </p>
@@ -88,7 +97,7 @@ const PublishForm = props => {
             name="organization"
             id="organization"
             class="form-control"
-            placeholder="Enter your Organization name"
+            placeholder="Organization name"
             value={credentials.organization}
             onChange={handleChange}
             required
@@ -149,7 +158,7 @@ const PublishForm = props => {
           />
         </div>
         <div>
-          <button type="submit" id="submit" >
+          <button className="submit" type="submit" id="submit" >
             Submit
           </button>
         </div>

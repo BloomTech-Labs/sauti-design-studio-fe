@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { setSimulationState } from "../actions";
 import axios from "axios";
 import dotenv from "dotenv";
-require("dotenv").config();
+
 
 class SimulationModal extends React.Component {
   state = {
