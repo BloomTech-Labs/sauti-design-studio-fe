@@ -46,7 +46,7 @@ export default function PublishModal() {
   };
 
   const body = (
-    <div style={modalStyle} className={classes.paper}>
+    <div style={modalStyle} className={classes.paper, "makeStyles-paper-1"} >
       
       <div id="simple-modal-description">
         <PublishForm open={open} setOpen={setOpen} handleClose={handleClose} count={count} setCount={setCount}/>
