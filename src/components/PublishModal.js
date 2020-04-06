@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
       padding: '8%'
     }
     // @media (max-width: 900px) {
+      //
     //     width: 75% !important;
     //     padding: 8% !important;
     // }
