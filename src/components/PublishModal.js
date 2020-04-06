@@ -21,11 +21,21 @@ function getModalStyle() {
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
-    width: 400,
     backgroundColor: theme.palette.background.paper,
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+    width: '45%' ,
+    padding: '6%' ,
+    display: "flex",
+    [theme.breakpoints.down("md")]: {
+      width: '75%',
+      padding: '8%'
+    }
+    // @media (max-width: 900px) {
+    //     width: 75% !important;
+    //     padding: 8% !important;
+    // }
   },
 }));
 
@@ -46,7 +56,7 @@ export default function PublishModal() {
   };
 
   const body = (
-    <div style={modalStyle} className={classes.paper, "makeStyles-paper-1"} >
+    <div style={modalStyle} className={classes.paper} >
       
       <div id="simple-modal-description">
         <PublishForm open={open} setOpen={setOpen} handleClose={handleClose} count={count} setCount={setCount}/>
