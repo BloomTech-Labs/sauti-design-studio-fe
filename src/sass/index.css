@@ -1483,79 +1483,64 @@ input, textarea {
   border: 1px solid black;
 }
 
-.makeStyles-paper-1 {
-  width: 45% !important;
-  padding: 6% !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-@media (max-width: 900px) {
-  .makeStyles-paper-1 {
-    width: 75% !important;
-    padding: 8% !important;
-  }
-}
-
-.makeStyles-paper-1 #form-title {
+#container #form-title {
   font-size: 3.5rem;
   font-weight: bolder;
   padding-bottom: 6%;
 }
 
 @media (max-width: 600px) {
-  .makeStyles-paper-1 #form-title {
+  #container #form-title {
     font-size: 3rem;
     font-weight: bold;
     padding-bottom: 6%;
   }
 }
 
-.makeStyles-paper-1 #description {
+#container #description {
   font-weight: bold;
   padding-bottom: 4%;
 }
 
 @media (max-width: 600px) {
-  .makeStyles-paper-1 #description {
+  #container #description {
     font-weight: normal;
     font-size: 1.6rem;
   }
 }
 
-.makeStyles-paper-1 label {
+#container label {
   line-height: 1.5;
   font-size: 1.6rem;
   padding-right: 1%;
   padding-bottom: 3%;
 }
 
-.makeStyles-paper-1 input {
+#container input {
   margin: 1%;
   padding-top: 2%;
 }
 
-.makeStyles-paper-1 select {
+#container select {
   margin: 1%;
   padding-top: 2%;
 }
 
-.makeStyles-paper-1 textarea {
+#container textarea {
   margin: 0 auto;
   padding-top: 5%;
   padding-right: 15%;
   margin-bottom: 4%;
 }
 
-.makeStyles-paper-1 p {
+#container p {
   margin: 4%;
   margin-left: 0%;
   font-style: italic;
   font-size: 1.8rem;
 }
 
-.makeStyles-paper-1 .submit {
+#container .submit {
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -1581,14 +1566,14 @@ input, textarea {
   transition: 0.25s;
 }
 
-.makeStyles-paper-1 .submit:hover {
+#container .submit:hover {
   background-color: #393b59;
   color: #fbffff;
   border: 1px solid #434569;
 }
 
 @media (max-width: 900px) {
-  .makeStyles-paper-1 .submit {
+  #container .submit {
     width: 35%;
   }
 }
