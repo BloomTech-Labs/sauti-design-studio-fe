@@ -1,11 +1,5 @@
-.publishModal{
-    width: 45% !important;
-    padding: 6% !important;
-    display: flex !important;
-    @media (max-width: 900px) {
-        width: 75% !important;
-        padding: 8% !important;
-    }
+#container{
+
     #form-title{
         font-size: 3.5rem;
         font-weight: bolder;
