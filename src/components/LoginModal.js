@@ -84,6 +84,13 @@ function LoginModal() {
           <Typography variant="h6" id="modal-title">
             Sauti Studio
           </Typography>
+          <button
+            style={loginButtonStyle}
+            onClick={() =>
+              // (window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/google`)
+                (process.env.REACT_APP_BE_API_URL ? window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/okta` : window.location.href = `http://localhost:5000/auth/okta`)
+            }
+          >Login with OKTA</button>
           <GoogleLoginButton
             style={loginButtonStyle}
             onClick={() =>
