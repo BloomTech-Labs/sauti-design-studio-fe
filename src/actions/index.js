@@ -1,4 +1,5 @@
 import axios from "axios";
+import { axiosWithAuth } from "../components/utils/axiosWithAuth";
 
 export const GET_CANVAS_BY_ID_START = "GET_CANVAS_BY_ID_START";
 export const GET_CANVAS_BY_ID_SUCCESS = "GET_CANVAS_BY_ID_SUCCESS";
@@ -52,7 +53,7 @@ export const getProjectsByUserId = (user_id) => dispatch => {
   }else{
     endpoint = `http://localhost:5000/projects/user/${user_id}`;
   } 
-  axios
+  axiosWithAuth()
     .get(
       endpoint,
     )

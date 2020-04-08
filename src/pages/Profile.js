@@ -89,6 +89,9 @@ class Profile extends React.Component {
   }
 
   render(){
+    console.log("this.props.fetching", this.props.fetching)
+    console.log("this.props.projects", this.props.projects)
+    console.log("this.state.projects", this.state.projects)
       return (
         <>
         <Navbar/>
