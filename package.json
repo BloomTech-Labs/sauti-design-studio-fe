@@ -56,7 +56,7 @@
     "eject": "react-scripts eject",
     "coverage": "CI=true npm test --coverage --watchAll=false || true"
   },
-	"jest": {
+  "jest": {
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/node_modules/**",
