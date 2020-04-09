@@ -1,4 +1,3 @@
-import axios from "axios";
 import { axiosWithAuth } from "../components/utils/axiosWithAuth";
 
 export const GET_CANVAS_BY_ID_START = "GET_CANVAS_BY_ID_START";
@@ -60,7 +59,8 @@ export const getProjectsByUserId = (user_id) => dispatch => {
     .then(response => {
       dispatch({ type: GET_PROJECTS_BY_ID_SUCCESS, payload: response.data});
     })
-    .catch(err => dispatch({ type: GET_PROJECTS_BY_ID_FAILURE, payload: err }));
+    .catch(err => dispatch({ type: GET_PROJECTS_BY_ID_FAILURE, payload: err }))
+    
 };
 
 export const setProjectId = ( project_id) => dispatch => {
@@ -89,7 +89,7 @@ export const getCanvasById = (project_id1) => dispatch => {
   }else{
     endpoint1 = `http://localhost:5000/projects/${project_id1}`;
   } 
-  axios
+  axiosWithAuth()
     .get(
       endpoint1,
     )
@@ -107,7 +107,7 @@ export const getTitleById = (project_id1) => dispatch => {
   }else{
     endpoint1 = `http://localhost:5000/projects/${project_id1}`;
   } 
-  axios
+  axiosWithAuth()
     .get(
       endpoint1,
     )
@@ -125,7 +125,7 @@ export const saveCanvas = (objUpdate, project_id) => dispatch => {
   }else{
     endpoint = `http://localhost:5000/projects/${project_id}`;
   } 
-  axios
+  axiosWithAuth()
     .put(
       endpoint,
       objUpdate
@@ -147,7 +147,7 @@ export const publishCanvas = (objUpdate, project_id) => dispatch => {
   }else{
     endpoint = `http://localhost:5000/projects/publish/${project_id}`;
   } 
-  axios
+  axiosWithAuth()
     .post(endpoint,
       objUpdate
     ).then(response => {
@@ -169,7 +169,7 @@ export const saveTitle = (objUpdate, project_id) => dispatch => {
   }else{
     endpoint = `http://localhost:5000/projects/${project_id}`;
   } 
-  axios
+  axiosWithAuth()
     .put(
       endpoint,
       objUpdate
@@ -190,7 +190,7 @@ export const addProjectByUserId = (item) => dispatch => {
   }else{
     endpoint = `http://localhost:5000/projects/`;
   }
-  axios
+  axiosWithAuth()
     .post(
       endpoint,
       item
@@ -224,7 +224,7 @@ export const deleteProject = (project_id, props) => dispatch => {
   }else{
     endpoint = `http://localhost:5000/projects/${project_id}`;
   }
-  axios
+  axiosWithAuth()
     .delete(
       endpoint,
     )
@@ -246,7 +246,7 @@ export const deleteProject = (project_id, props) => dispatch => {
 //       Authorization: token
 //     }
 //   };
-//   axios
+//   axiosWithAuth()
 //     .post(
 //       `https://one-line-a-day-2.herokuapp.com/api/users/${userID}/entries`,
 //       item,
@@ -271,7 +271,7 @@ export const deleteProject = (project_id, props) => dispatch => {
 //       Authorization: token
 //     }
 //   };
-//   axios
+//   axiosWithAuth()
 //     .get(
 //       `https://one-line-a-day-2.herokuapp.com/api/users/${userID}/entries`,
 //       options
@@ -285,7 +285,7 @@ export const deleteProject = (project_id, props) => dispatch => {
 
 // export const getNotesBySort = sortType => dispatch => {
 //   dispatch({ type: FETCH_NOTES_BY_SORT_START });
-//   axios
+//   axiosWithAuth()
 //     .get("https://fe-notes.herokuapp.com/note/get/all")
 //     .then(response => {
 //       console.log("fetch finished");
@@ -309,7 +309,7 @@ export const deleteProject = (project_id, props) => dispatch => {
 //       Authorization: token
 //     }
 //   };
-//   axios
+//   axiosWithAuth()
 //     .get(
 //       `https://one-line-a-day-2.herokuapp.com/api/users/${userID}/entries/${entryID}`,
 //       options
@@ -330,7 +330,7 @@ export const deleteProject = (project_id, props) => dispatch => {
 //       Authorization: token
 //     }
 //   };
-//   axios
+//   axiosWithAuth()
 //     .delete(
 //       `https://one-line-a-day-2.herokuapp.com/api/users/${userID}/entries/${entryID}`,
 //       options
@@ -353,7 +353,7 @@ export const deleteProject = (project_id, props) => dispatch => {
 //       Authorization: token
 //     }
 //   };
-//   axios
+//   axiosWithAuth()
 //     .put(
 //       `https://one-line-a-day-2.herokuapp.com/api/users/${userID}/entries/${entryID}`,
 //       item,
@@ -371,7 +371,7 @@ export const deleteProject = (project_id, props) => dispatch => {
 
 // export const login = (item, props) => dispatch => {
 //   dispatch({ type: LOGIN_USER_START });
-//   axios
+//   axiosWithAuth()
 //     .post("https://one-line-a-day-2.herokuapp.com/api/login", item)
 //     .then(res => {
 //       console.log(res);
@@ -389,7 +389,7 @@ export const deleteProject = (project_id, props) => dispatch => {
 
 // export const register = (item, props) => dispatch => {
 //   dispatch({ type: REGISTER_USER_START });
-//   axios
+//   axiosWithAuth()
 //     .post("https://one-line-a-day-2.herokuapp.com/api/register", item)
 //     .then(res => {
 //       console.log(res);
