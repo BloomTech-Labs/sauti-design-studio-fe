@@ -6,14 +6,15 @@ import Profile from "./pages/Profile";
 import AppBuilder from "./pages/AppBuilder.js";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
+import PrivateRoute from "./components/PrivateRoute";
 
 
 function App() {
   return (
     <div className="App">
       <Route exact path="/" component={Home} />
-      <Route path="/profile" component={Profile} />
-      <Route path="/workflows" component={AppBuilder}/>
+      <PrivateRoute path="/profile" component={Profile} />
+      <PrivateRoute path="/workflows" component={AppBuilder}/>
       <Route path="/login" component={Login} />
       <Route path="/error" component={Error} />
     </div>

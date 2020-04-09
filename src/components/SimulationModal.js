@@ -2,6 +2,7 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { setSimulationState } from "../actions";
 import axios from "axios";
+import {axiosWithAuth} from "./utils/axiosWithAuth";
 import dotenv from "dotenv";
 
 
@@ -43,7 +44,7 @@ class SimulationModal extends React.Component {
       text: this.state.text
     };
     console.log(reqBody);
-    axios
+    axiosWithAuth()
       .post(
         process.env.REACT_APP_BE_API_URL
           ? `${process.env.REACT_APP_BE_API_URL}/workflows/sim/${this.props.project_id}`
