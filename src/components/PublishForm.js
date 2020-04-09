@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {axiosWithAuth} from "./utils/axiosWithAuth";
 import { connect } from "react-redux";
 import PublishModal from "./PublishModal";
 const PublishForm = props => {
@@ -43,7 +44,7 @@ const PublishForm = props => {
     e.preventDefault();
 
     console.log("this is credentials at submission", credentials);
-    axios
+    axiosWithAuth()
       .post(
         `${
           process.env.REACT_APP_BE_API_URL
