@@ -11,12 +11,13 @@ const getCookies = () =>{
   }
   
 export const axiosWithAuth = () => {
-    const token = getCookies();
+    // const token = getCookies();
   return axios.create({
     // config object
     // baseURL: process.env.FRONTEND_URL,
     headers: {
-      Authorization: token.sauti_token
+      // Authorization: token.sauti_token
+      Authorization: localStorage.getItem("token")
     }
   });
 };

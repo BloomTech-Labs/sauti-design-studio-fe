@@ -12,12 +12,14 @@ const getCookies = () =>{
   }
 
 const PrivateRoute = ({component: Component, ...rest}) => {
-    const token = getCookies();
+    // const token = getCookies();
     return (
         <Route 
             {...rest}
             render={(...rest)=>{
-                if (token.sauti_token){
+                // if (token.sauti_token){
+                if (localStorage.getItem("token")
+                ){
                     return <Component {...rest}/>;
                 }else {
                     return <Redirect to="/" />

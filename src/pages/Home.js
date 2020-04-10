@@ -7,7 +7,6 @@ import image3 from "../images/image3.svg"
 import Navbar from "../components/Navbar";
 
 const Home = () => {
-  console.log(document.cookie)
   return (
     <>
       <Navbar />
