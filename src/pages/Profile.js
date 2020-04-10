@@ -23,9 +23,9 @@ class Profile extends React.Component {
   }
 
   componentDidMount(){
-    let user_id = this.getCookies().user_id;
+    // let user_id = this.getCookies().user_id;
     // let user_id = Number(window.location.pathname.split("/").pop());
-    console.log("user_id",user_id);
+    let user_id = localStorage.getItem("id")
     // On page load request users projects 
     if(user_id){
       if(this.props.user_id !== null && (this.props.user_id === user_id)){
@@ -42,8 +42,8 @@ class Profile extends React.Component {
 
   componentDidUpdate(prevProps, prevState){
     // let user_id = Number(window.location.pathname.split("/").pop());
-    let user_id = this.getCookies().user_id;
-    console.log("user_id",user_id);
+    // let user_id = this.getCookies().user_id;
+    let user_id = localStorage.getItem("id")
     if(user_id){
       // On Create New Project: request projects
       if(this.props.added_project !== prevProps.added_project && !this.props.added_project){
@@ -90,14 +90,7 @@ class Profile extends React.Component {
   }
 
   render(){
-    console.log("this.props.fetching", this.props.fetching)
-    console.log("this.props.projects", this.props.projects)
-    console.log("this.state.projects", this.state.projects)
       return (
-        // ternary below. ending of ternary is at the bottom of render
-        // (this.props.fetching === false && this.props.projects === null && this.state.projects===null ?  (
-        // <Redirect to="/" />
-        // ) : 
         <>
         <Navbar/>
         <div className="profile-page-container">
@@ -154,7 +147,6 @@ class Profile extends React.Component {
           </section>
         </div>
       </>
-        // ) // comment this out if not using ternary
     )
   }
 }

@@ -32,6 +32,8 @@ class ProfileLoginOut extends React.Component {
 deleteCookie = (name) => {
     this.setCookie(name, "", null , null , null, 1);
     this.props.setUserId(null, false);
+    localStorage.removeItem("token")
+    localStorage.removeItem("id")
 }
 
   render(){
@@ -41,7 +43,8 @@ deleteCookie = (name) => {
         <Link to="/login">Login</Link>
         ):(
         <>
-        <Link to={`/profile/${this.props.user_id}`}>Profile</Link>
+        {/* <Link to={`/profile/${this.props.user_id}`}>Profile</Link> */}
+        <Link to={`/profile`}>Profile</Link>
         <Link to="/" onClick={()=>this.deleteCookie("user_id")}>
           Log Out
         </Link>

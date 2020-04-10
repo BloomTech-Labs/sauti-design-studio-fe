@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Modal from '@material-ui/core/Modal'
@@ -61,6 +62,7 @@ function LoginModal() {
   const [open, setOpen] = React.useState(true)
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle)
+  const history = useHistory();
 
   // const handleOpen = () => {
   //     setOpen(true);
@@ -86,10 +88,11 @@ function LoginModal() {
           </Typography>
           <button
             style={loginButtonStyle}
-            onClick={() =>
-              // (window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/google`)
-                (process.env.REACT_APP_BE_API_URL ? window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/okta` : window.location.href = `http://localhost:5000/auth/okta`)
-            }
+            // onClick={() =>
+            //   // (window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/google`)
+            //     (process.env.REACT_APP_BE_API_URL ? window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/okta` : window.location.href = `http://localhost:5000/auth/okta`)
+            // }
+            onClick={()=>history.push("/loginOkta")}
           >Login with OKTA</button>
           <GoogleLoginButton
             style={loginButtonStyle}
