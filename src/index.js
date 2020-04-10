@@ -18,6 +18,7 @@ ReactDOM.render(
   <Security issuer={`${process.env.REACT_APP_OKTA_DOMAIN}/oauth2/default`}
             clientId={`${process.env.REACT_APP_OKTA_CLIENT_ID}`}
             redirectUri={window.location.origin+'/login'}
+            scopes={['openid', 'profile', 'email']}
             pkce={true} >
     <Provider store={store}>
       <Router>
