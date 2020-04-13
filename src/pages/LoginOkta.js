@@ -45,9 +45,6 @@ const LoginForm = ({ issuer }) => {
 
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>
     <div className='loginHero'>
       <form className='oktaForm' onSubmit={handleSubmit}>
         <h2 className='oktaTitle'>Welcome to Sauti Design Studio</h2>
