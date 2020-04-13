@@ -48,22 +48,27 @@ const LoginForm = ({ issuer }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <label>
+    <div className='loginHero'>
+      <form className='oktaForm' onSubmit={handleSubmit}>
+        <h2 className='oktaTitle'>Welcome to Sauti Design Studio</h2>
+        <label className='oktaLabel'>
           Username:
           <input
-            id="username" type="text"
+            className='oktaInput' id="username" type="text"
             value={username}
             onChange={handleUsernameChange} />
         </label>
-        <label>
+        <label className='oktaLabel'>
           Password:
           <input
-            id="password" type="password"
+           className='oktaInput' id="password" type="password"
             value={password}
             onChange={handlePasswordChange} />
         </label>
-        <input id="submit" type="submit" value="Submit" />
+        <input className='oktaSubmit' id="submit" type="submit" value="Submit" />
+        <p className='oktaSignUp'>Don't have an account?</p>
+        <button className="oktaSubmit" onClick={()=>history.push("/register")}>Create one here</button>
       </form>
-      <div>Don't have an account? <button className="" onClick={()=>history.push("/register")}>Create one here.</button></div>
     </div>
   );
 };
