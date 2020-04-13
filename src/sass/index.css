@@ -1577,4 +1577,78 @@ input, textarea {
     width: 35%;
   }
 }
+
+.loginHero {
+  background-image: url("../images/sauti2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.loginHero .oktaForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 55%;
+  padding: 5%;
+  margin: auto;
+  background-color: rgba(17, 25, 33, 0.8);
+  border-radius: 5px;
+}
+
+.loginHero .oktaForm .oktaTitle {
+  color: white;
+  margin: auto;
+  padding: 3%;
+  font-size: 3.6rem;
+}
+
+.loginHero .oktaForm .oktaLabel {
+  margin: auto;
+  font-size: 2rem;
+  padding: 3%;
+  color: white;
+}
+
+.loginHero .oktaForm .oktaInput {
+  padding: 2%;
+}
+
+.loginHero .oktaForm .oktaSubmit {
+  background-color: darkred;
+  color: white;
+  font-weight: bold;
+  width: 25%;
+  padding: 1.5%;
+  border: none;
+  border-radius: 3px;
+  margin: auto;
+  margin-top: 3%;
+}
+
+.loginHero .oktaForm .oktaSignUp {
+  margin: auto;
+  padding-top: 4%;
+  padding-bottom: 1%;
+  color: white;
+  font-size: 1.8rem;
+}
 /*# sourceMappingURL=index.css.map */
