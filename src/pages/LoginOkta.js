@@ -9,7 +9,6 @@ const LoginForm = ({ issuer }) => {
   const [sessionToken, setSessionToken] = useState();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
   const history = useHistory();
   
   const handleSubmit = (e) => {
@@ -28,7 +27,6 @@ const LoginForm = ({ issuer }) => {
         })
       .catch(err => {
         console.log('Failed to login', err)
-        setError(true)
       });
   };
 
@@ -47,6 +45,7 @@ const LoginForm = ({ issuer }) => {
 
 
   return (
+    <div>
       <form onSubmit={handleSubmit}>
         <label>
           Username:
@@ -64,6 +63,8 @@ const LoginForm = ({ issuer }) => {
         </label>
         <input id="submit" type="submit" value="Submit" />
       </form>
+      <div>Don't have an account? <button className="" onClick={()=>history.push("/register")}>Create one here.</button></div>
+    </div>
   );
 };
 export default LoginForm;
