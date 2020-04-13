@@ -9,7 +9,6 @@ const LoginForm = ({ issuer }) => {
   const [sessionToken, setSessionToken] = useState();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
   const history = useHistory();
   
   const handleSubmit = (e) => {
@@ -28,7 +27,6 @@ const LoginForm = ({ issuer }) => {
         })
       .catch(err => {
         console.log('Failed to login', err)
-        setError(true)
       });
   };
 
@@ -47,6 +45,9 @@ const LoginForm = ({ issuer }) => {
 
 
   return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
     <div className='loginHero'>
       <form className='oktaForm' onSubmit={handleSubmit}>
         <h2 className='oktaTitle'>Welcome to Sauti Design Studio</h2>
@@ -66,10 +67,8 @@ const LoginForm = ({ issuer }) => {
         </label>
         <input className='oktaSubmit' id="submit" type="submit" value="Submit" />
         <p className='oktaSignUp'>Don't have an account?</p>
-        <button className="oktaSubmit" onClick={()=>history.push("/registration")}>Create one here</button>
+        <button className="oktaSubmit" onClick={()=>history.push("/register")}>Create one here</button>
       </form>
-      
-
     </div>
   );
 };
