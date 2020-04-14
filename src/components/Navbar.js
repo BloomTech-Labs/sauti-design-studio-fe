@@ -1,5 +1,4 @@
 import React from "react";
-import React from "react";
 import Options from "./NavOptions.js";
 import { Link } from "react-router-dom";
 
