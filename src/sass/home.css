@@ -2,7 +2,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url(/static/media/sauti.18ec776d.jpg);
+  background-image: url("../images/sauti.jpg");
   height: 70vh;
   background-repeat: no-repeat;
   background-size: cover;
