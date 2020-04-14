@@ -30,17 +30,12 @@ class ProfileLoginOut extends React.Component {
         ";expires="+expireDate.toUTCString();
 }
 
-deleteCookie = (name) => {
-    this.setCookie(name, "", null , null , null, 1);
-    this.props.setUserId(null, false);
-    localStorage.removeItem("token")
-    localStorage.removeItem("id")
-}
+
 
   render(){
     return (
       <div className="navbar-links">
-        {(this.props.loggedIn === false)?(
+        {(!localStorage.getItem('token'))?(
           <>
         <Link to="/login">Sign in</Link>
         <Link className='signUpLink' to ="/register">Sign up</Link>
