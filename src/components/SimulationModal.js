@@ -99,7 +99,7 @@ class SimulationModal extends React.Component {
             </div>
             <div className="simulation-screen-container">
               <div className="to-container">
-                <p>
+                <p className='callback'>
                   Hosted At:{" "}
                   {process.env.REACT_APP_BE_API_URL
                     ? `${process.env.REACT_APP_BE_API_URL}/workflows/sim/${this.props.project_id}`

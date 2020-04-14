@@ -1357,10 +1357,11 @@ div.footer .footer-content a span.white {
           align-items: center;
 }
 
-.simulation-true .simulation-container .simulation-screen-container .to-container p {
+.simulation-true .simulation-container .simulation-screen-container .to-container .callback {
   padding: 0;
   margin-left: 1rem;
   font-size: 12px;
+  display: none;
 }
 
 .simulation-true .simulation-container .simulation-screen-container .receive-container {
