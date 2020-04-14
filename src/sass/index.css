@@ -114,8 +114,8 @@ input, textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: #1a1e23;
-  height: 70px;
+  background-color: white;
+  height: 6%;
   color: white;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -130,11 +130,15 @@ input, textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 15px;
-  width: auto;
+  width: 14%;
+  background-color: #1a1e23;
 }
 
 .navbar .nav-title-box .nav-title-content {
@@ -177,15 +181,35 @@ input, textarea {
 }
 
 .navbar .navbar-options .navbar-links a {
-  color: white;
+  font-size: 1.8rem;
   text-decoration: none;
-  margin-left: 2rem;
+  color: #303030;
+  padding: 7% .75%;
+  margin-left: -10%;
 }
 
 .navbar .navbar-options .navbar-links a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   color: darkred;
+}
+
+.navbar .navbar-options .navbar-links .signUpLink {
+  background-color: darkred;
+  border: 1px solid darkred;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 7% .75%;
+  border-radius: 3px;
+  font-size: 1.8rem;
+  margin-left: -10%;
+}
+
+.navbar .navbar-options .navbar-links .signUpLink:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #818181;
 }
 
 .navbar .navbar-options .navbar-links-2 {
@@ -449,6 +473,7 @@ div.tab-container .startLink {
 div.contact-container {
   background-color: #454545;
   color: white;
+  display: none;
 }
 
 div.contact-container header {

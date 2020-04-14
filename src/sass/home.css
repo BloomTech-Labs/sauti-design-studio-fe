@@ -237,6 +237,7 @@ div.tab-container .startLink {
 div.contact-container {
   background-color: #454545;
   color: white;
+  display: none;
 }
 
 div.contact-container header {
