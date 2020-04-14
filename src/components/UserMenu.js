@@ -16,6 +16,12 @@ export default function UserMenu() {
     setAnchorEl(null);
   };
 
+  const deleteCookie = (name) => {
+    //we now work with tokens but kept the name to ensure consistent cross over
+    localStorage.removeItem("token")
+    localStorage.removeItem("id")
+}
+
   return (
     <div>
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
@@ -32,7 +38,7 @@ export default function UserMenu() {
             <Link to={`/profile`}> Profile </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}> 
-            <Link to="/" onClick={()=>this.deleteCookie("user_id")}> Log Out </Link>
+            <Link to="/" onClick={()=>deleteCookie("user_id")}> Log Out </Link>
         </MenuItem>
       </Menu>
     </div>
