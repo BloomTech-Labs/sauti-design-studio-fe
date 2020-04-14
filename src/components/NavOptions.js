@@ -40,7 +40,10 @@ deleteCookie = (name) => {
     return (
       <div className="navbar-links">
         {(this.props.loggedIn === false)?(
-        <Link to="/login">Login</Link>
+          <>
+        <Link to="/login">Sign in</Link>
+        <Link className='signUpLink' to ="/register">Sign up</Link>
+        </>
         ):(
         <>
         {/* <Link to={`/profile/${this.props.user_id}`}>Profile</Link> */}
