@@ -114,8 +114,8 @@ input, textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: #1a1e23;
-  height: 70px;
+  background-color: white;
+  height: 6%;
   color: white;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -130,11 +130,15 @@ input, textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 15px;
-  width: auto;
+  width: 14%;
+  background-color: #1a1e23;
 }
 
 .navbar .nav-title-box .nav-title-content {
@@ -150,7 +154,7 @@ input, textarea {
 .navbar .nav-title-box .nav-title-content a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: tomato;
+  color: darkred;
 }
 
 .navbar .navbar-options {
@@ -177,15 +181,35 @@ input, textarea {
 }
 
 .navbar .navbar-options .navbar-links a {
-  color: white;
+  font-size: 1.8rem;
   text-decoration: none;
-  margin-left: 2rem;
+  color: #303030;
+  padding: 7% .75%;
+  margin-left: -10%;
 }
 
 .navbar .navbar-options .navbar-links a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: tomato;
+  color: darkred;
+}
+
+.navbar .navbar-options .navbar-links .signUpLink {
+  background-color: darkred;
+  border: 1px solid darkred;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 7% .75%;
+  border-radius: 3px;
+  font-size: 1.8rem;
+  margin-left: -10%;
+}
+
+.navbar .navbar-options .navbar-links .signUpLink:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #818181;
 }
 
 .navbar .navbar-options .navbar-links-2 {
@@ -207,45 +231,68 @@ input, textarea {
 .navbar .navbar-options .navbar-links-2 a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: tomato;
+  color: darkred;
 }
 
 .home-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  background-color: #fafafa;
-  height: 100px;
-  border: 1px;
-  color: black;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 20px;
+  background: url(/static/media/sauti.18ec776d.jpg);
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: darkred;
 }
 
 .home-header .header-content {
   font-size: 3.5rem;
-  margin-left: 20px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45%;
+  padding: 5%;
+  margin: auto;
+  background-color: rgba(17, 25, 33, 0.8);
+  border-radius: 5px;
+}
+
+.header-container .signUpLink {
+  background-color: darkred;
+  border: 1px solid darkred;
+  color: white;
+  text-decoration: none;
+  padding: 2% 2.5%;
+  border-radius: 3px;
+  font-size: 1.6rem;
+}
+
+.header-container .signUpLink:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #818181;
 }
 
 .home-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #fafafa;
-  height: 450px;
+  padding: 3%;
   border: 1px;
   color: black;
   -ms-flex-pack: distribute;
@@ -253,12 +300,21 @@ input, textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px;
+  margin-top: 3%;
 }
 
 .home-content {
   font-size: 2.5rem;
   width: 40%;
+}
+
+.home-content p {
+  font-size: 1.8rem;
+  margin-bottom: 5%;
+}
+
+.home-content span {
+  font-weight: bold;
 }
 
 .home-content button {
@@ -283,6 +339,14 @@ input, textarea {
 
 .home-content .flow-button {
   margin-top: 20px;
+}
+
+.mission {
+  background-color: darkred;
+  width: 100%;
+  color: white;
+  padding: 5%;
+  font-size: 3rem;
 }
 
 .home-list {
@@ -353,6 +417,104 @@ input, textarea {
 .home-info p {
   margin: 10px;
   font-size: 2.0rem;
+}
+
+p.learn {
+  margin: auto;
+}
+
+div.tab-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.tab-container iframe {
+  margin: auto;
+}
+
+div.tab-container .in-thirds {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+div.tab-container .in-thirds div {
+  width: 31%;
+}
+
+div.tab-container .startLink {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 12%;
+  background-color: darkred;
+  border: 1px solid darkred;
+  color: white;
+  text-decoration: none;
+  padding: 1%;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 4%;
+}
+
+div.contact-container {
+  background-color: #454545;
+  color: white;
+  display: none;
+}
+
+div.contact-container header {
+  margin: auto;
+  padding: 1.5%;
+}
+
+div.contact-container .contactLink {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: darkred;
+  border: 1px solid darkred;
+  color: white;
+  text-decoration: none;
+  padding: 1%;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 2%;
+}
+
+div.footer {
+  background-color: black;
+}
+
+div.footer .footer-content {
+  padding: 1%;
+}
+
+div.footer .footer-content a {
+  text-decoration: none;
+  padding: 0 .5%;
+  color: #c6c6c6;
+}
+
+div.footer .footer-content a span.red {
+  color: tomato;
+}
+
+div.footer .footer-content a span.white {
+  color: white;
 }
 
 .home-content2 {
@@ -452,7 +614,7 @@ input, textarea {
 .profile-page-container .projects-section .projects-title-add .btn:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: tomato;
+  color: darkred;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -735,7 +897,7 @@ input, textarea {
 }
 
 .taskbar .taskbar-container .taskbar-section i:hover {
-  color: tomato;
+  color: darkred;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -807,7 +969,7 @@ input, textarea {
 .custom-node-nodeTitle .check-box-true {
   width: 3rem;
   cursor: pointer;
-  color: tomato;
+  color: darkred;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-size: 3rem;
 }
@@ -822,7 +984,7 @@ input, textarea {
 }
 
 .custom-node-nodeTitle .check-box-false:hover {
-  color: tomato;
+  color: darkred;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -976,7 +1138,7 @@ input, textarea {
 }
 
 .custom-node-submenus .trash-icon i:hover {
-  color: tomato;
+  color: darkred;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -1012,7 +1174,7 @@ input, textarea {
 }
 
 .line-in .port:hover {
-  background: tomato;
+  background: darkred;
   border-radius: 50%;
 }
 
@@ -1042,7 +1204,7 @@ input, textarea {
 }
 
 .line-out .port:hover {
-  background: tomato;
+  background: darkred;
   border-radius: 50%;
 }
 
@@ -1097,7 +1259,7 @@ input, textarea {
 }
 
 .custom-node-addMenuOption i:hover {
-  color: tomato;
+  color: darkred;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -1579,7 +1741,7 @@ input, textarea {
 }
 
 .loginHero {
-  background-image: url("../images/sauti2.jpg");
+  background-image: url(/static/media/sauti2.c36e776a.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1651,5 +1813,12 @@ input, textarea {
   padding-bottom: 1%;
   color: white;
   font-size: 1.8rem;
+}
+
+.loginHero .oktaForm .oktaEntry {
+  margin: auto;
+  font-size: 1.8rem;
+  padding: 1.5%;
+  margin-top: 1.5%;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,5 +1,5 @@
 .loginHero {
-  background-image: url("../images/sauti2.jpg");
+  background-image: url(/static/media/sauti2.c36e776a.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -71,5 +71,12 @@
   padding-bottom: 1%;
   color: white;
   font-size: 1.8rem;
+}
+
+.loginHero .oktaForm .oktaEntry {
+  margin: auto;
+  font-size: 1.8rem;
+  padding: 1.5%;
+  margin-top: 1.5%;
 }
 /*# sourceMappingURL=LoginOkta.css.map */
