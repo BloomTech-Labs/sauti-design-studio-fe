@@ -29,10 +29,10 @@ export default function UserMenu() {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}>
-            <Link to={`/profile`}>Profile</Link>
+            <Link to={`/profile`}> Profile </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}> 
-            <Link to="/" onClick={()=>this.deleteCookie("user_id")}>Log Out</Link>
+            <Link to="/" onClick={()=>this.deleteCookie("user_id")}> Log Out </Link>
         </MenuItem>
       </Menu>
     </div>
