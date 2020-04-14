@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { getProjectsByUserId,addProjectByUserId,setProjectId,setUserId } from "../actions";
 
 import { Link } from "react-router-dom";
+import UserMenu from './UserMenu.js';
 
 
 
@@ -47,10 +48,7 @@ deleteCookie = (name) => {
         ):(
         <>
         {/* <Link to={`/profile/${this.props.user_id}`}>Profile</Link> */}
-        <Link to={`/profile`}>Profile</Link>
-        <Link to="/" onClick={()=>this.deleteCookie("user_id")}>
-          Log Out
-        </Link>
+          <UserMenu />
         </>
         )}
       </div>
