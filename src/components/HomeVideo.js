@@ -76,7 +76,7 @@ export default function HomeVideo() {
             <div className='in-thirds'>
                 <div>
                     {/* i need to find/add the images from the figma and 32% flexbox them */}
-                    <IoIosCode color='black' size='10rem'/>
+                    <IoIosCode color='black' size='10rem' />
                     <p>No programming background needed</p>
                 </div>
                 <div>
