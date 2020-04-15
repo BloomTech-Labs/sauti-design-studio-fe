@@ -80,23 +80,6 @@ class Profile extends React.Component {
         <Navbar/>
         <div className="profile-page-container">
           <section className="projects-section">
-            <div className="projects-title-add">
-              <h2>Projects</h2>
-              <div 
-                className="btn"
-                title="Add Project"
-                onClick={()=>this.addProject(
-                  {
-                    project_title: "Enter Title...",
-                    graph_json: null,
-                    user_id: this.props.user_id,
-                    initial_node_id: null
-                  }
-                )}
-              >
-                <i className="fas fa-plus-square"></i>
-              </div>
-            </div>
             {
               (this.props.fetching || this.props.projects === null || this.state.projects === null)?(
                 // On Loading Provide Temporary Loading Screen 
@@ -122,13 +105,39 @@ class Profile extends React.Component {
                     >
                     <div className="title-container">
                       <h3>{ project.project_title }</h3>
+                      <p>Project Staus</p>
+                      <p># of cards</p>
+                      <p>Last edit date</p>
+                      <p>API requests 119/225</p>
+                      <p>API bar graph</p>
+                      <p>Use period</p>
+                      <div className='project-card-buttons'>
+                        <button>Delete</button>
+                        <button><span className='emphasize'>Edit</span></button>
+                      </div>
                     </div>
                   </div>
                     }
                   })}
+                  <div 
+                    //this is the add project button 
+                    className="add-button-container title-container"
+                    title="Add Project"
+                    onClick={()=>this.addProject(
+                      {
+                        project_title: "Enter Title...",
+                        graph_json: null,
+                        user_id: this.props.user_id,
+                        initial_node_id: null
+                      }
+                    )}
+                  >
+                  <i className="fas fa-plus-square"></i>
+                </div>
                 </div>
               )
             }
+            
           </section>
         </div>
       </>

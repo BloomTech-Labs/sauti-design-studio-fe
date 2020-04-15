@@ -2,8 +2,7 @@
 .home-header {
   display: flex;  
   background-image: url('../images/sauti.jpg');
-  //background: url(/static/media/sauti.18ec776d.jpg);
-  height: 70vh;
+  height: 65vh;
   background-repeat: no-repeat; 
   background-size: cover; 
   background-color: darkred;
@@ -16,12 +15,22 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    width: 45%;
+    text-align: center;
+    width: 65%;
     padding: 5%;
     margin: auto;
     background-color: rgba(17, 25, 33, .8);
     border-radius: 5px;
+    margin-top: 12%;
+    margin-left: 10% !important;
     //need to position like in figma
+
+    h3{
+      padding: 1%;
+    }
+    p{
+      padding-top: 2%;
+    }
   }
 }
 .header-container{
@@ -33,6 +42,8 @@
     padding: 2% 2.5%;
     border-radius: 3px;
     font-size: 1.6rem;    
+    padding-top: 2%;
+    margin-left: 31%;
     //need to position with above container  
     
     &:hover{
@@ -189,25 +200,50 @@ div.tab-container{
 //contact us styles
 div.contact-container{
   background-color: #454545;
-  color: white;
-  display: none;
+  color: white; 
+
 
   header{
+    text-align: center;
     margin: auto;
     padding: 1.5%;
   }
-  .contactLink {
-    align-self: flex-end;
-    background-color: darkred;
-    border: 1px solid darkred;
-    color: white;
-    text-decoration: none;
-    padding: 1%;
-    border-radius: 3px;
-    text-align: center;
-    font-size: 1.6rem;
-    margin:2%;
+  .contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 35%;
+    margin: auto;
+
+    #contact-email-label{
+      font-size: 1.3rem;
+      padding-bottom: .5%;
+    }
+    .contact-input{
+      padding: 1% 2%;
+    }
+
+    .contact-input-area{
+      padding: 4% 2%;
+      margin-top:2%;
+    }
+
+    .contactLink {
+      align-self: flex-end;
+      background-color: darkred;
+      border: 1px solid darkred;
+      color: white;
+      text-decoration: none;
+      padding: 1%;
+      border-radius: 3px;
+      text-align: center;
+      font-size: 1.6rem;
+      margin:2%;
   }
+  }
+
+
 
 }
 

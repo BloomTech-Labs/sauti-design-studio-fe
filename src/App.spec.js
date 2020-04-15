@@ -39,7 +39,7 @@ describe('<App />', () => {
         </Router>
       </Provider>
     );
-    const loginButton = screen.getByText(/Login/i);
+    const loginButton = screen.getByText(/Sign in/i);
     await waitFor(()=> fireEvent.click(loginButton))
     await waitFor(()=> expect(screen.getByText('Login with Google')))
     getByText('Login with Google')
