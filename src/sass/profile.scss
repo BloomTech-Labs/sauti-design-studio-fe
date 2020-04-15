@@ -40,6 +40,15 @@
                 color:black;
                 width: 20rem;
                 height: 30rem;
+                margin-top: 0.45%
+
+                i{
+                    color: white;
+                    background-color: darkred;
+                    border: 8px solid darkred;
+                    border-radius: 50%;
+                    font-size: 5rem;
+                }
             }
             .project{
                 display: flex;
@@ -71,21 +80,22 @@
                     .project-card-buttons{
                         display: flex;
                         justify-content: space-between;
+                        align-content: stretch;
+                        margin-left: 22%;
 
                         button{
                             background-color: white;
                             font-size: 1.4rem;
                             border:none;
                             justify-self: flex-start;
-                            margin-right: 10%;
-                            margin-left: -47%
+
 
                             
                         }
-                        .red{
+                        .emphasize{
                                 color:darkred;
                                 justify-self: flex-end;
-                                margin-left: 73%;
+                                
                         }
                     }
 
