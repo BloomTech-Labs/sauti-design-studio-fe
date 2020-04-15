@@ -624,8 +624,7 @@ div.footer .footer-content a span.white {
       -ms-flex-align: start;
           align-items: flex-start;
   overflow-y: auto;
-  border-top: 0.5rem solid black;
-  border-bottom: 0.5rem solid black;
+  margin-top: 1%;
   margin-bottom: 2rem;
   padding-top: 2rem;
   height: 100%;
@@ -660,7 +659,7 @@ div.footer .footer-content a span.white {
   color: black;
   width: 20rem;
   height: 30rem;
-  margin-top: 0.45%;
+  margin-top: 0.3%;
 }
 
 .profile-page-container .projects-section .projects-list .add-button-container i {
