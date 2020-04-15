@@ -185,7 +185,6 @@ input, textarea {
   text-decoration: none;
   color: #303030;
   padding: 7% .75%;
-  margin-left: -10%;
 }
 
 .navbar .navbar-options .navbar-links a:hover {
@@ -1844,13 +1843,13 @@ div.footer .footer-content a span.white {
   margin-top: 1.5%;
 }
 
-
 .loginHero .oktaForm .oktaError {
   color: rgba(253, 82, 110, 0.8);
   font-weight: bold;
   font-size: 1.7rem;
   margin: auto;
-  
+}
+
 div.project-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1891,6 +1890,5 @@ div.project-bar .project-buttons button .red {
 
 div.project-bar .project-buttons .red {
   color: darkred;
-
 }
 /*# sourceMappingURL=index.css.map */

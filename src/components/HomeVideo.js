@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
+import {IoIosCode, IoMdCreate, IoMdPhonePortrait} from "react-icons/io"
 import { withStyles } from '@material-ui/core/styles';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+
 
 
 const ExpansionPanel = withStyles({
@@ -75,14 +76,17 @@ export default function HomeVideo() {
             <div className='in-thirds'>
                 <div>
                     {/* i need to find/add the images from the figma and 32% flexbox them */}
+                    <IoIosCode color='black' size='10rem'/>
                     <p>No programming background needed</p>
                 </div>
                 <div>
                     {/* i need to find/add the images from the figma and 32% flexbox them */}
+                    <IoMdCreate color='black' size='10rem'/>
                     <p>Quickly create, update, and save apps</p>
                 </div>
                 <div>
                     {/* i need to find/add the images from the figma and 32% flexbox them */}
+                    <IoMdPhonePortrait color='black' size='10rem'/>
                     <p>Easily see what you create</p>
                 </div>
             </div>
