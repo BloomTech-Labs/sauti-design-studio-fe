@@ -23,22 +23,23 @@ export default function UserMenu() {
 }
 
   return (
-    <div>
-      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+    <div className='user-menu-container'>
+      <Button className='user-menu-icon' aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
         User profile
       </Button>
       <Menu
         id="simple-menu"
+        className = 'user-menu'
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}>
-            <Link to={`/profile`}> Profile </Link>
+            <Link className='user-menu-link' to={`/profile`}> Profile </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}> 
-            <Link to="/" onClick={()=>deleteCookie("user_id")}> Log Out </Link>
+            <Link className='user-menu-link' to="/" onClick={()=>deleteCookie("user_id")}> Log Out </Link>
         </MenuItem>
       </Menu>
     </div>

@@ -1,17 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Breadcrumbs } from "@material-ui/core";
+
+import Breadcrumb from './Breadcrumbs.js';
 
 const ProjectBar = () => {
   return (
-    <div className="project bar">
+    <div className="project-bar">
       <div className="breadcrumbs">
-        <Breadcrumbs />
-        
+        <Breadcrumb />     
       </div>
-      <div className="navbar-options">
-        <Options />
+      
+      <div className='project-buttons'>
+        {/* if on canvas display buttons, if on project list display:none */}
+        <button><span className='red'>+</span>Add</button>
+        <button>Save</button>
+        <button>View</button>
+        <button className='red'>Publish</button>        
+        <button>Delete</button>
       </div>
+
     </div>
   );
 };
+
+export default ProjectBar;

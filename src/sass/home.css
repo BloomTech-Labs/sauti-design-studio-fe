@@ -3,7 +3,7 @@
   display: -ms-flexbox;
   display: flex;
   background-image: url("../images/sauti.jpg");
-  height: 70vh;
+  height: 65vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: darkred;
@@ -24,11 +24,22 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 45%;
+  text-align: center;
+  width: 65%;
   padding: 5%;
   margin: auto;
   background-color: rgba(17, 25, 33, 0.8);
   border-radius: 5px;
+  margin-top: 12%;
+  margin-left: 10% !important;
+}
+
+.home-header .header-content h3 {
+  padding: 1%;
+}
+
+.home-header .header-content p {
+  padding-top: 2%;
 }
 
 .header-container .signUpLink {
@@ -39,6 +50,8 @@
   padding: 2% 2.5%;
   border-radius: 3px;
   font-size: 1.6rem;
+  padding-top: 2%;
+  margin-left: 31%;
 }
 
 .header-container .signUpLink:hover {
@@ -237,15 +250,46 @@ div.tab-container .startLink {
 div.contact-container {
   background-color: #454545;
   color: white;
-  display: none;
 }
 
 div.contact-container header {
+  text-align: center;
   margin: auto;
   padding: 1.5%;
 }
 
-div.contact-container .contactLink {
+div.contact-container .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 35%;
+  margin: auto;
+}
+
+div.contact-container .contact-form #contact-email-label {
+  font-size: 1.3rem;
+  padding-bottom: .5%;
+}
+
+div.contact-container .contact-form .contact-input {
+  padding: 1% 2%;
+}
+
+div.contact-container .contact-form .contact-input-area {
+  padding: 4% 2%;
+  margin-top: 2%;
+}
+
+div.contact-container .contact-form .contactLink {
   -ms-flex-item-align: end;
       align-self: flex-end;
   background-color: darkred;

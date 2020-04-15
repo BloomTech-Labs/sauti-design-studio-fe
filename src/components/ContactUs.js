@@ -56,10 +56,9 @@ const ContactUs = props => {
       <header>
         <h2 className="contact-form-title"> Contact Us</h2>
       </header>
-      <form className="contact-form" onSubmit={submit}>        
-        <div id="contact-form-group">
+      <form className="contact-form" onSubmit={submit}>      
           <label id="contact-email-label" for="email">
-            Email
+            Email address
           </label>
           <input
             type="text"
@@ -70,11 +69,8 @@ const ContactUs = props => {
             value={credentials.email}
             onChange={handleChange}
             required
-          />
-        </div>
+          />   
         
-        <div class="contact-form-group">
-          
           <textarea
             id="comments"
             className="contact-input-area"
@@ -83,12 +79,11 @@ const ContactUs = props => {
             onChange={handleChange}
             placeholder="Type message here..."
           />
-        </div>
-        <div>
+      
           <button className="contactLink" type="submit" id="submit" >
             Submit
           </button>
-        </div>
+        
       </form>
     </div>
   );
