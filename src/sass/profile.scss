@@ -28,19 +28,18 @@
             -ms-overflow-style: none;  /* IE 10+ */
             &::-webkit-scrollbar {
                 width: 0px;
-                background: transparent; /* Chrome/Safari/Webkit */
-
-                .add-button-container{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    border: 1px solid lightgray;                 
-                    background-color: $snow;
-                    color:black;
-                    width: 20rem;
-                    height: 30rem;
-                }
+                background: transparent; /* Chrome/Safari/Webkit */           
+            }
+            .add-button-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid lightgray;                 
+                background-color: $snow;
+                color:black;
+                width: 20rem;
+                height: 30rem;
             }
             .project{
                 display: flex;
