@@ -57,10 +57,10 @@ export default function HomeVideo() {
 
   return (
     <div>
-      <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+      <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>        
         <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
           <p className='learn'>Learn More</p>
-          {/* insert terinary toggleing up 	&uArr and down &dArr arrow */}
+          {/* insert terinary toggleing up 	&uArr and down &dArr arrow as well as the panel1 on 60 so that it default to closed but will toggle open/close */}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className ='tab-container'>
             <iframe

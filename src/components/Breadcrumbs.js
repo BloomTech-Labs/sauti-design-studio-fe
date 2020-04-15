@@ -18,19 +18,19 @@ function handleClick(event) {
   console.info('You clicked a breadcrumb.');
 }
 
-export default function CustomSeparator() {
+export default function Breadcrumb() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
+      {/* would like to make this dynamic to user's history */}
       <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
         <Link color="inherit" href="/" onClick={handleClick}>
           Home
         </Link>
         <Link color="inherit" href="/profile" onClick={handleClick}>
-          Projects
+          My Projects
         </Link>
-        <Typography color="textPrimary">Breadcrumb</Typography>
       </Breadcrumbs>
     </div>
   );
