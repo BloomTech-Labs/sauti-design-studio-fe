@@ -234,6 +234,7 @@ export const deleteProject = (project_id, props) => dispatch => {
         payload: response.data
       });
       props.history.push("/profile");
+      
     })
     .catch(err => dispatch({ type: DELETE_PROJECT_FAILURE, payload: err }));
 };
