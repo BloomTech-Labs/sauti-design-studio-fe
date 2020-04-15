@@ -34,7 +34,7 @@ class DeleteModal extends React.Component {
                         <div className="btn-container">
                         <button
                             onClick={() => {
-                                this.props.deleteProject(this.props.project_id, this.props.props);
+                                this.props.deleteProject(this.props.project_id, this.props)
                             }}
                             className="delete-btn-yes"
                         >

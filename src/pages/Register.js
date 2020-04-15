@@ -51,12 +51,15 @@ const Register = ({ issuer }) => {
     }
 
     return (
-        <div>
-            <input type="text" onChange={handleChanges} name="firstName" value={newUser.firstName} placeholder="first name"/>
-            <input type="text" onChange={handleChanges} name="lastName" value={newUser.lastName} placeholder="last name"/>
-            <input type="email" onChange={handleChanges} name="email" value={newUser.email} placeholder="email"/>
-            <input type="password" onChange={handleChanges} name="password" value={newUser.password} placeholder="password"/>
-            <button onClick={handleSubmit}>Create User</button>
+        <div className='loginHero'>
+            <form className='oktaForm'>
+                <h3 className='oktaTitle'>Let's get started</h3>
+                <input className='oktaEntry' type="text" onChange={handleChanges} name="firstName" value={newUser.firstName} placeholder="first name"/>
+                <input className='oktaEntry' type="text" onChange={handleChanges} name="lastName" value={newUser.lastName} placeholder="last name"/>
+                <input className='oktaEntry' type="email" onChange={handleChanges} name="email" value={newUser.email} placeholder="email"/>
+                <input className='oktaEntry' type="password" onChange={handleChanges} name="password" value={newUser.password} placeholder="password"/>
+                <button className="oktaSubmit" onClick={handleSubmit}>Create User</button>
+            </form>
         </div>
     )
 }

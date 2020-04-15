@@ -7,8 +7,9 @@ const Navbar = () => {
     <div className="navbar">
       <div className="nav-title-box">
         <h2 className="nav-title-content">
-          <Link to="/">SAUTI DESIGN STUDIO</Link>
+          <Link to="/">SAUTI.</Link>
         </h2>
+        <p>Studio + Design</p>
       </div>
       <div className="navbar-options">
         <Options />
@@ -18,3 +19,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

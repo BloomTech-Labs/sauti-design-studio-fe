@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { getProjectsByUserId,addProjectByUserId,setProjectId,setUserId } from "../actions";
 
 import { Link } from "react-router-dom";
+import UserMenu from './UserMenu.js';
 
 
 
@@ -29,25 +30,20 @@ class ProfileLoginOut extends React.Component {
         ";expires="+expireDate.toUTCString();
 }
 
-deleteCookie = (name) => {
-    this.setCookie(name, "", null , null , null, 1);
-    this.props.setUserId(null, false);
-    localStorage.removeItem("token")
-    localStorage.removeItem("id")
-}
+
 
   render(){
     return (
       <div className="navbar-links">
-        {(this.props.loggedIn === false)?(
-        <Link to="/login">Login</Link>
+        {(!localStorage.getItem('token'))?(
+          <>
+        <Link to="/login">Sign in</Link>
+        <Link className='signUpLink' to ="/register">Sign up</Link>
+        </>
         ):(
         <>
         {/* <Link to={`/profile/${this.props.user_id}`}>Profile</Link> */}
-        <Link to={`/profile`}>Profile</Link>
-        <Link to="/" onClick={()=>this.deleteCookie("user_id")}>
-          Log Out
-        </Link>
+          <UserMenu />
         </>
         )}
       </div>
