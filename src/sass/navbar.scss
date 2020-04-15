@@ -6,7 +6,7 @@
   color: white;
   justify-content: space-between;
   align-items: center;
-  padding: 0% 2%;
+ 
 
 .nav-title-box {
   display: flex;
@@ -35,35 +35,39 @@
     font-size: 3rem;
     display: flex;
     justify-content: space-between;
-    width: auto;
+    width: 10%;
 
     .navbar-links {
         display: flex;
         justify-content: space-between;
-        width: 100%;
         text-decoration: none;
 
         a{
+          //justify-self: flex-start;
             font-size: 1.8rem;
             text-decoration: none;
             color: #303030;
-            padding: 7% .75%;
-            margin-left: -10%;
+             padding: 4% .75%;
+             width:  60%;
             &:hover{
               transition: 0.5s;
               color: darkred;
+            
             }
         }
         .signUpLink {
+          //justify-self: flex-end;
+          text-align: center;
             background-color: darkred;
             border:1px solid darkred;
             color: white;
             font-weight: bold;
             text-decoration: none;            
-            padding: 7% .75%;
-            border-radius: 3px;
-            font-size: 1.8rem;
-            margin-left: -10%;
+            padding: 4% .75%;
+            border-radius: 3px;            
+            margin-left: 2%;
+            width:  70% !important;
+            
             
             &:hover{
               transition: 0.5s;

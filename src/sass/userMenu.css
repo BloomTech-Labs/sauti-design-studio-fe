@@ -1,1 +1,9 @@
-/* No CSS *//*# sourceMappingURL=userMenu.css.map */
+.user-menu-container {
+  border: 2px solid red;
+  padding: 1%;
+}
+
+.user-menu-container .user-menu-icon {
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=userMenu.css.map */
