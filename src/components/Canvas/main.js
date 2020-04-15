@@ -116,7 +116,7 @@ class CustomExample extends React.Component {
     this.props.getCanvasById(this.props.project_id);
   }
         
-  saveCanvas = () => {
+  saveCanvas = async () => {
     let savedCanvas = cerealBox.serialize();
     // console.log("savedCanvas------------", savedCanvas);
     let key, objUpdate, parent_id = null;
@@ -132,7 +132,7 @@ class CustomExample extends React.Component {
         user_id: this.props.user_id,
         initial_node_id: parent_id 
       }
-      this.props.saveCanvas(objUpdate, this.props.project_id);
+      await this.props.saveCanvas(objUpdate, this.props.project_id);
     }else{
       window.alert("Check A Parent Node Before Saving!");
     }
@@ -277,7 +277,7 @@ class CustomExample extends React.Component {
   render() {
     return (
       <div className="diagram-page">
-        <DeleteModal props={this.props.props}/>
+        <DeleteModal props={this.props.props} history={this.props.history}/>
         <SimulationModal props={this.props.props}/>
         <section className="title-and-buttons">
           <h2
@@ -330,7 +330,7 @@ class CustomExample extends React.Component {
             <button
               className="cursor"
               onClick={() => {
-                this.props.setDeleteState(this.props.delete_project);
+                this.props.setDeleteState(this.props.delete_project)
               }}
             >
               Delete App

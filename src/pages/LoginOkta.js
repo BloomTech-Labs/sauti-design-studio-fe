@@ -16,7 +16,6 @@ const LoginForm = ({ issuer }) => {
     const oktaAuth = new OktaAuth({ issuer: issuer });
     oktaAuth.signIn({ username, password })
       .then(res => {
-        console.log("okta response: ", res)
         res.user.sessionToken = res.data.sessionToken;
         axios.post(`${process.env.REACT_APP_BE_API_URL}/auth/okta/verify`, res.user)
         .then(res=>{

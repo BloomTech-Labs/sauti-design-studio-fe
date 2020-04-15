@@ -28,9 +28,10 @@ class Profile extends React.Component {
     let user_id = localStorage.getItem("id")
     // On page load request users projects 
     if(user_id){
-      if(this.props.user_id !== null && (this.props.user_id === user_id)){
+      console.log("This should always happen on load")
+      // if(this.props.user_id !== null && (this.props.user_id === user_id)){
         this.props.getProjectsByUserId(this.props.user_id);
-      }
+      // }
       if(this.props.user_id !== user_id){
         this.props.setUserId(user_id, true);
       }

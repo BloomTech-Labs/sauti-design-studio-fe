@@ -62,7 +62,6 @@ export default function PublishModal() {
       <div id="simple-modal-description">
         <PublishForm open={open} setOpen={setOpen} handleClose={handleClose} count={count} setCount={setCount}/>
       </div>
-      <PublishModal />
     </div>
   );
 
