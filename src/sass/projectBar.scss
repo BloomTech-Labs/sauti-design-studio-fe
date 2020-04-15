@@ -1,0 +1,32 @@
+div.project-bar{
+    display: flex;
+    justify-content: space-between;
+
+    .breadcrumbs{
+        justify-self: flex-start;
+        margin-left: 2.5%;
+        a{
+          font-size: 1.4rem;  
+        }
+        
+    }
+    .project-buttons{
+        justify-self: flex-end;
+        display: flex;
+        justify-content: space-around;
+        margin-right: 2.5%;
+
+        button{
+            background-color: white;
+            font-size: 1.4rem;
+            border:none;
+
+            .red{
+                color:darkred;
+            }
+        }
+        .red{
+            color:darkred;
+        }
+    }
+}
