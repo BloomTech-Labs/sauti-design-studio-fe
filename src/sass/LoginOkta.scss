@@ -1,5 +1,5 @@
 .loginHero{
-    background-image: url(/static/media/sauti2.c36e776a.jpg);
+    background-image: url("../images/sauti2.jpg");
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover; 
@@ -58,6 +58,12 @@
             font-size: 1.8rem;
             padding: 1.5%;
             margin-top: 1.5%;
+        }
+        .oktaError{
+            color: rgba(253, 82, 110, 0.8);
+            font-weight: bold;
+            font-size: 1.7rem;
+            margin: auto;
         }
     }
 }

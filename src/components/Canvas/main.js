@@ -277,7 +277,7 @@ class CustomExample extends React.Component {
   render() {
     return (
       <div className="diagram-page">
-        <DeleteModal props={this.props.props}/>
+        <DeleteModal props={this.props.props} history={this.props.history}/>
         <SimulationModal props={this.props.props}/>
         <section className="title-and-buttons">
           <h2
@@ -330,7 +330,7 @@ class CustomExample extends React.Component {
             <button
               className="cursor"
               onClick={() => {
-                this.props.setDeleteState(this.props.delete_project);
+                this.props.setDeleteState(this.props.delete_project)
               }}
             >
               Delete App
