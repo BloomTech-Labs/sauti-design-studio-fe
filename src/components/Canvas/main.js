@@ -116,7 +116,7 @@ class CustomExample extends React.Component {
     this.props.getCanvasById(this.props.project_id);
   }
         
-  saveCanvas = async () => {
+  saveCanvas = () => {
     let savedCanvas = cerealBox.serialize();
     // console.log("savedCanvas------------", savedCanvas);
     let key, objUpdate, parent_id = null;
@@ -132,7 +132,7 @@ class CustomExample extends React.Component {
         user_id: this.props.user_id,
         initial_node_id: parent_id 
       }
-      await this.props.saveCanvas(objUpdate, this.props.project_id);
+      this.props.saveCanvas(objUpdate, this.props.project_id);
     }else{
       window.alert("Check A Parent Node Before Saving!");
     }

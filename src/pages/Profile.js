@@ -12,26 +12,11 @@ class Profile extends React.Component {
     projects: null
   }
 
-  getCookies = () =>{
-    let pairs = document.cookie.split(";");
-    let cookies = {};
-    for (let i=0; i<pairs.length; i++){
-      let pair = pairs[i].split("=");
-      cookies[(pair[0]+'').trim()] = unescape(pair.slice(1).join('='));
-    }
-    return cookies;
-  }
-
   componentDidMount(){
-    // let user_id = this.getCookies().user_id;
-    // let user_id = Number(window.location.pathname.split("/").pop());
     let user_id = localStorage.getItem("id")
     // On page load request users projects 
     if(user_id){
-      console.log("This should always happen on load")
-      // if(this.props.user_id !== null && (this.props.user_id === user_id)){
-        this.props.getProjectsByUserId(this.props.user_id);
-      // }
+      this.props.getProjectsByUserId(this.props.user_id);
       if(this.props.user_id !== user_id){
         this.props.setUserId(user_id, true);
       }
@@ -42,9 +27,8 @@ class Profile extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState){
-    // let user_id = Number(window.location.pathname.split("/").pop());
-    // let user_id = this.getCookies().user_id;
     let user_id = localStorage.getItem("id")
+
     if(user_id){
       // On Create New Project: request projects
       if(this.props.added_project !== prevProps.added_project && !this.props.added_project){
