@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,oBAAoB,CAAA;EAChB,MAAM,EAAE,aAAa;EACrB,OAAO,EAAC,EAAE;CAgBb;;AAlBD,AAKI,oBALgB,CAKhB,eAAe,CAAA;EACX,SAAS,EAAE,MAAM;CACpB;;AAPL,AAUQ,oBAVY,CAUZ,CAAC,AAAA,eAAe,CAAA;EACZ,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,MAAM;EACjB,OAAO,EAAE,EAAE;CACd",
     "sources": [
         "userMenu.scss"
     ],
