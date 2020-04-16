@@ -57,7 +57,7 @@ const Register = ({ issuer }) => {
         <Navbar />
         <div className='loginHero'>
             <form className='oktaForm' onSubmit={handleSubmit(onSubmit)}>
-                <h3 className='oktaTitle'>Create an account</h3>
+                <h3 className='oktaTitle'>Create an Account</h3>
                 <input className='oktaEntry' type="text"  name="firstName"  placeholder="first name" ref={register({ required: true})}/>
                     {errors.firstName && <span className="oktaError">First name is a required field</span>}
                 <input className='oktaEntry' type="text"  name="lastName" placeholder="last name" ref={register({ required: true})}/>
@@ -69,7 +69,8 @@ const Register = ({ issuer }) => {
                 <input className='oktaEntry' type="password"  name="confirmPassword" placeholder="confirm password" ref={register({ required: true, validate: (value) => { return value === password.current || "The passwords do not match"}})} />
                     {errors.confirmPassword && <span className="oktaError">Must match the password</span>}
                     <p className='password-reqs'>Password must be 8 letters long, include a number, a capital letter, a lowercase letter. <br/> <span className='emphasize'>    Password cannot contain part of email.</span></p>
-                <button className="oktaSubmit">Create User</button>
+                <button className="oktaSubmit">Sign Up</button>
+                <p style={{color:"white", textAlign:"center", margin:"1%"}}>Already have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/login')}>Click here to sign in.</span></p>
             </form>
         </div>
         </>

@@ -1840,6 +1840,7 @@ div.footer .footer-content a span.white {
 .loginHero .oktaForm .oktaSubtitle {
   font-size: 1.8rem;
   text-align: center;
+  color: white;
 }
 
 .loginHero .oktaForm .oktaLabel {
@@ -1870,6 +1871,7 @@ div.footer .footer-content a span.white {
   border-radius: 3px;
   margin: auto;
   margin-top: 3%;
+  cursor: pointer;
 }
 
 .loginHero .oktaForm .oktaSignUp {
@@ -1927,5 +1929,12 @@ div.project-bar .breadcrumbs a {
   color: black;
   font-size: 1.2rem;
   padding: 5%;
+}
+
+#simple-menu div ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+  padding: 3%;
 }
 /*# sourceMappingURL=index.css.map */

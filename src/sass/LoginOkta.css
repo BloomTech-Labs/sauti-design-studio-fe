@@ -58,6 +58,7 @@
 .loginHero .oktaForm .oktaSubtitle {
   font-size: 1.8rem;
   text-align: center;
+  color: white;
 }
 
 .loginHero .oktaForm .oktaLabel {
@@ -88,6 +89,7 @@
   border-radius: 3px;
   margin: auto;
   margin-top: 3%;
+  cursor: pointer;
 }
 
 .loginHero .oktaForm .oktaSignUp {
