@@ -14,6 +14,7 @@ const PublishForm = props => {
     title: "",
     implementationCountry: "TZ",
     user_id: props.user_id,
+    project_title: props.project_title,
     project_id: props.project_id,
     comments: "",
     callback: callbackURL
@@ -68,15 +69,16 @@ const PublishForm = props => {
   return (
     <div id="container">
       <header>
-        <h1 id="form-title"> Have your app published</h1>
+      <i class="fa fa-exclamation-circle fa_custom fa-5x"></i>
+        <h1 id="form-title"> Submit app for publication</h1>
         <p id="description">
-          Application to have your project deploy to AfricaTalking
+          Enter your information to deploy your <em>{credentials.project_title}</em> app
         </p>
       </header>
       <form id="survey-form" onSubmit={submit}>
         <div class="form-group">
           <label id="name-label" for="name">
-            Name{" "}
+            Name*{" "}
           </label>
           <input
             type="text"
@@ -91,7 +93,7 @@ const PublishForm = props => {
         </div>
         <div class="form-group">
           <label id="organization-label" for="organization">
-            Organization
+            Organization*
           </label>
           <input
             type="text"
@@ -106,7 +108,7 @@ const PublishForm = props => {
         </div>
         <div class="form-group">
           <label id="email-label" for="email">
-            Email
+            Email*
           </label>
           <input
             type="text"
@@ -121,7 +123,7 @@ const PublishForm = props => {
         </div>
         <div class="form-group">
           <label id="title-label" for="title">
-            Title
+            Title*
           </label>
           <input
             type="text"

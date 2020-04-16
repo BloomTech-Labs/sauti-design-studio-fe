@@ -468,6 +468,7 @@ div.tab-container .in-thirds {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  text-align: center;
 }
 
 div.tab-container .in-thirds div {
@@ -1674,23 +1675,36 @@ div.footer .footer-content a span.white {
   border: 1px solid black;
 }
 
+#container {
+  height: 90vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto 1fr;
+      grid-template-rows: auto 1fr auto 1fr;
+  grid-gap: 10px;
+      grid-template-areas: "advert" "header" "content";
+}
+
+#container .fa_custom {
+  color: orange;
+}
+
 #container #form-title {
   font-size: 3.5rem;
-  font-weight: bolder;
-  padding-bottom: 6%;
+  font-weight: bold;
 }
 
 @media (max-width: 600px) {
   #container #form-title {
     font-size: 3rem;
     font-weight: bold;
-    padding-bottom: 6%;
+    padding-bottom: 3%;
   }
 }
 
 #container #description {
   font-weight: bold;
-  padding-bottom: 4%;
 }
 
 @media (max-width: 600px) {
@@ -1700,71 +1714,75 @@ div.footer .footer-content a span.white {
   }
 }
 
-#container label {
-  line-height: 1.5;
-  font-size: 1.6rem;
-  padding-right: 1%;
-  padding-bottom: 3%;
+#container #survey-form {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  grid-gap: 5px;
 }
 
-#container input {
-  margin: 1%;
-  padding-top: 2%;
+#container #survey-form .form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
 }
 
-#container select {
-  margin: 1%;
-  padding-top: 2%;
+#container #survey-form .form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid #C6C6C6;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-#container textarea {
-  margin: 0 auto;
-  padding-top: 5%;
-  padding-right: 15%;
-  margin-bottom: 4%;
+#container #survey-form .form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-#container p {
-  margin: 4%;
-  margin-left: 0%;
-  font-style: italic;
-  font-size: 1.8rem;
+#container #survey-form .input-radio,
+#container #survey-form .input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
 }
 
-#container .submit {
+#container #survey-form .input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+#container #survey-form .submit {
+  background-color: #CB3D2F;
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 23%;
-  height: 35px;
-  background-color: #575a88;
-  color: #fbffff;
-  font-size: 1.4rem;
-  font-weight: bold;
-  border: 1px solid #575a88;
-  border-radius: 1.12rem;
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--tomato);
+  color: white;
+  border-radius: 2px;
   cursor: pointer;
-  outline: none;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-}
-
-#container .submit:hover {
-  background-color: #393b59;
-  color: #fbffff;
-  border: 1px solid #434569;
 }
 
 @media (max-width: 900px) {
-  #container .submit {
+  #container #survey-form .submit {
     width: 35%;
   }
 }
