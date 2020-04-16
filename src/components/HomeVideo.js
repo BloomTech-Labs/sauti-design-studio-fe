@@ -50,17 +50,19 @@ const ExpansionPanelDetails = withStyles((theme) => ({
 }))(MuiExpansionPanelDetails);
 
 export default function HomeVideo() {
-  const [expanded, setExpanded] = React.useState('panel1');
-
+    const [expanded, setExpanded] = React.useState('panel1');
+    const [learningOpen, setLearningOpen] = React.useState(false)
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
+    setLearningOpen(!learningOpen)
   };
 
   return (
     <div>
       <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>        
         <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
-          <p className='learn'>Learn More</p>
+          {/* <p className='learn'>Learn More   </p> */}
+          {learningOpen ? <p className='learn'>Learn More {"\n"}{"\n"} {String.fromCharCode(8681)}</p> : <p className="learn"> Learn More {"\n"}{"\n"} {String.fromCharCode(8679)} </p>}
           {/* insert ternary toggling up 	&uArr and down &dArr arrow as well as the panel1 on 60 so that it default to closed but will toggle open/close */}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className ='tab-container'>
@@ -92,8 +94,7 @@ export default function HomeVideo() {
             </div>
             <Link className='startLink' to ="/login">Get Started</Link>
         </ExpansionPanelDetails>
-      </ExpansionPanel>
-     
+      </ExpansionPanel>     
     </div>
   );
 }

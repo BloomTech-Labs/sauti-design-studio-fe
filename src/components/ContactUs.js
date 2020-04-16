@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import {axiosWithAuth} from "./utils/axiosWithAuth";
-import { connect } from "react-redux";
-
 
 const ContactUs = props => {
-  const callbackURL = process.env.REACT_APP_BE_API_URL
-    ? `${process.env.REACT_APP_BE_API_URL}/workflows/sim/${props.project_id}`
-    : `http://localhost:5000/workflows/sim/${props.project_id}`;
   const [credentials, setCredentials] = useState({
     email: "",
     comments: ""
@@ -28,29 +23,28 @@ const ContactUs = props => {
 
   const submit = e => {
     e.preventDefault();
-
-    console.log("this is credentials at submission", credentials);
-    axiosWithAuth()
-      .post(
-        `${
-          process.env.REACT_APP_BE_API_URL
-            ? process.env.REACT_APP_BE_API_URL
-            : "http://localhost:5000"
-        }/publish/send`,
-        credentials
-      )
-      .then(res => {
-        console.log("this is the API response", res);
-        if (res.data.status === "success") {
-          alert("message Sent");
-          resetCredentials();
-          props.setOpen(false);
-        } else if (Response.data.status === "failure") {
-          alert("message failed to send");
-        }
-      })
-      .catch(err => console.log(err));
+    if (credentials.comments.trim() !== ""){
+      axiosWithAuth()
+        .post(
+          `${
+            process.env.REACT_APP_BE_API_URL
+              ? process.env.REACT_APP_BE_API_URL
+              : "http://localhost:5000"
+          }/publish/contact`,
+          credentials
+        )
+        .then(res => {
+          if (res.data.status === "success") {
+            alert("message Sent");
+            resetCredentials();
+          } else if (Response.data.status === "failure") {
+            alert("message failed to send");
+          }
+        })
+        .catch(err => console.log(err));
+    }
   };
+
   return (
     <div className="contact-container">
       <header>
@@ -81,16 +75,12 @@ const ContactUs = props => {
           />
       
           <button className="contactLink" type="submit" id="submit" >
-            Submit
+            Send
           </button>
         
       </form>
     </div>
   );
 };
-const mapStateToProps = state => ({
-  user_id: state.user_id,
-  project_id: state.project_id,
-  project_title: state.project_title
-});
-export default connect(mapStateToProps, {})(ContactUs);
+
+export default ContactUs;

@@ -4,7 +4,7 @@ import { saveCanvas, getCanvasById, deleteProject, setDeleteState, setSimulation
 import DeleteModal from "../DeleteModal.js";
 import SimulationModal from "../SimulationModal.js";
 import PublishModal from '../PublishModal';
-
+import ProjectBar from '../ProjectBar'
 
 import createEngine, {
   DiagramModel,
@@ -300,6 +300,14 @@ class CustomExample extends React.Component {
             }}
             />
           <div className="project-buttons">
+          <button
+              className="cursor"
+              onClick={() => {
+                this.createNode();
+              }}
+            >
+              <span className='red' >+ </span>Add
+            </button>
             <button
               className="cursor"
               onClick={(event) => {
@@ -340,7 +348,7 @@ class CustomExample extends React.Component {
 
         <section className="taskbar">
         <div className="taskbar-container">
-            <div className="taskbar-section">
+            {/* <div className="taskbar-section">
               <i 
                 className="fas fa-plus-square"
                 title="Add Screen"
@@ -348,7 +356,7 @@ class CustomExample extends React.Component {
                   this.createNode();
                 }}
               ></i>
-            </div>
+            </div> */}
                <div className="taskbar-section">
               <i 
                 className="fas fa-search-plus"

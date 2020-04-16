@@ -124,6 +124,7 @@
   color: white;
   padding: 5%;
   font-size: 3rem;
+  text-align: center;
 }
 
 .home-list {
@@ -302,6 +303,7 @@ div.contact-container .contact-form .contactLink {
   text-align: center;
   font-size: 1.6rem;
   margin: 2%;
+  cursor: pointer;
 }
 
 div.footer {
