@@ -56,6 +56,7 @@ const LoginForm = ({ issuer }) => {
     <div className='loginHero'>
       <form className='oktaForm' onSubmit={handleSubmit(onSubmit)}>
         <h2 className='oktaTitle'>Welcome to Sauti Design Studio</h2>
+        <p className='oktaSubtitle'>Sign in below</p>
           {loginError.length > 0 ? <span className="oktaError">{loginError}</span> : <></>}
           <input
             className='oktaLoginInput' type="text" name="email" placeholder="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })} 

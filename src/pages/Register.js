@@ -57,7 +57,7 @@ const Register = ({ issuer }) => {
         <Navbar />
         <div className='loginHero'>
             <form className='oktaForm' onSubmit={handleSubmit(onSubmit)}>
-                <h3 className='oktaTitle'>Let's get started</h3>
+                <h3 className='oktaTitle'>Create an account</h3>
                 <input className='oktaEntry' type="text"  name="firstName"  placeholder="first name" ref={register({ required: true})}/>
                     {errors.firstName && <span className="oktaError">First name is a required field</span>}
                 <input className='oktaEntry' type="text"  name="lastName" placeholder="last name" ref={register({ required: true})}/>

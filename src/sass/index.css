@@ -368,6 +368,7 @@ input, textarea {
   color: white;
   padding: 5%;
   font-size: 3rem;
+  text-align: center;
 }
 
 .home-list {
@@ -1826,7 +1827,7 @@ div.footer .footer-content a span.white {
 .loginHero .oktaForm .password-reqs .emphasize {
   font-weight: bold;
   font-size: 1.1rem;
-  margin-left: 2%;
+  margin-left: 18%;
 }
 
 .loginHero .oktaForm .oktaTitle {
@@ -1834,6 +1835,11 @@ div.footer .footer-content a span.white {
   margin: auto;
   padding: 3%;
   font-size: 3.6rem;
+}
+
+.loginHero .oktaForm .oktaSubtitle {
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 .loginHero .oktaForm .oktaLabel {
