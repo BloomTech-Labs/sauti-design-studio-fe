@@ -1,7 +1,7 @@
 import * as React from "react";
 import { connect } from "react-redux";
 
-import { deleteProject, setDeleteState } from "../actions";
+import { deleteProject, setDeleteState, getProjectsByUserId } from "../actions";
 class DeleteModal extends React.Component {
     state = {
         // local State Indicator Providing Styling Functionality
@@ -33,8 +33,9 @@ class DeleteModal extends React.Component {
                         <h3>Confirm App Deletion</h3>
                         <div className="btn-container">
                         <button
-                            onClick={() => {
-                                this.props.deleteProject(this.props.project_id, this.props)
+                            onClick={async () => {
+                                await this.props.deleteProject(this.props.project_id, this.props)
+                                this.props.getProjectsByUserId(this.props.user_id)
                             }}
                             className="delete-btn-yes"
                         >
@@ -73,5 +74,5 @@ const mapStateToProps = state => ({
 // Connecting State and Rdux Reducer Methods
 export default connect(
 mapStateToProps,
-{ deleteProject, setDeleteState }
+{ deleteProject, setDeleteState, getProjectsByUserId }
 )(DeleteModal); 

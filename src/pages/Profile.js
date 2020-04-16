@@ -2,7 +2,9 @@ import React from 'react';
 import { withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { getProjectsByUserId,addProjectByUserId,setProjectId,setUserId } from "../actions";
+import { getProjectsByUserId,addProjectByUserId,setProjectId,setUserId,deleteProject, setDeleteState } from "../actions";
+
+import DeleteModal from "../components/DeleteModal";
 
 import Navbar from '../components/Navbar';
 
@@ -16,14 +18,15 @@ class Profile extends React.Component {
     let user_id = localStorage.getItem("id")
     // On page load request users projects 
     if(user_id){
-      this.props.getProjectsByUserId(this.props.user_id);
-      if(this.props.user_id !== user_id){
+      if(this.props.user_id !== null && (this.props.user_id === user_id)){
+        this.props.getProjectsByUserId(this.props.user_id);
+      }
+      else if(this.props.user_id !== user_id){
         this.props.setUserId(user_id, true);
       }
     }else if(!user_id || this.props.loggedIn === false){
       this.props.history.push("/");
     }
- 
   }
 
   componentDidUpdate(prevProps, prevState){
@@ -42,9 +45,9 @@ class Profile extends React.Component {
           });
       }
       // On selection of a project an ID is place on redux state and then update routing to project page
-      else if(this.props.fetchingProjectId !== prevProps.fetchingProjectId && this.props.fetchingProjectId === false){
-        this.props.history.push("/workflows");
-      }
+      // else if(this.props.fetchingProjectId !== prevProps.fetchingProjectId && this.props.fetchingProjectId === false){
+      //   this.props.history.push("/workflows");
+      // }
       if(this.props.user_id !== prevProps.user_id){
         this.props.getProjectsByUserId(this.props.user_id);
       }
@@ -77,6 +80,7 @@ class Profile extends React.Component {
   render(){
       return (
         <>
+        <DeleteModal props={this.props} history={this.props.history}/>
         <Navbar/>
         <div className="profile-page-container">
           <section className="projects-section">
@@ -89,19 +93,14 @@ class Profile extends React.Component {
                 <div className="projects-list">
                   {this.state.projects.map(project => {
                     if(project.add !== undefined){
-                      return <div 
-                    >
-                    <div className="title-container">
-                      <h3>{ project.add }</h3>
-                    </div>
-                  </div>
+                      return <div className="title-container">
+                        <h3>{ project.add }</h3>
+                      </div>
                     }else{
                     return <div 
                     className="project"
                     key={project.id}
-                    onClick={
-                      ()=> this.props.setProjectId(project.id)
-                    }
+                    
                     >
                     <div className="title-container">
                       <h3>{ project.project_title }</h3>
@@ -112,8 +111,16 @@ class Profile extends React.Component {
                       <p>API bar graph</p>
                       <p>Use period</p>
                       <div className='project-card-buttons'>
-                        <button>Delete</button>
-                        <button><span className='emphasize'>Edit</span></button>
+
+                        <button onClick={async () => {
+                          await this.props.setProjectId(project.id)
+                          await this.props.setDeleteState(this.props.delete_project)
+                        }}>Delete</button>
+
+                        <button><span className='emphasize' onClick={
+                      async ()=> {await this.props.setProjectId(project.id)
+                      this.props.history.push("/workflows")}
+                    }>Edit</span></button>
                       </div>
                     </div>
                   </div>
@@ -132,8 +139,8 @@ class Profile extends React.Component {
                       }
                     )}
                   >
-                  <i className="fas fa-plus-square"></i>
-                </div>
+                    <i className="fas fa-plus-circle"></i>
+                  </div>
                 </div>
               )
             }
@@ -156,10 +163,11 @@ const mapStateToProps = state => ({
   fetching: state.fetching,
   error: state.error,
   loggedIn: state.loggedIn,
-  fetchingProjectId: state.fetchingProjectId
+  fetchingProjectId: state.fetchingProjectId,
+  delete_project: state.delete_project
 });
 
 // Connecting State and Rdux Reducer Methods
 export default withRouter(connect(mapStateToProps,
-  { getProjectsByUserId, addProjectByUserId, setProjectId, setUserId }
+  { getProjectsByUserId, addProjectByUserId, setProjectId, deleteProject, setDeleteState, setUserId }
 )((Profile))) 

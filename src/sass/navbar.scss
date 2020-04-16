@@ -1,41 +1,42 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  background-color:white;
-  height: 6%;
   color: white;
   justify-content: space-between;
   align-items: center;
- 
+  width: 100%;
 
-.nav-title-box {
-  display: flex;
-  flex-direction: column;
-  align-items:center;    
-  width: 14%;
-  background-color: #1a1e23;
- 
-  
+  .nav-title-box {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: #1a1e23;
+    padding: 0 1%;
+    width: auto;
 
-  .nav-title-content {
-    padding: 0;
-    a {
-      font-size: 4rem;
-      text-decoration: none;
-      color: white;
-      &:hover{
-        transition: 0.5s;
-        color: $tomato;
+    .nav-title-content {
+      text-align: center;
+      padding: 1%;
+      width: 150px;
+      a {
+        font-size: 4rem;
+        text-decoration: none;
+        color: white;
+        &:hover{
+          transition: 0.5s;
+          color: $tomato;
+        }
       }
     }
   }
-}
+
   .navbar-options {
+    text-align: center;
     font-size-adjust: 1rem;
     font-size: 3rem;
     display: flex;
     justify-content: space-between;
-    width: 10%;
+    padding-right: 1%;
 
     .navbar-links {
         display: flex;
@@ -44,53 +45,53 @@
 
         a{
           //justify-self: flex-start;
-            font-size: 1.8rem;
-            text-decoration: none;
-            color: #303030;
-             padding: 4% .75%;
-             width:  60%;
-            &:hover{
-              transition: 0.5s;
-              color: darkred;
-            
-            }
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.8rem;
+          text-decoration: none;
+          color: #303030;
+          height: 35px;
+          width: 100px;
+          
+          &:hover{
+            transition: 0.5s;
+          
+          }
         }
         .signUpLink {
           //justify-self: flex-end;
           text-align: center;
-            background-color: darkred;
-            border:1px solid darkred;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;            
-            padding: 4% .75%;
-            border-radius: 3px;            
-            margin-left: 2%;
-            width:  70% !important;
-            
-            
-            &:hover{
-              transition: 0.5s;
-              color: #818181;
-            }
-          }
+          background-color: darkred;
+          border:1px solid darkred;
+          color: white;
+          font-weight: bold;
+          text-decoration: none;     
+          border-radius: 3px;    
           
-      }
-      //not sure where below code renders to, might need to be logged in to see
-      .navbar-links-2 {
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        text-decoration: none;
-    
-        a {
-            color: white;
-            text-decoration: none;
-            &:hover{
-              transition: 0.5s;
-              color: $tomato;
-            }
+          &:hover{
+            transition: 0.5s;
+            color: #818181;
           }
-      }
-}
+        }
+          
+    }
+      
+    //not sure where below code renders to, might need to be logged in to see
+    .navbar-links-2 {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      text-decoration: none;
+  
+      a {
+          color: white;
+          text-decoration: none;
+          &:hover{
+            transition: 0.5s;
+            color: $tomato;
+          }
+        }
+    }
+  }
 }
