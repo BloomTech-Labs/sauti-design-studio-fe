@@ -8,6 +8,7 @@ import DeleteModal from "../components/DeleteModal";
 
 import Navbar from '../components/Navbar';
 import ProjectBar from '../components/ProjectBar.js';
+import Footer from '../components/Footer.js';
 
 class Profile extends React.Component {
   state={
@@ -149,6 +150,7 @@ class Profile extends React.Component {
             
           </section>
         </div>
+        <Footer />
       </>
     )
   }

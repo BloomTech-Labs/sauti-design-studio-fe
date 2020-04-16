@@ -6,6 +6,7 @@ import  {useForm} from 'react-hook-form'
 import { useHistory } from "react-router-dom";
 
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.js';
 
 const LoginForm = ({ issuer }) => { 
   const { authService } = useOktaAuth();
@@ -59,18 +60,18 @@ const LoginForm = ({ issuer }) => {
         <p className='oktaSubtitle'>Sign in below</p>
           {loginError.length > 0 ? <span className="oktaError">{loginError}</span> : <></>}
           <input
-            className='oktaLoginInput' type="text" name="email" placeholder="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })} 
+            className='oktaLoginInput' id="email" type="text" name="email" placeholder="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })} 
            />
            {errors.email && <span className="oktaError">Please use a valid email address"</span>}
           <input
-           className='oktaLoginInput' type="password" name="password" placeholder="password" ref={register({ required: true, minLength:{ value: 8, message: "Password must have at least 8 characters"}, pattern: { value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!$%@#£€*?&]{8,}$/i, message: " your password must contain at least one upper case letter, one lower case letter and one number" }  })}
+           className='oktaLoginInput' type="password" name="password" placeholder="password" ref={register({ required: true, minLength:{ value: 8, message: "Password must have at least 8 characters"}, pattern: { value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!$%@#£€*?&]{8,}$/i, message: "Password must contain at least one upper case letter, one lower case letter and one number" }  })}
              />
              {errors.password && <span className="oktaError">{errors.password.message}</span>}
         <input className='oktaSubmit' id="submit" type="submit" value="Submit" />
-        <p className='oktaSignUp'>Don't have an account?</p>
-        <button className="oktaSubmit" onClick={()=>history.push("/register")}>Create one here</button>
+        <p style={{color:"white", textAlign:"center", margin:"1%"}}>Don't have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/login')}>Click here to sign up.</span></p>
       </form>
     </div>
+    <Footer />
     </>
   );
 };

@@ -4,6 +4,7 @@ import  {useForm} from 'react-hook-form'
 import OktaAuth from '@okta/okta-auth-js';
 import axios from "axios";
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.js';
 
 // const initialState = {
 //     firstName: "",
@@ -73,6 +74,7 @@ const Register = ({ issuer }) => {
                 <p style={{color:"white", textAlign:"center", margin:"1%"}}>Already have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/login')}>Click here to sign in.</span></p>
             </form>
         </div>
+        <Footer />
         </>
     )
 }

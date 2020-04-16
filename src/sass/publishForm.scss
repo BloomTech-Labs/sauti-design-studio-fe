@@ -46,7 +46,7 @@
     }
     .submit {
         align-self: center;
-        @include custom-btn(23%, 35px, $darkslateblue, #fbffff, 1.4rem);
+        @include custom-btn(23%, 35px, $tomato, #fbffff, 1.4rem);
         @media (max-width: 900px) {
             width: 35%;
         }
