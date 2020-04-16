@@ -159,12 +159,13 @@ const PublishForm = props => {
             onChange={handleChange}
             placeholder="Enter your comment here..."
           />
-        </div>
-        <div>
+                  <div className="submitbutton">
           <button className="submit" type="submit" id="submit" >
             Submit
           </button>
         </div>
+        </div>
+
       </form>
     </div>
   );

@@ -1,5 +1,5 @@
 #container {
-  height: 90vh;
+  height: 50vh;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -75,37 +75,28 @@
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-#container #survey-form .input-radio,
-#container #survey-form .input-checkbox {
-  display: inline-block;
-  margin-right: 0.625rem;
-  min-height: 1.25rem;
-  min-width: 1.25rem;
-}
-
 #container #survey-form .input-textarea {
-  min-height: 120px;
   width: 100%;
   padding: 0.625rem;
-  resize: vertical;
 }
 
-#container #survey-form .submit {
+#container #survey-form .submitbutton {
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+
+#container #survey-form .submitbutton .submit {
   background-color: #CB3D2F;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  display: block;
-  width: 100%;
+  width: 20%;
   padding: 0.75rem;
-  background: var(--tomato);
   color: white;
-  border-radius: 2px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 @media (max-width: 900px) {
-  #container #survey-form .submit {
+  #container #survey-form .submitbutton .submit {
     width: 35%;
   }
 }
