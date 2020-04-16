@@ -67,8 +67,9 @@ export default function PublishModal() {
 
   return (
     <>
+        {/* "{`${count > 0 ? hidden : cursor publish }`}" */}
         {/* need a way to make this publish button visible only from main canvas page */}
-      <button className="{`${count > 0 ? hidden : cursor publish }`}" onClick={handleOpen}> 
+       <button className='cursor red' onClick={handleOpen}>  
         Publish
       </button>
       <Modal

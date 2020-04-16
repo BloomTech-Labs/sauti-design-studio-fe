@@ -16,7 +16,7 @@ export default function UserMenu() {
     setAnchorEl(null);
   };
 
-  const deleteCookie = (name) => {
+  const deleteCookie = () => {
     //we now work with tokens but kept the name to ensure consistent cross over
     localStorage.removeItem("token")
     localStorage.removeItem("id")
@@ -39,7 +39,7 @@ export default function UserMenu() {
             <Link className='user-menu-link' to={`/profile`}> Profile </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}> 
-            <Link className='user-menu-link' to="/" onClick={()=>deleteCookie("user_id")}> Log Out </Link>
+            <Link className='user-menu-link' to="/login" onClick={deleteCookie}> Log Out </Link>
         </MenuItem>
       </Menu>
     </div>

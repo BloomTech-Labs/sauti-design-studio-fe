@@ -110,6 +110,7 @@
   color: white;
   padding: 5%;
   font-size: 3rem;
+  text-align: center;
 }
 .home-list {
   font-size: 1.3rem;
@@ -177,6 +178,7 @@ div.tab-container{
     flex-direction: row;
     justify-content: space-evenly;
     text-align: center;
+    padding: 3%;
     div{
       width: 31%;
     }
@@ -240,6 +242,7 @@ div.contact-container{
       text-align: center;
       font-size: 1.6rem;
       margin:2%;
+      cursor: pointer;
   }
   }
 

@@ -5,6 +5,7 @@
 .user-menu-container .user-menu-icon {
   font-size: 1.4rem;
   width: 150px;
+  color: white;
 }
 
 .user-menu-container a.user-menu-link {
@@ -12,5 +13,12 @@
   color: black;
   font-size: 1.2rem;
   padding: 5%;
+}
+
+#simple-menu div ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+  padding: 3%;
 }
 /*# sourceMappingURL=userMenu.css.map */
