@@ -1,10 +1,10 @@
 .user-menu-container {
-  border: 2px solid red;
-  padding: 1%;
+  border-left: 2px solid gray;
 }
 
 .user-menu-container .user-menu-icon {
   font-size: 1.4rem;
+  width: 150px;
 }
 
 .user-menu-container a.user-menu-link {

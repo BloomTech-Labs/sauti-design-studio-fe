@@ -232,9 +232,28 @@ export const deleteProject = (project_id, props) => dispatch => {
       dispatch({
         type: DELETE_PROJECT_SUCCESS,
         payload: response.data
-      });
-      props.history.push("/profile");
-      
+      })
+    })
+    // gets project list after successfully deleting a project to update project list
+    // because get projects by id was completing before deleting success
+    // This makes get projects by id happen after a successful deletion
+    .then(result => {
+      dispatch({ type: GET_PROJECTS_BY_ID_START });
+      let endpoint;
+      if(productionServer){
+        endpoint = `${productionServer}/projects/user/${props.user_id}`;
+      }else{
+        endpoint = `http://localhost:5000/projects/user/${props.user_id}`;
+      } 
+      axiosWithAuth()
+        .get(
+          endpoint,
+        )
+        .then(response => {
+          dispatch({ type: GET_PROJECTS_BY_ID_SUCCESS, payload: response.data});
+          props.history.push("/profile")
+        })
+        .catch(err => dispatch({ type: GET_PROJECTS_BY_ID_FAILURE, payload: err }))
     })
     .catch(err => dispatch({ type: DELETE_PROJECT_FAILURE, payload: err }));
 };
