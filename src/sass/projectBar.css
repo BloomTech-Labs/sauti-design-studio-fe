@@ -15,28 +15,4 @@ div.project-bar .breadcrumbs {
 div.project-bar .breadcrumbs a {
   font-size: 1.4rem;
 }
-
-div.project-bar .project-buttons {
-  justify-self: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-right: 2.5%;
-}
-
-div.project-bar .project-buttons button {
-  background-color: white;
-  font-size: 1.4rem;
-  border: none;
-}
-
-div.project-bar .project-buttons button .red {
-  color: darkred;
-}
-
-div.project-bar .project-buttons .red {
-  color: darkred;
-}
 /*# sourceMappingURL=projectBar.css.map */

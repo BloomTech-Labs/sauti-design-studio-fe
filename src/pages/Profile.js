@@ -7,6 +7,7 @@ import { getProjectsByUserId,addProjectByUserId,setProjectId,setUserId,deletePro
 import DeleteModal from "../components/DeleteModal";
 
 import Navbar from '../components/Navbar';
+import ProjectBar from '../components/ProjectBar.js';
 
 class Profile extends React.Component {
   state={
@@ -82,6 +83,7 @@ class Profile extends React.Component {
         <>
         <DeleteModal props={this.props} history={this.props.history}/>
         <Navbar/>
+        <ProjectBar />
         <div className="profile-page-container">
           <section className="projects-section">
             {

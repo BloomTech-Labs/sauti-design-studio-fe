@@ -35,6 +35,19 @@
   border-radius: 5px;
 }
 
+.loginHero .oktaForm .password-reqs {
+  margin-top: 3%;
+  font-size: 1rem;
+  color: rgba(253, 82, 110, 0.8);
+  margin-left: 20%;
+}
+
+.loginHero .oktaForm .password-reqs .emphasize {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-left: 2%;
+}
+
 .loginHero .oktaForm .oktaTitle {
   color: white;
   margin: auto;
@@ -51,6 +64,13 @@
 
 .loginHero .oktaForm .oktaInput {
   padding: 2%;
+}
+
+.loginHero .oktaForm .oktaLoginInput {
+  padding: 2%;
+  font-size: 1.6rem;
+  margin: auto;
+  margin-top: 1.5%;
 }
 
 .loginHero .oktaForm .oktaSubmit {
@@ -77,7 +97,7 @@
   margin: auto;
   font-size: 1.8rem;
   padding: 1.5%;
-  margin-top: 1.5%;
+  margin-top: 1.5% !important;
 }
 
 .loginHero .oktaForm .oktaError {

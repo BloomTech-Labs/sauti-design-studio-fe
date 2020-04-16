@@ -14,7 +14,7 @@ export class AdvancedLinkModel extends DefaultLinkModel {
 			type: 'default',
 			width: 5,
 			color: 'black',
-			selectedColor: "#ff7300",
+			selectedColor: "darkred",
 			curvyness: 200,
 			...options
 		});

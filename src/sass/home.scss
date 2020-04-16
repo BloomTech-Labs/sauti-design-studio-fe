@@ -177,6 +177,7 @@ div.tab-container{
     flex-direction: row;
     justify-content: space-evenly;
     text-align: center;
+    padding: 3%;
     div{
       width: 31%;
     }
@@ -240,6 +241,7 @@ div.contact-container{
       text-align: center;
       font-size: 1.6rem;
       margin:2%;
+      cursor: pointer;
   }
   }
 
