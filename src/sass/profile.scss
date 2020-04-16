@@ -70,7 +70,7 @@
                     flex-direction: column;
                     justify-content: center;
                     margin: 2%;
-                    padding: 3%;
+                    padding: 2%;
                     align-items: center;
                     border: 1px solid lightgray;                 
                     background-color: $snow;
@@ -88,19 +88,21 @@
                         font-size: 1.2rem;
                     }
                     .project-card-buttons{
-                        width: 100%;
+                        width: 90%;
                         display: flex;
-                        justify-content: space-around;
+                        justify-content: space-between;
                         align-content: stretch;
 
                         button{
                             background-color: white;
                             font-size: 1.4rem;
                             border:none;
+                            cursor: pointer;
                             // justify-self: flex-start;
                         }
                         .emphasize{
                                 color:darkred;
+                                
                                 // justify-self: flex-end;
                                 
                         }
