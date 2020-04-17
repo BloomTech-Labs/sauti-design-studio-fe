@@ -54,21 +54,25 @@ const LoginForm = ({ issuer }) => {
   return (
   <>
     <Navbar />
-    <div className='loginHero'>
-      <form className='oktaForm' onSubmit={handleSubmit(onSubmit)}>
+    <div className='loginHero loginHero2'>
+      <form className='oktaForm oktaForm2' onSubmit={handleSubmit(onSubmit)}>
         <h2 className='oktaTitle'>Welcome to Sauti Design Studio</h2>
         <p className='oktaSubtitle'>Sign in below</p>
           {loginError.length > 0 ? <span className="oktaError">{loginError}</span> : <></>}
+          <span className="inputLabelSpan">
+            <label className="inputLabel" htmlFor="email">Email</label>
+            <input
+              className='oktaLoginInput' id="email" title="Enter an Email" type="text" name="email" placeholder="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })} 
+            />
+           </span>
+           {errors.email && <span className="oktaError">Please use a valid email address</span>}
+           <span className="inputLabelSpan"><label className="inputLabel" htmlFor="password">Password</label>
           <input
-            className='oktaLoginInput' id="email" type="text" name="email" placeholder="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })} 
-           />
-           {errors.email && <span className="oktaError">Please use a valid email address"</span>}
-          <input
-           className='oktaLoginInput' type="password" name="password" placeholder="password" ref={register({ required: true, minLength:{ value: 8, message: "Password must have at least 8 characters"}, pattern: { value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!$%@#£€*?&]{8,}$/i, message: "Password must contain at least one upper case letter, one lower case letter and one number" }  })}
-             />
+           className='oktaLoginInput' id="password" title="Enter a Password" type="password" name="password" placeholder="password" ref={register({ required: true, minLength:{ value: 8, message: "Password must have at least 8 characters."}, pattern: { value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!$%@#£€*?&]{8,}$/i, message: "Password must contain at least one upper case letter, one lower case letter, and one number" }  })}
+             /></span>
              {errors.password && <span className="oktaError">{errors.password.message}</span>}
-        <input className='oktaSubmit' id="submit" type="submit" value="Submit" />
-        <p style={{color:"white", textAlign:"center", margin:"1%"}}>Don't have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/login')}>Click here to sign up.</span></p>
+        <input className='oktaSubmit' id="submit" type="submit" value="Sign In" />
+        <p style={{color:"white", textAlign:"center", margin:"1%"}}>Don't have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/register')}>Click here to sign up.</span></p>
       </form>
     </div>
     <Footer />

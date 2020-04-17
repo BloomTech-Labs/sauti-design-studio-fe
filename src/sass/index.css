@@ -58,6 +58,7 @@ table {
 }
 
 html {
+  background-color: black;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -471,6 +472,7 @@ div.tab-container .in-thirds {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
+  padding: 3%;
 }
 
 div.tab-container .in-thirds div {
@@ -1692,7 +1694,7 @@ div.footer .footer-content a span.white {
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
   grid-gap: 10px;
-      grid-template-areas: "header" "content";
+      grid-template-areas: "header" "content";
 }
 
 #container .fa_custom {
@@ -1762,14 +1764,11 @@ div.footer .footer-content a span.white {
 }
 
 #container #survey-form .input-textarea {
-  min-height: 120px;
   width: 100%;
   padding: 0.625rem;
-  resize: vertical;
 }
 
 #container #survey-form .submitbutton {
-  border: 1px solid lightgrey;
   -webkit-box-align: right;
       -ms-flex-align: right;
           align-items: right;
@@ -1796,7 +1795,6 @@ div.footer .footer-content a span.white {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #818181;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1805,6 +1803,10 @@ div.footer .footer-content a span.white {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .loginHero .oktaForm {
@@ -1815,47 +1817,54 @@ div.footer .footer-content a span.white {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 55%;
-  padding: 5%;
-  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  padding: 2%;
+  margin: 4.5%;
   background-color: rgba(17, 25, 33, 0.8);
   border-radius: 5px;
 }
 
 .loginHero .oktaForm .password-reqs {
-  margin: 1%;
-  font-size: 1rem;
-  color: rgba(253, 82, 110, 0.8);
+  font-size: 1.2rem;
+  color: white;
   text-align: center;
+  margin-top: 1%;
 }
 
 .loginHero .oktaForm .password-reqs .emphasize {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 .loginHero .oktaForm .oktaTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: white;
-  margin: auto;
-  padding: 3%;
   font-size: 3.6rem;
+  width: 100%;
 }
 
 .loginHero .oktaForm .oktaSubtitle {
   font-size: 1.8rem;
   text-align: center;
   color: white;
+  width: 100%;
 }
 
 .loginHero .oktaForm .oktaLabel {
   margin: auto;
   font-size: 2rem;
-  padding: 3%;
+  padding: 1%;
   color: white;
 }
 
@@ -1863,25 +1872,50 @@ div.footer .footer-content a span.white {
   padding: 2%;
 }
 
-.loginHero .oktaForm .oktaLoginInput {
-  padding: 2%;
+.loginHero .oktaForm .inputLabelSpan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  width: 60%;
+}
+
+.loginHero .oktaForm .inputLabelSpan .oktaLoginInput {
   font-size: 1.6rem;
-  margin: auto;
-  margin-top: 1.5%;
+  width: 100%;
+  padding: 1.5% 0.5%;
+}
+
+.loginHero .oktaForm .inputLabelSpan .inputLabel {
+  color: white;
+  width: 100%;
+  font-size: 1.4rem;
+  margin-top: 2%;
 }
 
 .loginHero .oktaForm .oktaSubmit {
   background-color: darkred;
   color: white;
   font-weight: bold;
-  width: 25%;
+  width: 60%;
   padding: 1.5%;
   border: none;
   border-radius: 3px;
-  margin: auto;
-  margin-top: 3%;
-  margin-bottom: 3%;
   cursor: pointer;
+  margin-top: 2%;
+}
+
+.loginHero .oktaForm .oktaSubmit:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #818181;
 }
 
 .loginHero .oktaForm .oktaSignUp {
@@ -1901,9 +1935,13 @@ div.footer .footer-content a span.white {
 
 .loginHero .oktaForm .oktaError {
   color: rgba(253, 82, 110, 0.8);
-  font-weight: bold;
-  font-size: 1.7rem;
-  margin: auto;
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.loginHero .oktaForm2 {
+  margin: 10% 2%;
 }
 
 div.project-bar {

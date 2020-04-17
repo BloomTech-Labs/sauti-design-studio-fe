@@ -59,17 +59,29 @@ const Register = ({ issuer }) => {
         <div className='loginHero'>
             <form className='oktaForm' onSubmit={handleSubmit(onSubmit)}>
                 <h3 className='oktaTitle'>Create an Account</h3>
-                <input className='oktaEntry' type="text"  name="firstName"  placeholder="first name" ref={register({ required: true})}/>
+                <span className="inputLabelSpan">
+                    <label className="inputLabel" htmlFor="firstName">First Name</label>
+                <input className='oktaLoginInput' title="Enter a First Name" id="firstName" type="text"  name="firstName"  placeholder="first name" ref={register({ required: true})}/>
+                </span>
                     {errors.firstName && <span className="oktaError">First name is a required field</span>}
-                <input className='oktaEntry' type="text"  name="lastName" placeholder="last name" ref={register({ required: true})}/>
+                <span className="inputLabelSpan">
+                <label className="inputLabel" htmlFor="lastName">Last Name</label>
+                <input className='oktaLoginInput' title="Enter a Last Name" id="lastName" type="text"  name="lastName" placeholder="last name" ref={register({ required: true})}/>
+                </span>
                     {errors.lastName &&  <span className="oktaError">Last name is a required field</span>}
-                <input className='oktaEntry' type="email"  name="email" placeholder="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })}/> 
-                    {errors.email && "Please use a valid email address"}
-                <input className='oktaEntry' type="password"  name="password" placeholder="password" ref={register({ required: true, minLength:{ value: 8, message: "Password must have at least 8 characters"}, pattern: { value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!$%@#£€*?&]{8,}$/i, message: " your password must contain at least one upper case letter, one lower case letter and one number" }  })}/>
+                <span className="inputLabelSpan">
+                <label className="inputLabel" htmlFor="email">Email</label>
+                <input className='oktaLoginInput' title="Enter an Email" id="email" type="email"  name="email" placeholder="email" ref={register({ required: true, pattern: /^\S+@\S+$/i })}/></span>
+                    {errors.email && <span className="oktaError">Please use a valid email address</span>}
+                <span className="inputLabelSpan">
+                <label className="inputLabel" htmlFor="password">Password</label>
+                <input className='oktaLoginInput' title="Enter a Password" id="password" type="password"  name="password" placeholder="password" ref={register({ required: true, minLength:{ value: 8, message: "Passwords must have at least 8 characters"}, pattern: { value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!$%@#£€*?&]{8,}$/i, message: "Passwords must contain at least one upper case letter, one lower case letter, and one number." }  })}/></span>
                     {errors.password && <span className="oktaError">{errors.password.message}</span>}
-                <input className='oktaEntry' type="password"  name="confirmPassword" placeholder="confirm password" ref={register({ required: true, validate: (value) => { return value === password.current || "The passwords do not match"}})} />
+                <span className="inputLabelSpan">
+                <label className="inputLabel" htmlFor="confirmP">Confirm Password</label>
+                <input className='oktaLoginInput' id="confirmP" title="Confirm Password" type="password"  name="confirmPassword" placeholder="confirm password" ref={register({ required: true, validate: (value) => { return value === password.current || "The passwords do not match"}})} /></span>
                     {errors.confirmPassword && <span className="oktaError">Must match the password</span>}
-                    <p className='password-reqs'>Password must be 8 letters long, include a number, a capital letter, a lowercase letter. <br/> <span className='emphasize'>    Password cannot contain part of email.</span></p>
+                    <p className='password-reqs'>Passwords must have at least 8 characters, include a number, a capital letter, and a lowercase letter.<br/> <span className='emphasize'>    Passwords cannot contain part of email.</span></p>
                 <button className="oktaSubmit">Sign Up</button>
                 <p style={{color:"white", textAlign:"center", margin:"1%"}}>Already have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/login')}>Click here to sign in.</span></p>
             </form>

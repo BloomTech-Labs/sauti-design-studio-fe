@@ -4,72 +4,97 @@
     background-repeat: no-repeat; 
     background-size: cover; 
     background-color: #818181;
-    height: 100vh;
     display:flex;
 	justify-content: center;
-	align-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
     .oktaForm{
         display: flex;
         flex-direction: column;
-        align-content: center;
         justify-content: center;
-        width: 55%;
-        padding: 5%;
-        margin: auto;
+        align-items: center;
+        width: 60%;
+        padding: 2%;
+        // margin: auto;
+        margin: 4.5%;
         background-color: rgba(17, 25, 33, .8);
         border-radius: 5px;
-
         .password-reqs{
-            margin:1%;
-            font-size: 1rem;
-            color:rgba(253, 82, 110, 0.8);
+            // margin:1%;
+            font-size: 1.2rem;
+            color:white;
             text-align: center;
+            margin-top: 1%;
 
             .emphasize{
                 font-weight:bold;
-                font-size: 1.1rem;
+                font-size: 1.4rem;
             }
         }
 
         .oktaTitle{
+            display: flex;
+            justify-content: center;
             color:white;
-            margin:auto;
-            padding:3%;
+            // margin:auto;
+            // padding:3%;
             font-size: 3.6rem;
+            width: 100%;
+            
         }
         .oktaSubtitle{            
                 font-size: 1.8rem;
                 text-align: center;
-                color:white;            
+                color:white;   
+                width: 100%;         
         }
         .oktaLabel{
               margin: auto;
               font-size: 2rem;
-              padding: 3%;
+              padding: 1%;
               color:white;
         }
         .oktaInput{    
             padding: 2%;
           
         }
-        .oktaLoginInput{    
-            padding: 2%;
+        .inputLabelSpan{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color:white;
+            width: 60%;
+
+            .oktaLoginInput{    
             font-size: 1.6rem;
-            margin: auto;
-            margin-top: 1.5%;        
+            // margin: auto;
+            // margin-top: 1.5%;    
+            width: 100%;   
+            padding: 1.5% 0.5%;
+            }
+            .inputLabel{
+                color:white;
+                width: 100%;
+                font-size: 1.4rem;
+                margin-top: 2%;
+            }
         }
         .oktaSubmit{
             background-color: darkred;
             color:white;
             font-weight: bold;
-            width: 25%;
+            width: 60%;
             padding: 1.5%;
             border: none;
             border-radius: 3px;
-            margin: auto;
-            margin-top: 3%;
-            margin-bottom: 3%;
             cursor: pointer;
+            margin-top: 2%;
+
+            &:hover{
+                transition: 0.2s;
+                color: #818181;
+              }
         }
         .oktaSignUp{
             margin:auto;
@@ -86,9 +111,19 @@
         }
         .oktaError{
             color: rgba(253, 82, 110, 0.8);
-            font-weight: bold;
-            font-size: 1.7rem;
-            margin: auto;
+            // font-weight: bold;
+            font-size: 1.6rem;
+            // margin: auto;
+            padding: 0;
+            margin: 0;
         }
+        
     }
+    .oktaForm2{
+        margin: 10% 2%;
+    }
+    
 }
+// .loginHero2{
+//     height: 88vh;
+// }
