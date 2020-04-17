@@ -1689,7 +1689,7 @@ div.footer .footer-content a span.white {
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
   grid-gap: 10px;
-      grid-template-areas: "header" "content";
+      grid-template-areas: "header" "content";
 }
 
 #container .fa_custom {
@@ -1726,8 +1726,8 @@ div.footer .footer-content a span.white {
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
-  -ms-grid-rows: auto 1fr auto;
-      grid-template-rows: auto 1fr auto;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
   grid-gap: 5px;
 }
 
@@ -1751,30 +1751,38 @@ div.footer .footer-content a span.white {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-#container #survey-form .form-control:focus {
-  border-color: #80bdff;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
 #container #survey-form .input-textarea {
   width: 100%;
   padding: 0.625rem;
+  border: 1px solid lightgrey;
 }
 
 #container #survey-form .submitbutton {
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 15%;
+}
+
+#container #survey-form .submitbutton .cancel {
+  border: 1px solid #CB3D2F;
+  border-radius: 15px;
+  padding: 0.75rem;
+  width: 25%;
+  background: white;
+  margin-right: 15%;
 }
 
 #container #survey-form .submitbutton .submit {
   background-color: #CB3D2F;
-  width: 20%;
   padding: 0.75rem;
   color: white;
-  border-radius: 10px;
+  border-radius: 15px;
+  border: none;
+  width: 25%;
   cursor: pointer;
 }
 
