@@ -58,7 +58,6 @@ table {
 }
 
 html {
-  background-color: black;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -832,7 +831,6 @@ div.footer .footer-content a span.white {
           align-items: center;
   height: 60px;
   padding: 0px 2%;
-  background: snow;
   border-bottom: 1px solid gainsboro;
 }
 
@@ -1825,7 +1823,7 @@ div.footer .footer-content a span.white {
           align-items: center;
   width: 60%;
   padding: 2%;
-  margin: 4.5%;
+  margin: 5%;
   background-color: rgba(17, 25, 33, 0.8);
   border-radius: 5px;
 }
@@ -1941,7 +1939,7 @@ div.footer .footer-content a span.white {
 }
 
 .loginHero .oktaForm2 {
-  margin: 10% 2%;
+  margin: 10.7% 2%;
 }
 
 div.project-bar {
@@ -1963,7 +1961,7 @@ div.project-bar .breadcrumbs a {
 }
 
 .user-menu-container {
-  border-left: 2px solid gray;
+  border-left: 1px solid gray;
 }
 
 .user-menu-container .user-menu-icon {
