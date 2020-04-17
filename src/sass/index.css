@@ -621,7 +621,6 @@ div.footer .footer-content a span.white {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 2.5rem;
-  background: snow;
 }
 
 .profile-page-container .projects-section .projects-list {
@@ -668,7 +667,6 @@ div.footer .footer-content a span.white {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid lightgray;
-  background-color: snow;
   color: black;
   width: 28.9rem;
   height: 30rem;
@@ -713,7 +711,6 @@ div.footer .footer-content a span.white {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid lightgray;
-  background-color: snow;
   color: black;
   width: 30rem;
   height: 30rem;
@@ -743,7 +740,7 @@ div.footer .footer-content a span.white {
 }
 
 .profile-page-container .projects-section .projects-list .project .title-container .project-card-buttons button {
-  background-color: snow;
+  background-color: white;
   font-size: 1.4rem;
   border: none;
   cursor: pointer;
