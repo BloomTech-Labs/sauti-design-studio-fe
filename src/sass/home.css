@@ -227,7 +227,6 @@ div.tab-container .in-thirds {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
-  padding: 3%;
 }
 
 div.tab-container .in-thirds div {
