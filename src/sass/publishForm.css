@@ -6,7 +6,7 @@
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
   grid-gap: 10px;
-      grid-template-areas: "header" "content";
+      grid-template-areas: "header" "content";
 }
 
 #container .fa_custom {
