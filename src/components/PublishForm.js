@@ -74,10 +74,7 @@ const PublishForm = props => {
       <header>
         <i className="fa fa-exclamation-circle fa_custom fa-5x"></i>
         <h1 id="form-title"> Submit app for publication</h1>
-        <p id="description">
-          Enter your information to deploy your{" "}
-          <em>{credentials.project_title}</em> app
-        </p>
+        <p id="description">Enter your information to deploy your "<span>{`${credentials.project_title}`}</span>" app</p>
       </header>
       <form id="survey-form" onSubmit={submit}>
         <div className="form-group">
