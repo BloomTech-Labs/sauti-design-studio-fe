@@ -71,112 +71,112 @@ const PublishForm = props => {
   } 
   return (
     <div id="container">
-      <header>
-        <i className="fa fa-exclamation-circle fa_custom fa-5x"></i>
-        <h1 id="form-title"> Submit app for publication</h1>
-        <p id="description">Enter your information to deploy your "<span>{`${credentials.project_title}`}</span>" app</p>
+
+      <header className="header">
+        <span className="titleSection">
+          <i className="fa fa-exclamation-circle fa_custom fa-3x" title="You will receive an email confirming the submission of your app. Please wait for an adminstrator to contact you for further information."></i>
+          <h1 id="form-title">Submit app for publication</h1>
+        </span>
+        <p id="description">Enter the following information to deploy your "{`${credentials.project_title}`}" app</p>
       </header>
-      <form id="survey-form" onSubmit={submit}>
-        <div className="form-group">
-          <label id="name-label" for="name">
-            Name*{" "}
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            className="form-control"
-            placeholder="Enter your name"
-            value={credentials.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label id="organization-label" for="organization">
-            Organization*
-          </label>
-          <input
-            type="text"
-            name="organization"
-            id="organization"
-            className="form-control"
-            placeholder="Organization name"
-            value={credentials.organization}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label id="email-label" for="email">
-            Email*
-          </label>
-          <input
-            type="text"
-            name="email"
-            id="email"
-            className="form-control"
-            placeholder="Enter your email"
-            value={credentials.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label id="title-label" for="title">
-            Title*
-          </label>
-          <input
-            type="text"
-            name="title"
-            id="title"
-            className="form-control"
-            placeholder="Enter your Title"
-            value={credentials.title}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <p>Country</p>
-          <select
-            id="dropdown"
-            name="implementationCountry"
-            className="form-control"
-            value={credentials.implementationCountry}
-            onChange={handleChange}
-            required
-          >
-            {/* Add more countries as needed according to their country code */}
-            <option disabled selected value>
-              Select current country
-            </option>
-            <option value="TZ">TZ</option>
-            <option value="KE">KE</option>
-            <option value="RW">RW</option>
-            <option value="UG">UG</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <p>Any comments or suggestions?</p>
-          <textarea
-            id="comments"
-            class="input-textarea"
-            name="comments"
-            value={credentials.comments}
-            onChange={handleChange}
-            placeholder="Enter your comment here..."
-          />
-        </div>
-        <div></div>
-        <div className="form-group" className="submitbutton">
-            <button onClick={closeForm} className="cancel" type="submit" id="submit">
-              Cancel
-            </button>
-            <button className="submit" type="submit" id="submit">
-              Continue
-            </button>
+
+      <form onSubmit={submit}>
+        <div id="survey-form">
+          <div className="form-group">
+            <label id="name-label" for="name">Name*</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className="form-control"
+              placeholder="Enter your name"
+              value={credentials.name}
+              onChange={handleChange}
+              required
+            />
           </div>
+          <div className="form-group">
+            <label id="organization-label" for="organization">Organization*</label>
+            <input
+              type="text"
+              name="organization"
+              id="organization"
+              className="form-control"
+              placeholder="Organization name"
+              value={credentials.organization}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label id="email-label" for="email">Email*</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              className="form-control"
+              placeholder="Enter your email"
+              value={credentials.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label id="title-label" for="title">Title*</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              className="form-control"
+              placeholder="Enter your Title"
+              value={credentials.title}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <span>Country*</span>
+            <select
+              id="dropdown"
+              name="implementationCountry"
+              className="form-control"
+              value={credentials.implementationCountry}
+              onChange={handleChange}
+              required
+            >
+              {/* Add more countries as needed according to their country code */}
+              <option disabled selected value>
+                Select current country
+              </option>
+              <option value="TZ">TZ</option>
+              <option value="KE">KE</option>
+              <option value="RW">RW</option>
+              <option value="UG">UG</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="comments">Other comments or suggestions</label>
+            <textarea
+              id="comments"
+              class="input-textarea"
+              name="comments"
+              value={credentials.comments}
+              onChange={handleChange}
+              placeholder="Enter your comment here..."
+            />
+          </div>
+        </div>
+        <div className="buttonContainer">
+
+          <button onClick={closeForm} className="cancel button" type="submit" id="submit">
+            Cancel
+          </button>
+
+          <button className="submit button" type="submit" id="submit">
+            Submit
+          </button>
+
+        </div>
       </form>
     </div>
   );
