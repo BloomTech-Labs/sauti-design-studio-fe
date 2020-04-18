@@ -135,7 +135,7 @@ const PublishForm = props => {
             />
           </div>
           <div className="form-group">
-            <span>Country*</span>
+            <label for="dropdown">Country*</label>
             <select
               id="dropdown"
               name="implementationCountry"
