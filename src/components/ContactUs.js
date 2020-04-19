@@ -51,7 +51,7 @@ const ContactUs = props => {
         <h2 className="contact-form-title"> Contact Us</h2>
       </header>
       <form className="contact-form" onSubmit={submit}>      
-          <label id="contact-email-label" for="email">
+          <label id="contact-email-label" htmlFor="email">
             Email address
           </label>
           <input

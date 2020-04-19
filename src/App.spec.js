@@ -29,28 +29,8 @@ describe('<App />', () => {
                 </Router>
             </Provider>
         )  
-        })  
+      })  
 
-  it('should render google button after clicking login', async () => {
-    const { getByText } = render(
-      <Provider store={store}>
-        <Router>
-          <App />
-        </Router>
-      </Provider>
-    );
-    const loginButton = screen.getByText(/Sign in/i);
-    await waitFor(()=> fireEvent.click(loginButton))
-    await waitFor(()=> expect(screen.getByText('Login with Google')))
-    getByText('Login with Google')
-    expect(screen.getByText("Login with Google"));
-    // code below for additional click -- cannot test oauth page
-    // const googleButton = getByText('Login with Google');
-    // await waitFor(()=> fireEvent.click(googleButton))
-    // await waitFor(()=> expect(screen.getByText("Sign in with Google")))
-    // getByText('Sign in with Google')
-    // expect(screen.getByText("Sign in with Google"));
-  })
   afterEach(cleanup)
 })
 
