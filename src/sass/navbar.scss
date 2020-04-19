@@ -25,7 +25,7 @@
         color: white;
         &:hover{
           transition: 0.5s;
-          color: $tomato;
+          color: $accent;
         }
       }
     }
@@ -63,8 +63,8 @@
         .signUpLink {
           //justify-self: flex-end;
           text-align: center;
-          background-color: darkred;
-          border:1px solid darkred;
+          background-color: $accent;
+          border:1px solid $accent;
           color: white;
           font-weight: bold;
           text-decoration: none;     
@@ -90,7 +90,7 @@
           text-decoration: none;
           &:hover{
             transition: 0.5s;
-            color: $tomato;
+            color: $accent;
           }
         }
     }

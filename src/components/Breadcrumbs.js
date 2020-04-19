@@ -32,7 +32,7 @@ export default function Breadcrumb() {
           Home
         </Link>
         <Link color="inherit" href="/profile" onClick={()=>handleClick("profile")}>
-          My Projects
+          My Projects 
         </Link>
       </Breadcrumbs>
     </div>

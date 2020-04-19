@@ -1,7 +1,6 @@
 // Colors
-$darkslateblue: #575a88;
-$tomato: darkred;
-$darkslategray: darkslategray;
+$accent: darkred;
+$darkgray: #454545;
 $snow: snow;
 
 // Mobile
@@ -9,4 +8,9 @@ $mobile: (max-width: 600px);
 
 // Tablet
 $tablet: (max-width: 900px);
+
+//We should be able to delete these
+$darkslateblue: #575a88;
+$tomato: darkred;
+$darkslategray: darkslategray;
 

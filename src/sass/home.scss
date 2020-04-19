@@ -5,7 +5,7 @@
   height: 65vh;
   background-repeat: no-repeat; 
   background-size: cover; 
-  background-color: darkred;
+  background-color: $accent;
 
 
   .header-content {
@@ -35,8 +35,8 @@
 }
 .header-container{
   .signUpLink {
-    background-color: darkred;
-    border:1px solid darkred;
+    background-color: $accent;
+    border:1px solid $accent;
     color: white;
     text-decoration: none;            
     padding: 2% 2.5%;
@@ -105,7 +105,7 @@
 
 //mission statement styles
 .mission{
-  background-color: darkred;
+  background-color: $accent;
   width:100%;
   color: white;
   padding: 5%;
@@ -186,8 +186,8 @@ div.tab-container{
   .startLink {
     align-self: center;
     width: 12%;
-    background-color: darkred;
-    border: 1px solid darkred;
+    background-color: $accent;
+    border: 1px solid $accent;
     color: white;
     text-decoration: none;
     padding: 1%;
@@ -201,7 +201,7 @@ div.tab-container{
 
 //contact us styles
 div.contact-container{
-  background-color: #454545;
+  background-color: $darkgray;
   color: white; 
 
 
@@ -233,8 +233,8 @@ div.contact-container{
 
     .contactLink {
       align-self: flex-end;
-      background-color: darkred;
-      border: 1px solid darkred;
+      background-color: $accent;
+      border: 1px solid $accent;
       color: white;
       text-decoration: none;
       padding: 1%;
