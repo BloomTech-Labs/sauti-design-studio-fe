@@ -1,102 +1,114 @@
-#container {
-  height: 50vh;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  grid-gap: 10px;
-      grid-template-areas: "header" "content";
+#container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#container .fa_custom {
+#container .header .titleSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#container .header .titleSection .fa_custom {
   color: orange;
+  width: 10%;
 }
 
-#container #form-title {
-  font-size: 3.5rem;
+#container .header .titleSection #form-title {
+  font-size: 3.2rem;
   font-weight: bold;
 }
 
 @media (max-width: 600px) {
-  #container #form-title {
-    font-size: 3rem;
+  #container .header .titleSection #form-title {
+    font-size: 2rem;
     font-weight: bold;
-    padding-bottom: 3%;
   }
 }
 
-#container #description {
+#container .header #description {
   font-weight: bold;
+  margin: 0 10%;
 }
 
 @media (max-width: 600px) {
-  #container #description {
+  #container .header #description {
     font-weight: normal;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
 #container #survey-form {
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -ms-grid-rows: auto 1fr auto;
-      grid-template-rows: auto 1fr auto;
-  grid-gap: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 10%;
 }
 
 #container #survey-form .form-group {
-  margin: 0 auto 1.25rem auto;
-  padding: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2% 0;
+  width: 47%;
+  font-size: 1.4rem;
 }
 
 #container #survey-form .form-control {
-  display: block;
-  width: 100%;
-  height: 2.375rem;
-  padding: 0.375rem 0.75rem;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 2px solid #C6C6C6;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-}
-
-#container #survey-form .form-control:focus {
-  border-color: #80bdff;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border: solid lightgrey 1px;
+  padding: 1.5% 0.5%;
 }
 
 #container #survey-form .input-textarea {
   width: 100%;
   padding: 0.625rem;
+  border: 1px solid lightgrey;
 }
 
-#container #survey-form .submitbutton {
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
+#container .submitbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 10%;
 }
 
-#container #survey-form .submitbutton .submit {
+#container .submitbutton .cancel {
+  border: 1px solid #CB3D2F;
+  border-radius: 15px;
+  padding: 0.75rem;
+  width: 25%;
+  background: white;
+}
+
+#container .submitbutton .submit {
   background-color: #CB3D2F;
-  width: 20%;
   padding: 0.75rem;
   color: white;
-  border-radius: 10px;
+  border-radius: 15px;
+  border: none;
+  width: 25%;
   cursor: pointer;
 }
 
 @media (max-width: 900px) {
-  #container #survey-form .submitbutton .submit {
+  #container .submitbutton .submit {
     width: 35%;
   }
 }

@@ -1,0 +1,552 @@
+.diagram-page {
+  width: 100%;
+}
+
+.diagram-page .title-and-buttons {
+  justify-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.diagram-page .title-and-buttons .cursor {
+  background-color: white;
+  color: black;
+  font-size: 1.6rem;
+  border: none;
+}
+
+.diagram-page .title-and-buttons .cursor .red {
+  color: darkred;
+  font-weight: bold;
+}
+
+.diagram-page .title-and-buttons .red {
+  font-weight: bold;
+  color: darkred !important;
+  background-color: white !important;
+}
+
+.diagram-container {
+  height: calc(100vh - 130px);
+  z-index: 0;
+}
+
+.diagram-container svg circle {
+  r: 10px;
+}
+
+.main-diagram-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.title-and-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  padding: 0px 2%;
+  border-bottom: 1px solid gainsboro;
+}
+
+.title-and-buttons h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  line-height: auto;
+  font-weight: bold;
+  padding: 0;
+  cursor: pointer;
+  width: calc(100% - 600px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-and-buttons input {
+  font-size: 3rem;
+  width: calc(100% - 600px);
+}
+
+.title-and-buttons .project-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 550px;
+}
+
+.title-and-buttons .project-buttons button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 23%;
+  height: 35px;
+  background-color: snow;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.taskbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 0px;
+}
+
+.taskbar .taskbar-container {
+  position: absolute;
+  right: 2rem;
+  top: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 3px;
+  padding: 0 1rem;
+  margin-right: 2%;
+  width: 200px;
+  background: darkred;
+  z-index: 1;
+  height: 4rem;
+}
+
+.taskbar .taskbar-container .taskbar-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: auto;
+  font-size: 2.6rem;
+  color: white;
+  z-index: 2;
+}
+
+.taskbar .taskbar-container .taskbar-section i {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.taskbar .taskbar-container .taskbar-section i:hover {
+  color: black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bodywidget-container {
+  width: 100%;
+}
+
+.custom-node {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.selected-true {
+  border: dashed 4px black;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.custom-node-nodeTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  padding: 0 15px;
+  border: solid 2px #454545;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: #454545;
+  width: 400px;
+  height: 60px;
+  text-align: center;
+  line-height: 57px;
+  font-family: "LiberationSansRegular";
+}
+
+.custom-node-nodeTitle input {
+  font-size: 3rem;
+  font-family: "LiberationSansRegular";
+  width: 80%;
+  height: 4rem;
+}
+
+.custom-node-nodeTitle h1 {
+  width: 80%;
+  margin: 0;
+  font-size: 3rem;
+  font-family: "LiberationSansRegular";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: start;
+}
+
+.custom-node-nodeTitle .check-box-true {
+  width: 3rem;
+  cursor: pointer;
+  color: green;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 3rem;
+}
+
+.custom-node-nodeTitle .check-box-false {
+  width: 3rem;
+  font-size: 3rem;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.custom-node-nodeTitle .check-box-false:hover {
+  color: green;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.custom-node-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #999999;
+  border-left: 2px solid #454545;
+  border-right: 2px solid #454545;
+  border-bottom: 2px solid #454545;
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  font-family: "LiberationSansRegular";
+}
+
+.custom-node-screen p {
+  width: 100%;
+  -ms-flex-line-pack: left;
+      align-content: left;
+  font-size: 2.5rem;
+  text-align: left;
+  padding: 2rem;
+}
+
+.custom-node-screen textarea {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  width: 400px;
+  height: 26rem;
+  outline: none;
+  padding: 2rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background-color: transparent;
+  overflow-y: hidden;
+  resize: none;
+  font-size: 2.5rem;
+  line-height: 3.8rem;
+  font-family: "LiberationSansRegular";
+}
+
+.custom-node-submenus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  padding: 0 15px;
+  border-left: solid 2px #454545;
+  border-right: solid 2px #454545;
+  border-bottom: solid 2px #454545;
+  height: 50px;
+  line-height: 50px;
+  max-width: 400px;
+  background-color: white;
+  font-family: "LiberationSansRegular";
+}
+
+.custom-node-submenus .submenu-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+.custom-node-submenus .submenu-text-container .number {
+  width: 17%;
+  padding: 0;
+  font-style: italic;
+  font-family: "LiberationSansRegular";
+}
+
+.custom-node-submenus .submenu-text-container .option-text {
+  width: 83%;
+  padding: 0;
+  padding-left: 1rem;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-family: "LiberationSansRegular";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.custom-node-submenus .submenu-text-container input {
+  width: 83%;
+  font-size: 2.8rem;
+  padding-left: 1rem;
+  font-style: italic;
+  font-family: "LiberationSansRegular";
+  outline: none;
+}
+
+.custom-node-submenus .trash-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  width: 50px;
+  height: 100%;
+  padding: 0px;
+}
+
+.custom-node-submenus .trash-icon i {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 2.4rem;
+  color: darkred;
+}
+
+.custom-node-submenus .trash-icon i:hover {
+  text-transform: 1.1rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.trash-icon img {
+  width: auto;
+  height: 55%;
+}
+
+.line-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #454545;
+  background-color: black;
+  z-index: 0;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding: 1px;
+}
+
+.line-in .port {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: green;
+  border-radius: 50%;
+}
+
+.line-in .port:hover {
+  background: green;
+  border: solid black 1px;
+}
+
+.line-out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 0;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.line-out .port {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: green;
+  border-radius: 50%;
+  border: solid black 1px;
+}
+
+.line-out .port:hover {
+  background: green;
+  border: solid black 2px;
+}
+
+.fill-port {
+  background: black;
+}
+
+.fill-port2 {
+  background: white;
+}
+
+.custom-node-addMenuOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-color: #787878;
+  padding: 0 15px;
+  border-left: solid 2px #454545;
+  border-right: solid 2px #454545;
+  border-bottom: solid 2px #454545;
+  height: 50px;
+  line-height: 50px;
+  max-width: 400px;
+  font-family: "LiberationSansRegular";
+}
+
+.custom-node-addMenuOption h2 {
+  margin: 0;
+  font-style: italic;
+  font-family: "LiberationSansRegular";
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 0;
+}
+
+.custom-node-addMenuOption i {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.custom-node-addMenuOption i:hover {
+  color: black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.hidden {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+/*# sourceMappingURL=canvas.css.map */

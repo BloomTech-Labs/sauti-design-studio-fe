@@ -49,7 +49,7 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  padding: 0px 2%;
+  padding: 0px 0.5%;
   border-bottom: 1px solid gainsboro;
   h2 {
     align-self: center;
@@ -88,15 +88,16 @@
   height: 0px;
   
   .taskbar-container{
-    position: absolute;
+    // position: absolute;
     right: 2rem;
-    top: 25%;
+    // top: 25%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-radius: 3px;
     padding: 0 1rem;
     margin-right: 2%;
+    margin-top: 1%;
     width: 200px;
     background: darkred;
     z-index: 1;
@@ -132,7 +133,7 @@
 }
 
 .selected-true{
-  border: solid 4px darkred;
+  border: solid 4px $tomato;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
@@ -169,25 +170,25 @@
     text-overflow: ellipsis;
     text-align: start;
   }
-    .check-box-true{
-      width: 3rem;
-      cursor: pointer;
+  .check-box-true{
+    width: 3rem;
+    cursor: pointer;
+    color: $tomato;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 3rem;
+    
+  }
+  .check-box-false{
+    width: 3rem;
+    font-size: 3rem;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+    &:hover{
       color: $tomato;
       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      font-size: 3rem;
-      
     }
-    .check-box-false{
-      width: 3rem;
-      font-size: 3rem;
-      cursor: pointer;
-      color: white;
-      transition: 0.5s;
-      &:hover{
-        color: $tomato;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      }
-    }
+  }
 }
 
 
@@ -201,8 +202,8 @@
   border-right: 2px solid #454545;
   border-bottom: 2px solid #454545;
   background-color: white;
-  width: 40rem;
-  height: 20rem;
+  width: 400px;
+  height: 300px;
   text-align: center;
   font-family: "LiberationSansRegular";
   p {
@@ -312,22 +313,24 @@
   display: flex;
   align-self: center;
   justify-content: center;
-  border: 2px solid #454545;
+  // border: 1px solid #454545;
   background-color: white;
+  background-color: black;
   z-index: 0;
   position: relative;
   width: 25px;
   height: 25px;
-  border-radius: 20px;
+  // border-radius: 20px;
+  border-radius: 50%;
   .port{
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: white;
+    background: black;
     border-radius: 50%;
     &:hover{
-      background: $tomato;
-      border-radius: 50%;
+      border: solid $tomato 2px;
+      // border-radius: 50%;
     }
   }
 }
@@ -336,21 +339,22 @@
   display: flex;
   align-self: center;
   justify-content: center;
-  border: 2px solid #454545;
+  // border: 1px solid #454545;
   z-index: 0;
   position: relative;
   width: 25px;
   height: 25px;
-  border-radius: 20px;
+  border-radius: 50%;
   .port{
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: white;
+    background: black;
     border-radius: 50%;
+    border: solid black 1px;
     &:hover{
-      background: $tomato;
-      border-radius: 50%;
+      // border-radius: 50%;
+      border: solid $tomato 3px;
     }
   }
 }

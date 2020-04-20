@@ -1,79 +1,92 @@
 #container{
-    height: 50vh;
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-gap: 10px;
-    grid-template-areas:
-    "header"
-    "content";
-    .fa_custom {
-        color:orange; 
+    .header{
+        display: flex;
+        flex-direction: column;
+        .titleSection{
+            display: flex;
+            
+            .fa_custom {
+                color:orange;
+                width: 10%;
+            }
+
+            #form-title{
+                font-size: 3.2rem;
+                font-weight: bold;
+                @media (max-width: 600px) {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+            }
+            
         }
-    #form-title{
-        font-size: 3.5rem;
+        #description{
         font-weight: bold;
-        @media (max-width: 600px) {
-            font-size: 3rem;
-            font-weight: bold;
-            padding-bottom: 3%;
-        }
-    }
-    #description{
-        font-weight: bold;
+        margin: 0 10%;
         @media (max-width: 600px) {
             font-weight: normal;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
+            }
         }
     }
+
     #survey-form {
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto 1fr auto;
-        grid-gap: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 10%;
         .form-group {
-            margin: 0 auto 1.25rem auto;
-            padding: 0.25rem;
+            display: flex;
+            flex-direction: column;
+            margin: 2% 0;
+            width: 47%;
+            font-size: 1.4rem;
+            label{
+                margin: 1% 0;
+            }
           }
         
         .form-control {
-            display: block;
-            width: 100%;
-            height: 2.375rem;
-            padding: 0.375rem 0.75rem;
-            background-color: #fff;
-            background-clip: padding-box;
-            border: 2px solid #C6C6C6;
-            border-radius: 0.25rem;
-            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        }
-        
-        .form-control:focus {
-            border-color: #80bdff;
-            outline: 0;
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            border: solid lightgrey 1px;
+            padding: 1.5% 0.5%;
         }
         
         .input-textarea {
             width: 100%;
             padding: 0.625rem;
+            border: 1px solid lightgrey;
         }
-        .submitbutton {
-            align-items: right;
-        
-            .submit {
-                background-color: #CB3D2F;
-                width: 20%;
-                padding: 0.75rem;
-                color: white;
-                border-radius: 10px;
-                cursor: pointer;
-            //  @include custom-btn(23%, 35px, $darkslateblue, #fbffff, 1.4rem);
-                @media (max-width: 900px) {
-                    width: 35%;
-                }
-            }   
-        } 
     }
+    .buttonContainer {
+        display: flex;
+        justify-content: flex-end;
+        margin: 5% 10% 0 0;
+        .button{
+            padding: 1% 2%;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .cancel {
+            border: 1px solid lightgrey;
+            background-color: white;
+
+            &:hover{
+                transition: 0.2s;
+                background-color: rgb(243, 243, 243)
+            }
+        }
+    
+        .submit {
+            background-color: $tomato;
+            color: white;
+            margin-left: 2%;
+            border: none;
+
+            &:hover{
+                transition: 0.2s;
+                color: #818181;
+            }
+        }   
+    } 
 }
