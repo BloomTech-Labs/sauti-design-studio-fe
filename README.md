@@ -6,11 +6,13 @@
 
 # Sauti Design Studio
 
+You can find the latest deployed project at [Sauti Design Studio](https://master.d1452jrxuaqaph.amplifyapp.com/).
+
 You can find the deployed project at [Sauti Design Studio](https://sautistudio.netlify.com/).
 
 ## Contributors
 
-|[Kevin Tena](https://github.com/kevten22)|[Austin Howes](https://github.com/austie702)|[Amber Meador](https://github.com/nek0senpa1)|[Leianne Louis](https://github.com/leianne)|[Sean Kennedy](https://github.com/skennedy93)| [Thomas Claydon](https://github.com/gittc100)| 
+|[Kevin Tena](https://github.com/kevten22)|[Austin Howes](https://github.com/austie702)|[Amber Meador](https://github.com/nek0senpa1)|[Leianne Louis](https://github.com/leianne)|[Sean Kennedy](https://github.com/skennedy93)| [Thomas Claydon](https://github.com/gittc100)| [Phong Yang](https://github.com/PHONGdotTech)| [Michael Famurewa ](https://github.com/viscountfam)| [Ana Carillo](https://github.com/acarrillo3)| [Nicole White](https://github.com/Nicci498)|
 | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
 |[<img src="https://avatars0.githubusercontent.com/u/36459496?s=400&v=4" width = "200" />](https://github.com/kevten22)|[<img src="https://media.licdn.com/dms/image/C4E03AQEFOwyBzZSi_A/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=dj9oTr66FidYvkw8MxewVTGOIHVmCAZCGALsE9HzoeM" width = "200" />](https://github.com/austie702) | [<img src="https://avatars2.githubusercontent.com/u/44776869?s=400&v=4" width = "200" />](https://github.com/nek0senpa1)| [<img src="https://avatars0.githubusercontent.com/u/26041727?s=400&v=4" width = "200" />](https://github.com/leianne)|[<img src="https://avatars0.githubusercontent.com/u/38869679?s=400&v=4" width = "200" />](https://github.com/skennedy93)| [<img src="https://avatars3.githubusercontent.com/u/37307521?s=400&u=81331a855611530734a0268c3fda7893e2aa12cd&v=4" width = "200" />](https://github.com/gittc100)|
 | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/kevten22)|[<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/austie702)|[<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/nek0senpa1) | [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/leianne)| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/skennedy93)| [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/gittc100)|
@@ -22,8 +24,10 @@ You can find the deployed project at [Sauti Design Studio](https://sautistudio.n
 
 ## Project Overview
 
+[Labs 22 Trello Board](https://trello.com/b/RkVPLgHw/labs-22-sauti-design-studio)
 [Trello Board](https://trello.com/b/4HBS1AfL/sauti-design)
 
+[Labs 22 Product Canvas](https://www.notion.so/Sauti-Design-Studio-Sprint-2-30d3a3179eca44be945629e709cf7383)
 [Product Canvas](https://www.notion.so/Sauti-Design-Studio-f83f84ecef3c4e51b07a1a941580c306)
 
 Sauti Studio + Design is a desktop product that aims to serve the East African communities by providing a simple tool that will allow individuals with no programming skills to build and customise a text based app to share information and knowledge. Sauti Studio + Design encourages anyone who experience the problems stemming from lack of information to take a stand and design their own solutions by laying out a USSD text-flow that can be accessed via simple phone.
@@ -36,9 +40,9 @@ Essentially, Sauti Studio + Design is a digital tool that will provide a  UI for
 
 #### React/Redux
 
-#### Front end deployed to `Netlify`
+#### Front end deployed to `Amazon AWS`
 
-#### [Back end](https://github.com/labs13-sauti-studio/sauti-studio-BE) built using:
+#### [Back end](https://github.com/Lambda-School-Labs/sauti-design-studio-be) built using:
 
 #### Express/Node.js
 
@@ -78,12 +82,15 @@ A flow & process orientated diagramming library inspired by Blender, Labview and
 In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
     *  REACT_APP_BE_API_URL='http://localhost:5000' OR Production Route 
+    *  REACT_APP_OKTA_DOMAIN=https://dev-YOURACCOUNT.okta.com
+    *  REACT_APP_OKTA_CLIENT_ID= 
+
     
 # Installation Instructions
 
-`yarn install` - to install dependencies
+`npm install` - to install dependencies
 
-`yarn start` - to start local application
+`npm start` - to start local application
 
 # Contributing
 
@@ -121,7 +128,7 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Backend Documentation](https://github.com/labs13-sauti-studio/sauti-studio-BE/blob/master/README.md) for details on the backend of our project.
+See [Backend Documentation](https://github.com/Lambda-School-Labs/sauti-design-studio-be/blob/master/README.md) for details on the backend of our project.
 ```
 
 ```
