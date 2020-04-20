@@ -43,8 +43,8 @@
 
                 i{
                     color: white;
-                    background-color: darkred;
-                    border: 8px solid darkred;
+                    background-color: $accent;
+                    border: 8px solid $accent;
                     border-radius: 50%;
                     font-size: 5rem;
                 }
@@ -91,7 +91,7 @@
                             // justify-self: flex-start;
                         }
                         .emphasize{
-                                color:darkred;
+                                color:$accent;
                                 
                                 // justify-self: flex-end;
                                 
