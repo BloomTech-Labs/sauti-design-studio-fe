@@ -377,8 +377,7 @@ class CustomExample extends React.Component {
             title="Click to Edit Title"
             className={this.state.project_title_class ? "hidden" : ""}
              // onDoubleClick={()=>this.handleEdit("project_title")}>
-            onClick={() => this.handleEdit("project_title")}
-            
+            onClick={() => this.handleEdit("project_title")} 
           >
             {/* {this.state.project_title} */}
             {this.state.project_title !== "" && this.state.project_title !== "My app" && this.state.project_title !== null ? this.state.project_title + " (click to edit)" : "Click here to add/edit app title"}
