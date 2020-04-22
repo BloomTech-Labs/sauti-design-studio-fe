@@ -281,9 +281,9 @@ class CustomExample extends React.Component {
         <SimulationModal props={this.props.props}/>
         <section className="title-and-buttons">
           <h2
-            title="Double Click to Edit Title"
+            title="Click to Edit Title"
             className={this.state.project_title_class ? "hidden" : ""}
-            onDoubleClick={()=>this.handleEdit("project_title")}>
+            onClick={()=>this.handleEdit("project_title")}>
             {this.state.project_title}
           </h2>
             <input
