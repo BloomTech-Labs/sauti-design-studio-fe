@@ -7,17 +7,17 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { createStore, applyMiddleware } from "redux";
 
 import rootReducer from "../reducers/index.js";
-import Error from './Error.js';
+import ShortTutorial from './ShortTutorial.js';
 
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
-describe('Error(.js)', () =>{
-  it('Error renders without crashing', () =>{
+describe('Short Tutorial(.js)', () =>{
+  it('shorttutorial renders without crashing', () =>{
     render(
         <Provider store={store}>
             <Router>
-               <Error />
+               <ShortTutorial />
             </Router>
         </Provider>
     )  

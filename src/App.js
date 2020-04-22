@@ -5,7 +5,7 @@ import Home from "./pages/Home.js";
 import Profile from "./pages/Profile";
 import AppBuilder from "./pages/AppBuilder.js";
 import LoginOkta from "./pages/LoginOkta"
-import Error from "./pages/Error";
+import ShortTutorial from "./pages/ShortTutorial";
 import PrivateRoute from "./components/PrivateRoute";
 import Register from "./pages/Register"
 
@@ -18,7 +18,7 @@ function App() {
       <PrivateRoute path="/workflows" component={AppBuilder}/>
       <Route path="/login" render={()=> <LoginOkta issuer={`${process.env.REACT_APP_OKTA_DOMAIN}/oauth2/default`}/>} />
       <Route path="/register" render={()=> <Register issuer={`${process.env.REACT_APP_OKTA_DOMAIN}/oauth2/default`}/>}/>
-      <Route path="/error" component={Error} />
+      <PrivateRoute path="/shorttutorial" component={ShortTutorial} />
     </div>
   );
 }
