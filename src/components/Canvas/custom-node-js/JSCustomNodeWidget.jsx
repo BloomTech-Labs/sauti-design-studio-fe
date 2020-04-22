@@ -130,7 +130,7 @@ export class JSCustomNodeWidget extends React.Component {
   addSubMenu = (event) => {
     event.stopPropagation();
     let UI = Toolkit.UID();
-    let x = this.props.node.addOutPort("Double click to write here", `out-${this.props.node.options.id + UI + 1}`);
+    let x = this.props.node.addOutPort("Click to write here", `out-${this.props.node.options.id + UI + 1}`);
     let promise = new Promise(function(resolve, reject) {
         resolve(x);
     });
