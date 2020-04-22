@@ -57,11 +57,10 @@ Essentially, Sauti Studio + Design is a digital tool that will provide a  UI for
 - Africa's talking also works with the  ussd-menu-builder library which we are used to reduce workload.
 - Africa's talking services East Africa, which is our target audience.
 
-## Oauth
-
-### Passport.js
-
-Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application. A comprehensive set of strategies support authentication using a username and password, Facebook, Twitter, and more.
+## Okta
+- Okta is the only approved identity and access management company per the Lambda School Engineering Standards 
+- Okta is a trusted service that has been in buisness since 2009
+- Okta allows developers to build identity controls into applications, website web services and devices
 
 ## Diagramming
 
