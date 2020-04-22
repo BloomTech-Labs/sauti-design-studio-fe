@@ -63,6 +63,7 @@ for (let key in obj) {
   }
 }
 class CustomExample extends React.Component {
+  
   constructor(props) {
     super(props);
 
@@ -212,8 +213,8 @@ class CustomExample extends React.Component {
 
   createNode = () => {
     let newItem = new JSCustomNodeModel();
-    newItem.nameNode("Enter Node Name...");
-    newItem.provideDescription("Enter Description...");
+    newItem.nameNode("Enter Screen Name...");
+    newItem.provideDescription("Double click to write here");
     newItem.setPosition(0, 0);
     cerealBox.addNode(newItem);
     // this.saveCanvas();

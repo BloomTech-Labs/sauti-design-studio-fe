@@ -107,7 +107,7 @@ class Profile extends React.Component {
                     >
                     <div className="title-container">
                       <h3>{ project.project_title }</h3>
-                      <p>Project Staus</p>
+                      <p>Project Status</p>
                       <p># of cards</p>
                       <p>Last edit date</p>
                       <p>API requests 119/225</p>
