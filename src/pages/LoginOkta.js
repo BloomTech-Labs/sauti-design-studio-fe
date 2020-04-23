@@ -72,7 +72,10 @@ const LoginForm = ({ issuer }) => {
              /></span>
              {errors.password && <span className="oktaError">{errors.password.message}</span>}
         <input className='oktaSubmit' id="submit" type="submit" value="Sign In" />
-        <p style={{color:"white", textAlign:"center", margin:"1%"}}>Don't have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/register')}>Click here to sign up.</span></p>
+        <span className="oktaLinks">
+          <p style={{color:"white", textAlign:"center"}}>Don't have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/register')}>Click here to sign up.</span></p>
+          <p style={{color:"white", textAlign:"center"}}>Forgot your password? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/reset')}>Click here to reset your password.</span></p>
+        </span>
       </form>
     </div>
     <Footer />
