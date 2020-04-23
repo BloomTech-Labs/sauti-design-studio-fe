@@ -212,10 +212,19 @@ class CustomExample extends React.Component {
   };
 
   createNode = () => {
+    function rand() {
+      return Math.round(Math.random() * 50);
+    }    
+    const top = 50 + rand();
+    const left = 50 + rand();
+
+    
     let newItem = new JSCustomNodeModel();
+
     newItem.nameNode("Enter Screen Name...");
     newItem.provideDescription("Click to write here");
-    newItem.setPosition(0, 0);
+    newItem.setPosition(top, left);
+
     cerealBox.addNode(newItem);
     // this.saveCanvas();
     engine.repaintCanvas();
