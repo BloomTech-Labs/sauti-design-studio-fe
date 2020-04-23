@@ -112,6 +112,7 @@ export const getTitleById = (project_id1) => dispatch => {
       endpoint1,
     )
     .then(response => {
+      console.log("This is the response data: ", response.data)
       dispatch({ type: GET_TITLE_BY_ID_SUCCESS, payload: response.data});
     })
     .catch(err => dispatch({ type: GET_TITLE_BY_ID_FAILURE, payload: err }));
@@ -174,9 +175,10 @@ export const saveTitle = (objUpdate, project_id) => dispatch => {
       endpoint,
       objUpdate
     ).then(response => {
+      console.log("this is the response", response)
       dispatch({
       type: SAVE_TITLE_SUCCESS,
-        payload: response.data
+        payload: response.data.project_title
       });
     })
     .catch(err => dispatch({ type: SAVE_TITLE_FAILURE, payload: err }));
