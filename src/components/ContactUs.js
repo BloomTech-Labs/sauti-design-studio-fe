@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import {axiosWithAuth} from "./utils/axiosWithAuth";
-
+import Loader from 'react-loader-spinner'
 const ContactUs = props => {
+  const [loading, setLoading] = useState(false)
   const [credentials, setCredentials] = useState({
     email: "",
     comments: ""
@@ -23,6 +24,7 @@ const ContactUs = props => {
 
   const submit = e => {
     e.preventDefault();
+    setLoading(true)
     if (credentials.comments.trim() !== ""){
       axiosWithAuth()
         .post(
@@ -37,6 +39,7 @@ const ContactUs = props => {
           if (res.data.status === "success") {
             alert("message Sent");
             resetCredentials();
+            setLoading(false)
           } else if (Response.data.status === "failure") {
             alert("message failed to send");
           }
@@ -49,6 +52,7 @@ const ContactUs = props => {
     <div className="contact-container">
       <header>
         <h2 className="contact-form-title"> Contact Us</h2>
+        
       </header>
       <form className="contact-form" onSubmit={submit}>      
           <label id="contact-email-label" htmlFor="email">
@@ -73,10 +77,12 @@ const ContactUs = props => {
             onChange={handleChange}
             placeholder="Type message here..."
           />
-      
-          <button className="contactLink" type="submit" id="submit" >
-            Send
-          </button>
+          <span className="loaderButton">
+            {loading && <span><Loader type="TailSpin" color="darkred" height={40} width={40} /></span>}
+            <button className="contactLink" type="submit" id="submit" >
+              Send
+            </button>
+          </span>
         
       </form>
     </div>

@@ -231,19 +231,27 @@ div.contact-container{
       margin-top:2%;
     }
 
-    .contactLink {
-      align-self: flex-end;
-      background-color: $accent;
-      border: 1px solid $accent;
-      color: white;
-      text-decoration: none;
-      padding: 1%;
-      border-radius: 3px;
-      text-align: center;
-      font-size: 1.6rem;
-      margin:2%;
-      cursor: pointer;
-  }
+    
+    .loaderButton{
+      display: flex;
+      justify-content: flex-end;
+      align-content: center;
+      align-items: center;
+      
+      .contactLink {
+        align-self: flex-end;
+        background-color: $accent;
+        border: 1px solid $accent;
+        color: white;
+        text-decoration: none;
+        padding: 1%;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 1.6rem;
+        margin:2%;
+        cursor: pointer;
+      }
+    }
   }
 
 
