@@ -721,6 +721,10 @@ div.footer .footer-content a span.white {
   text-align: center;
   margin: 1%;
   margin-bottom: 10%;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .profile-page-container .projects-section .projects-list .project .title-container p {
