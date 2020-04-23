@@ -57,12 +57,13 @@ export default function HomeVideo() {
     setLearningOpen(!learningOpen)
   };
 
+
   return (
     <div>
-      <ExpansionPanel square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>        
+      <ExpansionPanel square onChange={handleChange('panel1')}>        
         <ExpansionPanelSummary aria-controls="panel1d-content" id="panel1d-header">
           {/* <p className='learn'>Learn More   </p> */}
-          {learningOpen ? <p className='learn'>Learn More {"\n"}{"\n"} {String.fromCharCode(8681)}</p> : <p className="learn"> Learn More {"\n"}{"\n"} {String.fromCharCode(8679)} </p>}
+          {learningOpen ? <p className='learn'>Learn More {"\n"}{"\n"} {String.fromCharCode(8679)}</p> : <p className="learn"> Learn More {"\n"}{"\n"} {String.fromCharCode(8681)} </p>}
           {/* insert ternary toggling up 	&uArr and down &dArr arrow as well as the panel1 on 60 so that it default to closed but will toggle open/close */}
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className ='tab-container'>

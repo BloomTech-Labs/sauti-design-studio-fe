@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { setSimulationState } from "../actions";
 import axios from "axios";
 import {axiosWithAuth} from "./utils/axiosWithAuth";
-import dotenv from "dotenv";
+
 
 
 class SimulationModal extends React.Component {
@@ -171,7 +171,7 @@ const mapStateToProps = state => ({
   simulate_project: state.simulate_project
 });
 
-// Connecting State and Rdux Reducer Methods
+// Connecting State and Redux Reducer Methods
 export default connect(mapStateToProps, { setSimulationState })(
   SimulationModal
 );

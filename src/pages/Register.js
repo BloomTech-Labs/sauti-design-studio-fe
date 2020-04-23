@@ -1,6 +1,7 @@
 import React, {useState, useRef} from "react";
 import {useHistory} from "react-router-dom";
 import  {useForm} from 'react-hook-form'
+import Loader from 'react-loader-spinner'
 import OktaAuth from '@okta/okta-auth-js';
 import axios from "axios";
 import Navbar from '../components/Navbar';
@@ -14,6 +15,7 @@ import Footer from '../components/Footer.js';
 // }
 
 const Register = ({ issuer }) => {
+    const [loading, setLoading] = useState(false)
     const history = useHistory();
     // const [newUser, setNewUser] = useState(initialState);
     const {handleSubmit, register, errors, watch} = useForm();
@@ -30,6 +32,7 @@ const Register = ({ issuer }) => {
     const  onSubmit = values => {
         const email = values.email;
         const password = values.password;
+        setLoading(true)
         axios.post(`${process.env.REACT_APP_BE_API_URL}/auth/okta/register`, values)
         .then(res=> {
             console.log("successfully created a user.", res);
@@ -41,6 +44,7 @@ const Register = ({ issuer }) => {
                     .then(res=>{
                     localStorage.setItem('token', res.data.token)
                     localStorage.setItem('id', res.data.id)
+                    setLoading(false)
                     history.push(`/profile`)
                     })
                 })
@@ -57,7 +61,7 @@ const Register = ({ issuer }) => {
         <>
         <Navbar />
         <div className='loginHero'>
-            <form className='oktaForm' onSubmit={handleSubmit(onSubmit)}>
+         { loading ? <span className="Loader-div oktaForm"><Loader type="TailSpin" color="darkred" height={500} width={500}/></span> : ( <form className='oktaForm' onSubmit={handleSubmit(onSubmit)}>
                 <h3 className='oktaTitle'>Create an Account</h3>
                 <span className="inputLabelSpan">
                     <label className="inputLabel" htmlFor="firstName">First Name</label>
@@ -84,7 +88,7 @@ const Register = ({ issuer }) => {
                     <p className='password-reqs'>Passwords must have at least 8 characters, include a number, a capital letter, and a lowercase letter.<br/> <span className='emphasize'>    Passwords cannot contain part of email.</span></p>
                 <button className="oktaSubmit">Sign Up</button>
                 <p style={{color:"white", textAlign:"center", margin:"1%"}}>Already have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/login')}>Click here to sign in.</span></p>
-            </form>
+            </form>) }
         </div>
         <Footer />
         </>
