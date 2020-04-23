@@ -24,10 +24,10 @@ You can find the deployed project at [Sauti Design Studio](https://sautistudio.n
 
 ## Project Overview
 
-[Labs 22 Trello Board](https://trello.com/b/RkVPLgHw/labs-22-sauti-design-studio)
+[Labs 22 Trello Board](https://trello.com/b/RkVPLgHw/labs-22-sauti-design-studio)<br>
 [Trello Board](https://trello.com/b/4HBS1AfL/sauti-design)
 
-[Labs 22 Product Canvas](https://www.notion.so/Sauti-Design-Studio-Sprint-2-30d3a3179eca44be945629e709cf7383)
+[Labs 22 Product Canvas](https://www.notion.so/Sauti-Design-Studio-Sprint-2-30d3a3179eca44be945629e709cf7383)<br>
 [Product Canvas](https://www.notion.so/Sauti-Design-Studio-f83f84ecef3c4e51b07a1a941580c306)
 
 Sauti Studio + Design is a desktop product that aims to serve the East African communities by providing a simple tool that will allow individuals with no programming skills to build and customise a text based app to share information and knowledge. Sauti Studio + Design encourages anyone who experience the problems stemming from lack of information to take a stand and design their own solutions by laying out a USSD text-flow that can be accessed via simple phone.
