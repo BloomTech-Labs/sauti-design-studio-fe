@@ -1832,6 +1832,7 @@ div.footer .footer-content a span.white {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  height: 88vh;
 }
 
 .loginHero .oktaForm {

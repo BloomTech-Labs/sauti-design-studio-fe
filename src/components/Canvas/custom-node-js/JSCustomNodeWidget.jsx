@@ -102,7 +102,6 @@ export class JSCustomNodeWidget extends React.Component {
         });
         this.props.node.options.name = this.state[event.target.name];
       } else {
-        console.log("this here is what i want: ", event.target.name)
         let mod = event.target.name;
         let id = mod.slice(0,-1);
         this.setState({
@@ -112,8 +111,6 @@ export class JSCustomNodeWidget extends React.Component {
           editingOptions: !this.state.editingOptions
         });
         let obj = this.props.node.ports;
-        console.log("This is obj", obj)
-        console.log("This is this.state: ", this.state)
         for (let key in obj) {
           if (obj[key].options.id === id) {
             obj[key].options.label = this.state[event.target.name];
@@ -288,15 +285,20 @@ export class JSCustomNodeWidget extends React.Component {
       this.props.node.options.description = this.state.description;
       this.props.node.options.name = this.state.nodeTitle;
 
-      // this saves options when saving
+      // this saves a node's options when clicking save app, after you have clicked outside it to save
+      // loop through this.state object and selects all keys that are generated from a node's options
       for(let key in this.state){
         if (key != "description" && key != "editing" && key != "editingDesc" && key != "editingOptions" && key != "is_parent" && key != "nodeTitle" && key != "selected" && key != "wantToChange")
         {
           const value = this.state[key]
+          // selects keys that are boolean type, this is the id of option
+          // from the id, we can get the key for the label by adding an 'a' to the id key
+          // the value of the label is the name of the option
           if(typeof value === "boolean"){
             let id = key
             let ida = id+"a"
             let label = this.state[ida]
+            // this saves the label's name to props, allowing it to save after clicking save app
             for (let key2 in this.props.node.ports) {
               if (this.props.node.ports[key2].options.id === id) {
                 this.props.node.ports[key2].options.label = label;
