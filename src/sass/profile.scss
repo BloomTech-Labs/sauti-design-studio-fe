@@ -72,6 +72,10 @@
                         text-align: center;
                         margin: 1%;
                         margin-bottom: 10%;
+                        width:90%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                     p{
                         font-size: 1.2rem;
