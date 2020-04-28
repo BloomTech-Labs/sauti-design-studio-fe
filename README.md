@@ -136,3 +136,12 @@ See [Backend Documentation](https://github.com/Lambda-School-Labs/sauti-design-s
 ```
 
 ```
+
+## Notes
+
+#### Reset Password Page
+When a user registers an account on the application, recovery questions and answers are not required, therefore a user cannot request a self-service password reset because by default okta requires a recovery question and recovery answer to reset a password.
+
+The email sent to a user when resetting their email will not be a self-service email until the setting within "password policy -> account recovery -> additional self-service recovery option -> security question" is unchecked. This option by default, when creating a new okta app, will not be available. 
+
+You MUST contact okta support, create a ticket, and ask them to enable this option for your application. Once this option is available you can uncheck the option and save.
