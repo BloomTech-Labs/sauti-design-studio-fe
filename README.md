@@ -82,8 +82,13 @@ In order for the app to function correctly, the user must set up their own envir
 
     *  REACT_APP_BE_API_URL='http://localhost:5000' OR Production Route 
     *  REACT_APP_OKTA_DOMAIN=https://dev-YOURACCOUNT.okta.com
-    *  REACT_APP_OKTA_CLIENT_ID= 
+    *  REACT_APP_OKTA_CLIENT_ID=00000000AAAAAAA
 
+REACT_APP_BE_API_URL -- Set this to 'http://localhost:port' of your backend api if using locally. Otherwise, set it to your backend's URL.
+
+REACT_APP_OKTA_DOMAIN -- Set this to your okta app's domain. You will need to sign up for an okta developer account and create an app. From there you will get your app's URL.
+
+REACT_APP_OKTA_CLIENT_ID -- A string. Once you have your okta app created, under the client credentials section of your app's settings, you will find your client ID and client secret.
     
 # Installation Instructions
 
