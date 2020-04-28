@@ -82,8 +82,13 @@ In order for the app to function correctly, the user must set up their own envir
 
     *  REACT_APP_BE_API_URL='http://localhost:5000' OR Production Route 
     *  REACT_APP_OKTA_DOMAIN=https://dev-YOURACCOUNT.okta.com
-    *  REACT_APP_OKTA_CLIENT_ID= 
+    *  REACT_APP_OKTA_CLIENT_ID=00000000AAAAAAA
 
+REACT_APP_BE_API_URL -- Set this to 'http://localhost:port' of your backend api if using locally. Otherwise, set it to your backend's URL.
+
+REACT_APP_OKTA_DOMAIN -- Set this to your okta app's domain. You will need to sign up for an okta developer account and create an app. From there you will get your app's URL.
+
+REACT_APP_OKTA_CLIENT_ID -- A string. Once you have your okta app created, under the client credentials section of your app's settings, you will find your client ID and client secret.
     
 # Installation Instructions
 
@@ -131,3 +136,12 @@ See [Backend Documentation](https://github.com/Lambda-School-Labs/sauti-design-s
 ```
 
 ```
+
+## Notes
+
+#### Reset Password Page
+When a user registers an account on the application, recovery questions and answers are not required, therefore a user cannot request a self-service password reset because by default okta requires a recovery question and recovery answer to reset a password.
+
+The email sent to a user when resetting their email will not be a self-service email until the setting within "password policy -> account recovery -> additional self-service recovery option -> security question" is unchecked. This option by default, when creating a new okta app, will not be available. 
+
+You MUST contact okta support, create a ticket, and ask them to enable this option for your application. Once this option is available you can uncheck the option and save.
