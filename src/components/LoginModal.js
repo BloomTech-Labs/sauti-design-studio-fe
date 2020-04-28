@@ -64,13 +64,6 @@ function LoginModal() {
   const [modalStyle] = React.useState(getModalStyle)
   const history = useHistory();
 
-  // const handleOpen = () => {
-  //     setOpen(true);
-  // };
-
-  // const handleClose = () => {
-  //     setOpen(false);
-  // };
   const classes = useStyles()
 
   return (
@@ -88,26 +81,9 @@ function LoginModal() {
           </Typography>
           <button
             style={loginButtonStyle}
-            // onClick={() =>
-            //   // (window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/google`)
-            //     (process.env.REACT_APP_BE_API_URL ? window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/okta` : window.location.href = `http://localhost:5000/auth/okta`)
-            // }
             onClick={()=>history.push("/loginOkta")}
           >Login with OKTA</button>
-          {/* <GoogleLoginButton
-            style={loginButtonStyle}
-            onClick={() =>
-              // (window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/google`)
-                (process.env.REACT_APP_BE_API_URL ? window.location.href = `${process.env.REACT_APP_BE_API_URL}/auth/google` : window.location.href = `http://localhost:5000/auth/google`)
-            }
-          /> */}
-          {/* <FacebookLoginButton
-            onClick={() =>
-              (window.location.href = `${process.env.BE_API_URL}/auth/facebook`)
-            }
-          /> */}
 
-          {/*  */}
         </div>
       </Modal>
     </div>
@@ -124,13 +100,4 @@ const pageStyle = {
 
 export default LoginModal
 
-{
-  /* <Typography variant="subtitle1" id="simple-modal-description">
-            <a href={`${process.env.GATSBY_API_URL}/auth/google`}>
-              <img src={GoogleLoginButton} alt="" />
-            </a>
-            <a href={`${process.env.GATSBY_API_URL}/auth/facebook`}>
-              <img src={FacebookLoginButton} alt="" />
-            </a>{' '}
-          </Typography> */
-}
+

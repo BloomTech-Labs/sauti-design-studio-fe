@@ -69,11 +69,7 @@ class SimulationModal extends React.Component {
               title="Cancel Simulation"
               onClick={() => {
                 this.props.setSimulationState(this.props.simulate_project)
-                // this.setState({
-                //   simulate_project: false,
-                //   incoming: "",
-                //   text: ""
-                // });
+
                 const reqBody = {
                     user_id: this.props.user_id,
                     text: "00"

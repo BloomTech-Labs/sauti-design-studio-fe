@@ -24,8 +24,10 @@ You can find the deployed project at [Sauti Design Studio](https://sautistudio.n
 
 ## Project Overview
 
+
 [Labs 22 Trello Board](https://trello.com/b/RkVPLgHw/labs-22-sauti-design-studio)<br>
 [Trello Board](https://trello.com/b/4HBS1AfL/sauti-design)
+
 
 [Labs 22 Product Canvas](https://www.notion.so/Sauti-Design-Studio-Sprint-2-30d3a3179eca44be945629e709cf7383)<br>
 [Product Canvas](https://www.notion.so/Sauti-Design-Studio-f83f84ecef3c4e51b07a1a941580c306)

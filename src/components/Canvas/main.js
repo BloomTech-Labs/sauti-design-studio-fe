@@ -430,15 +430,10 @@ class CustomExample extends React.Component {
             >
               Simulate App
             </button>
-            <PublishModal props={this.props.props} />
-            {/* <button
-              className="cursor"
-              onClick={(event) => {
-                this.publishCanvas(event);
-              }}
-            >
-              Publish App
-            </button> */}
+
+            <PublishModal props={this.props.props}/>
+
+
             <button
               className="cursor"
               onClick={() => {
@@ -451,18 +446,12 @@ class CustomExample extends React.Component {
         </section>
 
         <section className="taskbar">
-          <div className="taskbar-container">
-            {/* <div className="taskbar-section">
+
+        <div className="taskbar-container">
+
+               <div className="taskbar-section">
               <i 
-                className="fas fa-plus-square"
-                title="Add Screen"
-                onClick={() => {
-                  this.createNode();
-                }}
-              ></i>
-            </div> */}
-            <div className="taskbar-section">
-              <i
+
                 className="fas fa-search-plus"
                 title="Zoom In"
                 onClick={() => {
@@ -521,34 +510,11 @@ const mapStateToProps = (state) => ({
 });
 
 // Connecting State and Rdux Reducer Methods
-export default connect(mapStateToProps, {
-  saveCanvas,
-  getCanvasById,
-  deleteProject,
-  setDeleteState,
-  setSimulationState,
-  saveTitle,
-  getTitleById,
-  publishCanvas,
-})(CustomExample);
 
-// Handle Project canvas update on initial load
-// if(this.props.project_id !== prevProps.project_id && this.props.fetching !== prevProps.fetching && this.props.fetching === false && this.props.graph_json !== null){
-//     cerealBox = new DiagramModel();
-//     cerealBox.deserializeModel(this.props.graph_json, engine);
-//     engine.setModel(cerealBox);
-// }
+export default connect(
+  mapStateToProps,
+  { saveCanvas, getCanvasById, deleteProject, setDeleteState, setSimulationState, saveTitle, getTitleById, publishCanvas }
+)(CustomExample); 
 
-// Handle Project canvas update on initial load
-// if(this.props.project_id !== prevProps.project_id && this.props.fetching !== prevProps.fetching && this.props.fetching === false && this.props.graph_json !== null && this.props.graph_json !== prevProps.graph_json){
-//   cerealBox = new DiagramModel();
-//     cerealBox.deserializeModel(this.props.graph_json, engine);
-//     engine.setModel(cerealBox);
-// }
 
-// Update JSON
-// if(this.props.graph_json !== null && this.props.graph_json !== prevProps.graph_json){
-//     cerealBox = new DiagramModel();
-//     cerealBox.deserializeModel(this.props.graph_json, engine);
-//     engine.setModel(cerealBox);
-// }
+        
