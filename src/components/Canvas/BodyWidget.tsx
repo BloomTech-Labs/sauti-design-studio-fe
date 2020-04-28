@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { DiagramEngine } from "@projectstorm/react-diagrams";
 import { CanvasWidget } from '@projectstorm/react-canvas-core';

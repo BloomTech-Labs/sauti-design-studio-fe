@@ -4,6 +4,7 @@ import { useOktaAuth } from '@okta/okta-react';
 import axios from 'axios'
 import  {useForm} from 'react-hook-form'
 import { useHistory } from "react-router-dom";
+import Loader from 'react-loader-spinner'
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer.js';
@@ -11,6 +12,7 @@ import Footer from '../components/Footer.js';
 const LoginForm = ({ issuer }) => { 
   const { authService } = useOktaAuth();
   const [sessionToken] = useState();
+  const [loading, setLoading] = useState(false)
   // const [username, setUsername] = useState("");
   // const [password, setPassword] = useState("");
   const {handleSubmit, register, errors} = useForm();
@@ -21,6 +23,7 @@ const LoginForm = ({ issuer }) => {
     const oktaAuth = new OktaAuth({ issuer: issuer });
     const username = values.email
     const password = values.password
+    setLoading(true)
     oktaAuth.signIn({ username: username,  password: password })
       .then(res => {
         res.user.sessionToken = res.data.sessionToken;
@@ -28,6 +31,7 @@ const LoginForm = ({ issuer }) => {
         .then(res=>{
           localStorage.setItem('token', res.data.token)
           localStorage.setItem('id', res.data.id)
+          setLoading(false)
           history.push(`/profile`)
         })
         })
@@ -55,6 +59,7 @@ const LoginForm = ({ issuer }) => {
   <>
     <Navbar />
     <div className='loginHero loginHero2'>
+    { loading ? <span className="Loader-div oktaForm"><Loader type="TailSpin" color="darkred" height={500} width={500}/></span> : (
       <form className='oktaForm oktaForm2' onSubmit={handleSubmit(onSubmit)}>
         <h2 className='oktaTitle'>Welcome to Sauti Design Studio</h2>
         <p className='oktaSubtitle'>Sign in below</p>
@@ -72,8 +77,12 @@ const LoginForm = ({ issuer }) => {
              /></span>
              {errors.password && <span className="oktaError">{errors.password.message}</span>}
         <input className='oktaSubmit' id="submit" type="submit" value="Sign In" />
-        <p style={{color:"white", textAlign:"center", margin:"1%"}}>Don't have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/register')}>Click here to sign up.</span></p>
+        <span className="oktaLinks">
+          <p style={{color:"white", textAlign:"center"}}>Don't have an account? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/register')}>Click here to sign up.</span></p>
+          <p style={{color:"white", textAlign:"center"}}>Forgot your password? <span style={{textDecoration:"underline", cursor: "pointer"}} onClick={()=>history.push('/reset')}>Click here to reset your password.</span></p>
+        </span>
       </form>
+    )}
     </div>
     <Footer />
     </>

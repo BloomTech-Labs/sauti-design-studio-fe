@@ -9,6 +9,7 @@
     align-content: center;
     align-items: center;
     width: 100%;
+    height: 88vh;
     .oktaForm{
         display: flex;
         flex-direction: column;
@@ -19,6 +20,14 @@
         margin: 5%;
         background-color: rgba(17, 25, 33, .8);
         border-radius: 5px;
+
+        .oktaLinks{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin: 2%;
+        }
         .password-reqs{
             font-size: 1.2rem;
             color:white;
@@ -112,7 +121,15 @@
         
     }
     .oktaForm2{
-        margin: 10.7% 2%;
+        margin: 9% 2%;
+    }
+
+    .oktaForm3{
+        margin: 14% 2%;
+    }
+
+    .Loader-div{
+        height: 68vh;
     }
     
 }

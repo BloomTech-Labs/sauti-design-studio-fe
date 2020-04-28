@@ -96,6 +96,7 @@ import {
           return {
             ...state,
             saving_title: false,
+            project_title: action.payload,
             error: false
           };
         case SAVE_TITLE_FAILURE:

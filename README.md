@@ -24,10 +24,12 @@ You can find the deployed project at [Sauti Design Studio](https://sautistudio.n
 
 ## Project Overview
 
-[Labs 22 Trello Board](https://trello.com/b/RkVPLgHw/labs-22-sauti-design-studio)
-[Trello Board](https://trello.com/b/RkVPLgHw/labs-22-sauti-design-studio)
 
-[Labs 22 Product Canvas](https://www.notion.so/Sauti-Design-Studio-Sprint-2-30d3a3179eca44be945629e709cf7383)
+[Labs 22 Trello Board](https://trello.com/b/RkVPLgHw/labs-22-sauti-design-studio)<br>
+[Trello Board](https://trello.com/b/4HBS1AfL/sauti-design)
+
+
+[Labs 22 Product Canvas](https://www.notion.so/Sauti-Design-Studio-Sprint-2-30d3a3179eca44be945629e709cf7383)<br>
 [Product Canvas](https://www.notion.so/Sauti-Design-Studio-f83f84ecef3c4e51b07a1a941580c306)
 
 Sauti Studio + Design is a desktop product that aims to serve the East African communities by providing a simple tool that will allow individuals with no programming skills to build and customise a text based app to share information and knowledge. Sauti Studio + Design encourages anyone who experience the problems stemming from lack of information to take a stand and design their own solutions by laying out a USSD text-flow that can be accessed via simple phone.
@@ -82,8 +84,13 @@ In order for the app to function correctly, the user must set up their own envir
 
     *  REACT_APP_BE_API_URL='http://localhost:5000' OR Production Route 
     *  REACT_APP_OKTA_DOMAIN=https://dev-YOURACCOUNT.okta.com
-    *  REACT_APP_OKTA_CLIENT_ID= 
+    *  REACT_APP_OKTA_CLIENT_ID=00000000AAAAAAA
 
+REACT_APP_BE_API_URL -- Set this to 'http://localhost:port' of your backend api if using locally. Otherwise, set it to your backend's URL.
+
+REACT_APP_OKTA_DOMAIN -- Set this to your okta app's domain. You will need to sign up for an okta developer account and create an app. From there you will get your app's URL.
+
+REACT_APP_OKTA_CLIENT_ID -- A string. Once you have your okta app created, under the client credentials section of your app's settings, you will find your client ID and client secret.
     
 # Installation Instructions
 
@@ -131,3 +138,12 @@ See [Backend Documentation](https://github.com/Lambda-School-Labs/sauti-design-s
 ```
 
 ```
+
+## Notes
+
+#### Reset Password Page
+When a user registers an account on the application, recovery questions and answers are not required, therefore a user cannot request a self-service password reset because by default okta requires a recovery question and recovery answer to reset a password.
+
+The email sent to a user when resetting their email will not be a self-service email until the setting within "password policy -> account recovery -> additional self-service recovery option -> security question" is unchecked. This option by default, when creating a new okta app, will not be available. 
+
+You MUST contact okta support, create a ticket, and ask them to enable this option for your application. Once this option is available you can uncheck the option and save.
