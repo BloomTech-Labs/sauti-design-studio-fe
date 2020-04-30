@@ -147,3 +147,9 @@ When a user registers an account on the application, recovery questions and answ
 The email sent to a user when resetting their email will not be a self-service email until the setting within "password policy -> account recovery -> additional self-service recovery option -> security question" is unchecked. This option by default, when creating a new okta app, will not be available. 
 
 You MUST contact okta support, create a ticket, and ask them to enable this option for your application. Once this option is available you can uncheck the option and save.
+
+#### A New Okta App Must Be Created
+In order for you to have access to the okta application and it's settings, you should create your own okta application and update the environment variables to reflect the newly created okta application. Remember to contact Okta support to implement the self-service password reset noted in the notes section.
+
+#### Heroku Backend Free Tier
+Because we are currently using Heroku's free tier to host the backend and database, note that the service goes to sleep after a time of inactivity (30 minutes?) and requires a time of about 30 seconds to wake from sleep.
