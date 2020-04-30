@@ -6,7 +6,7 @@
 
 # Sauti Design Studio
 
-You can find the latest deployed project at [Sauti Design Studio](https://master.d1452jrxuaqaph.amplifyapp.com/).
+You can find the latest deployed project at [sautistudio.saustiafrica.org](https://sautistudio.sautiafrica.org/).
 
 You can find the deployed project at [Sauti Design Studio](https://sautistudio.netlify.com/).
 
