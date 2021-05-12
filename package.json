@@ -22,7 +22,7 @@
     "global": "^4.4.0",
     "jest": "24.7.1",
     "lodash": "^4.17.15",
-    "mathjs": "^6.0.3",
+    "mathjs": "^7.5.1",
     "node-sass": "^4.12.0",
     "nodemailer": "^6.4.6",
     "pathfinding": "^0.4.18",
