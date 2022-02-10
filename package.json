@@ -23,7 +23,7 @@
     "jest": "24.7.1",
     "lodash": "^4.17.15",
     "mathjs": "^6.0.3",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "nodemailer": "^6.4.6",
     "pathfinding": "^0.4.18",
     "paths-js": "^0.4.9",
